@@ -22,7 +22,6 @@ namespace Darklight.Selectable
     /// Base class for controlled elements that encapsulates common functionalities for UXML elements.
     /// </summary>
     /// <typeparam name="TElement">The Type of the </typeparam>
-    // Base class for controlled elements that encapsulates common functionalities for UXML elements.
     [UxmlElement]
     public partial class SelectableVisualElement<TElement> : VisualElement, ISelectable where TElement : VisualElement, new()
     {
