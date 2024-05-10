@@ -14,12 +14,20 @@ public class InteractableNPC : Interactable, IInteract
     [Header("NPC Speech Bubble Settings")]
     [SerializeField] private float speechBubbleScalar = 1.5f;
     [SerializeField, ShowOnly] private UXML_WorldSpaceUI dialogueBubble;
+    private NPCState stateBeforeTalkedTo = NPCState.NONE;
     public UXML_WorldSpaceUI DialogueBubble { get => dialogueBubble; set => dialogueBubble = value; }
     public OverlapGrid2D overlapGrid2D => GetComponent<OverlapGrid2D>();
 
     public void Start()
     {
         NPC_Controller controller = GetComponent<NPC_Controller>();
+
+        // >> ON FIRST INTERACTION -------------------------------
+
+        this.OnFirstInteraction += () =>
+        {
+            stateBeforeTalkedTo = controller.stateMachine.CurrentState;
+        };
 
         // >> ON INTERACTION -------------------------------------
         this.OnInteraction += (string currentText) =>
@@ -37,7 +45,7 @@ public class InteractableNPC : Interactable, IInteract
             //UIManager.WorldSpaceUI.Hide();
             if (controller)
             {
-                controller.stateMachine.GoToState(NPCState.IDLE);
+                controller.stateMachine.GoToState(stateBeforeTalkedTo);
             }
         };
     }
@@ -73,7 +81,7 @@ public class InteractableNPCCustomEditor : InteractableCustomEditor
 
         DrawDefaultInspector();
 
-        if (interactableNPC.DialogueBubble.isVisible)
+        if (interactableNPC.DialogueBubble != null && interactableNPC.DialogueBubble.isVisible)
         {
             if (GUILayout.Button("Hide Dialogue Bubble"))
             {
