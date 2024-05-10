@@ -48,7 +48,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 128
-  showGizmos: 0
+  showGizmos: 1
 --- !u!1 &3748172356156110787
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +126,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2137254424, guid: 6b167707065891e4c826ace85794e423, type: 3}
+  m_Sprite: {fileID: 979639723, guid: 6b167707065891e4c826ace85794e423, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
     - {fileID: 979639723, guid: 6b167707065891e4c826ace85794e423, type: 3}
     - {fileID: -2137254424, guid: 6b167707065891e4c826ace85794e423, type: 3}
     - {fileID: -2137254424, guid: 6b167707065891e4c826ace85794e423, type: 3}
-  currentFrame: 2
+  currentFrame: 0
 --- !u!114 &3459753342046718353
 MonoBehaviour:
   m_ObjectHideFlags: 0

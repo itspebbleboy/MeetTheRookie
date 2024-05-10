@@ -34,8 +34,8 @@ MonoBehaviour:
   - {x: 4, y: 1}
   values:
   - _positionKey: {x: 0, y: 0}
-    _disabled: 0
-    _weight: 2
+    _disabled: 1
+    _weight: 0
   - _positionKey: {x: 0, y: 1}
     _disabled: 0
     _weight: 3
@@ -46,14 +46,14 @@ MonoBehaviour:
     _disabled: 1
     _weight: 0
   - _positionKey: {x: 1, y: 1}
-    _disabled: 0
-    _weight: 1
+    _disabled: 1
+    _weight: 0
   - _positionKey: {x: 1, y: 2}
     _disabled: 0
     _weight: 2
   - _positionKey: {x: 2, y: 0}
-    _disabled: 0
-    _weight: 2
+    _disabled: 1
+    _weight: 0
   - _positionKey: {x: 2, y: 1}
     _disabled: 0
     _weight: 3

@@ -53,6 +53,13 @@ MonoBehaviour:
   _storyParent: {fileID: 11400000, guid: 3cc4aca1b43bc7f4a9c2fcf84c0e7338, type: 2}
   _interactionKey: scene4_1.Misra_dialogue
   _sprite: {fileID: 0}
+  _interactSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _isTarget: 0
   _isActive: 0
   _isComplete: 0

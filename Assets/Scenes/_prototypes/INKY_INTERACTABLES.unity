@@ -1152,6 +1152,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 574323930}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &353058571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: '[L5]TheWineryNIGHT_1'
+  m_EditorClassIdentifier: 
+  _inkFile: {fileID: 4900000, guid: da8f9984e46f146419c0b6427eaeeb4d, type: 3}
+  _knotAndStitchKeys:
+  - scene5_1
+  - scene5_2
+  - scene5_2.outdoor_choices
+  - scene5_2INSIDE
+  - scene5_3
+  - scene5_3.table_papers
+  - scene5_3.number_pad
+  - scene5_3.misra_found
+  _variables:
+  - _key: locked_door_visited
+    _valueAsString: False
+  - _key: correct_code
+    _valueAsString: False
+  - _key: table_papers_visited
+    _valueAsString: False
+  - _key: newspaper_article_visited
+    _valueAsString: False
+  - _key: handwritten_note_visited
+    _valueAsString: False
+  - _key: economics_of_winery_visited
+    _valueAsString: False
+  - _key: winery_blueprint_evidence
+    _valueAsString: False
+  - _key: newspaper_article_evidence
+    _valueAsString: False
+  - _key: winery_handwritten_note_evidence
+    _valueAsString: False
+  - _key: winery_graph_evidence
+    _valueAsString: False
+  _globalTags:
+  - Level 5 - The Winery, Night, Day 1
+  - This Level holds both a Dating Sim and Gameplay. We start in the interior of
+    Lupe's car during a Stakeout with Misra, outside the Old Winery. The Dating Sim
+    can be cycled through, and at a certain point is interrupted by a loud, unexplained
+    disturbance from inside the Winery. Misra is quick to get out of the car to invesitigate.
 --- !u!1 &412561261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,6 +1483,155 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &542528159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: '[L6]Town_1'
+  m_EditorClassIdentifier: 
+  _inkFile: {fileID: 4900000, guid: 141294ed79a95494a9e07d46f47e47e4, type: 3}
+  _knotAndStitchKeys:
+  - set_speaker
+  - StartQuest
+  - CompleteQuest
+  - IsQuestComplete
+  - DiscoverClue
+  - IsClueFound
+  - main
+  - scene4_1
+  - scene4_1.Misra_dialogue
+  - scene4_1.strange_symbol_on_fountain
+  - scene4_1.goop_on_fountain
+  - scene4_1.power_up_arcade
+  - scene4_1.the_rockin_kettle
+  - scene4_2
+  - scene4_3
+  - scene4_3.arcade
+  - scene4_3.teens
+  - teens_roulette
+  - teens_suspect
+  - scene4_4
+  - scene4_4.goop
+  - scene4_4.memorial_plaque
+  - first_interact_roy
+  - questions
+  - window
+  - merch_shirt
+  - merch_sticker
+  - pamphlet
+  - personal_info
+  - town_history
+  - winery_closing
+  - potential_suspects
+  - roy_teenagers
+  - calvin_intro
+  - calvin_questions
+  - calvin_questions.cal_hosi
+  - calvin_questions.HOSI_questions
+  - calvin_questions.HOSI_questions2
+  - calvin_questions.personal_info_calvin
+  - calvin_questions.winery_calvin
+  - calvin_questions.KR_calvin
+  - c_suspects
+  - jenny_intro
+  - jenny_questions
+  - jenny_questions.KR_Jenny
+  - jenny_questions.personal_info_jenny
+  - jenny_questions.winery_jenny
+  - jenny_questions.Crazies
+  - j_suspects
+  - josh_intro
+  - josh_questions
+  - josh_questions.josh_personal_info
+  - josh_questions.KR_josh
+  - josh_questions.winery_josh
+  - jo_suspects
+  - jenkins_intro
+  - jenkins_questions
+  - Irene_intro
+  - irene_questions
+  _variables:
+  - _key: current_npc
+    _valueAsString: 
+  - _key: closed_signs
+    _valueAsString: 0
+  - _key: Speaker
+    _valueAsString: 
+  - _key: curSpeaker
+    _valueAsString: Lupe
+  - _key: QuestChain
+    _valueAsString: 
+  - _key: activeQuests
+    _valueAsString: 
+  - _key: completedQuests
+    _valueAsString: 
+  - _key: Clues
+    _valueAsString: 
+  - _key: knowledgeState
+    _valueAsString: 
+  _globalTags: []
+--- !u!114 &570572227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: '[DS]Stakeout_1'
+  m_EditorClassIdentifier: 
+  _inkFile: {fileID: 4900000, guid: d2797144259c001469726dc7da86c883, type: 3}
+  _knotAndStitchKeys:
+  - intro
+  - intro.usedToIt
+  - intro.music
+  - intro.classical
+  - intro.pop
+  - intro.youCool
+  - intro.turnOffRadio
+  - questions
+  - goats
+  - goats.didntKnowBetter
+  - goats.insulted
+  - goats.misguided
+  - goats.yeah
+  - goats.no
+  - goats.Preserving
+  - goats.couldBe
+  - goats.allTheBest
+  - goats.realistic
+  - goats.leave
+  - goats.leave2
+  - goats.strangeQuestion
+  - goats.homeYes
+  - goats.scary
+  - goats.hard
+  - goats.normal
+  - goats.preSound
+  - goats.homeNo
+  - teens
+  - teens.ratherNot
+  - RuhRoah
+  _variables:
+  - _key: reported_incident
+    _valueAsString: False
+  - _key: case_file_received
+    _valueAsString: False
+  - _key: love_points
+    _valueAsString: 0
+  - _key: tease_level
+    _valueAsString: 0
+  - _key: sincerity_level
+    _valueAsString: 0
+  _globalTags: []
 --- !u!1 &574323924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1802,6 +2000,67 @@ Transform:
   - {fileID: 1873654239}
   m_Father: {fileID: 1725653641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &582543337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: '[L3 Log] TheWineryMorning_1 '
+  m_EditorClassIdentifier: 
+  _inkFile: {fileID: 4900000, guid: de82cd49bc847fc439642ede1ea61a4a, type: 3}
+  _knotAndStitchKeys:
+  - set_speaker
+  - StartQuest
+  - CompleteQuest
+  - IsQuestComplete
+  - DiscoverClue
+  - IsClueFound
+  - GoToSubScene
+  - scene3_1
+  - scene3_1.investigate
+  - scene3_1.evidence_discussed_Misra
+  - scene3_1.Misra_
+  - scene3_1.Misra_dialogue
+  - scene3_1.fence
+  - scene3_1.window
+  - scene3_1.strange_footsteps
+  - scene3_2
+  - scene3_2.intro_conversation
+  - scene3_2.investigate_inside
+  - scene3_2.evidence_discussed_Misra_inside
+  - scene3_2.closing_discussion
+  - scene3_2.closing_discussion_2
+  - scene3_2.claw_marks
+  - scene3_2.floor_splatters
+  - scene3_2.additional_damages
+  - scene3_2.wine_barrels
+  - scene3_2.wine_barrels2
+  - scene3_2.backroom_door
+  - scene3_2.Winery_front_door
+  _variables:
+  - _key: Speaker
+    _valueAsString: 
+  - _key: curSpeaker
+    _valueAsString: Lupe
+  - _key: QuestChain
+    _valueAsString: 
+  - _key: activeQuests
+    _valueAsString: FIRST_INTERACT
+  - _key: completedQuests
+    _valueAsString: 
+  - _key: Clues
+    _valueAsString: EVIDENCE_BROKEN_WINDOW, EVIDENCE_FOOTSTEPS, EVIDENCE_FENCE, EVIDENCE_CLAW_MARKS,
+      EVIDENCE_DAMAGES
+  - _key: knowledgeState
+    _valueAsString: 
+  - _key: currentScene
+    _valueAsString: scene3_1
+  _globalTags: []
 --- !u!1001 &642367386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2022,11 +2281,200 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dafb4da648192f4e93ea06d51cc2b9e, type: 3}
+--- !u!114 &812161489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: '[L3] TheWineryMorning_1 '
+  m_EditorClassIdentifier: 
+  _inkFile: {fileID: 4900000, guid: 5e866fc625cd4c5459733bafe0a6654e, type: 3}
+  _knotAndStitchKeys:
+  - scene3_1
+  - scene3_1.investigate
+  - scene3_1.evidence_discussed_Misra
+  - scene3_1.Misra
+  - scene3_1.Misra_dialogue
+  - scene3_1.fence
+  - scene3_1.window
+  - scene3_1.strange_footsteps
+  - scene3_2
+  - scene3_2.intro_conversation
+  - scene3_2.investigate_inside
+  - scene3_2.evidence_discussed_Misra_inside
+  - scene3_2.closing_discussion
+  - scene3_2.closing_discussion_2
+  - scene3_2.claw_marks
+  - scene3_2.floor_splatters
+  - scene3_2.additional_damages
+  - scene3_2.wine_barrels
+  - scene3_2.wine_barrels2
+  - scene3_2.backroom_door
+  - scene3_2.Winery_front_door
+  _variables:
+  - _key: evidence_broken_window
+    _valueAsString: False
+  - _key: evidence_footsteps
+    _valueAsString: False
+  - _key: evidence_fence
+    _valueAsString: False
+  - _key: first_interact
+    _valueAsString: False
+  - _key: fence_visited
+    _valueAsString: False
+  - _key: window_visited
+    _valueAsString: False
+  - _key: footsteps_visited
+    _valueAsString: False
+  - _key: evidence_claw_marks
+    _valueAsString: False
+  - _key: evidence_damages
+    _valueAsString: False
+  - _key: floor_visited
+    _valueAsString: False
+  - _key: barrels_visited
+    _valueAsString: False
+  - _key: backroom_door_visited
+    _valueAsString: False
+  _globalTags: []
 --- !u!1 &852328867 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6171685949738713303, guid: f38374023554ea349a889ef5ff8244e6, type: 3}
   m_PrefabInstance: {fileID: 1869038469}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &867351759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: '[DS]Bar_1'
+  m_EditorClassIdentifier: 
+  _inkFile: {fileID: 4900000, guid: 9b85df92c3de1b740b64e8ac1b2f0585, type: 3}
+  _knotAndStitchKeys:
+  - intro
+  - intro.MisraConfused
+  - intro.Sweet
+  - intro.DontKnow
+  - intro.bet
+  - intro.wrong
+  - intro.color
+  - intro.GuessMisras
+  - intro.CorrectColor
+  - intro.IncorrectColor
+  - intro.MisraOrderReminder
+  - intro.ShockedNo
+  - intro.MisraOrder
+  - intro.offerToPay
+  - intro.MisraOrdersForThemselves
+  - intro.GuessMisrasOrder
+  - intro.guessDrinkRight
+  - intro.guessDrinkWrong
+  - questions
+  - Roy
+  - Roy.RoyQuestions
+  - Roy.close
+  - Roy.yourOwn
+  - Roy.old
+  - Roy.leaveWithThem
+  - Roy.buisness
+  - Roy.itsAlright
+  - Roy.buyOut
+  - Roy.town
+  - Roy.RoySister
+  - Roy.RoySisterExplination
+  - Roy.maybe
+  - Roy.doingWell
+  - Bachitan
+  - Bachitan.sacrifice
+  - Bachitan.club
+  - Bachitan.prank
+  - Bachitan.legendExplination
+  - Thelton
+  - Thelton.hometown1
+  - Thelton.dontGiveLocation
+  - Thelton.GiveLocation
+  - Thelton.hometown2
+  - Teens
+  - Teens.LieDetector
+  - Teens.justTell
+  - WhatNow
+  - WhatNow.NotEvenClose
+  - WhatNow.KiddingMe
+  - WhatNow.Stakeout
+  - WhatNow.stationCars
+  - WhatNow.LupeCar
+  _variables:
+  - _key: reported_incident
+    _valueAsString: False
+  - _key: case_file_received
+    _valueAsString: False
+  - _key: love_points
+    _valueAsString: 0
+  - _key: tease_level
+    _valueAsString: 0
+  - _key: sincerity_level
+    _valueAsString: 0
+  _globalTags: []
+--- !u!114 &872412895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: '[L5 Log]TheWineryNIGHT_1'
+  m_EditorClassIdentifier: 
+  _inkFile: {fileID: 4900000, guid: f254792db95610847a0aee5798174b86, type: 3}
+  _knotAndStitchKeys:
+  - set_speaker
+  - StartQuest
+  - CompleteQuest
+  - IsQuestComplete
+  - DiscoverClue
+  - IsClueFound
+  - scene5_1
+  - scene5_2
+  - scene5_2.outdoor_choices
+  - scene5_2INSIDE
+  - scene5_3
+  - scene5_3.table_papers
+  - scene5_3.number_pad
+  - scene5_3.misra_found_dating_sim
+  - scene5_3.ending_sequence
+  _variables:
+  - _key: Speaker
+    _valueAsString: 
+  - _key: curSpeaker
+    _valueAsString: Lupe
+  - _key: QuestChain
+    _valueAsString: 
+  - _key: activeQuests
+    _valueAsString: 
+  - _key: completedQuests
+    _valueAsString: 
+  - _key: Clues
+    _valueAsString: 
+  - _key: knowledgeState
+    _valueAsString: 
+  _globalTags:
+  - Level 5 - The Winery, Night, Day 1
+  - This Level holds both a Dating Sim and Gameplay. We start in the interior of
+    Lupe's car during a Stakeout with Misra, outside the Old Winery. The Dating Sim
+    can be cycled through, and at a certain point is interrupted by a loud, unexplained
+    disturbance from inside the Winery. Misra is quick to get out of the car to invesitigate.
 --- !u!1 &930558553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,6 +3203,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 574323930}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1140329884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: '[TEST] Global File'
+  m_EditorClassIdentifier: 
+  _inkFile: {fileID: 4900000, guid: a133fa51898d5f64dbf5e9bee4d78c9b, type: 3}
+  _knotAndStitchKeys:
+  - set_speaker
+  - StartQuest
+  - CompleteQuest
+  - IsQuestComplete
+  - DiscoverClue
+  - IsClueFound
+  _variables:
+  - _key: Clues_1_1
+    _valueAsString: GAS_PUMP_BROKEN, CASHREG_BROKEN, CASHREG_FIX
+  - _key: QuestChain_1_1
+    _valueAsString: 
+  - _key: knowledgeState_1
+    _valueAsString: 
+  - _key: activeQuests
+    _valueAsString: 
+  - _key: completedQuests
+    _valueAsString: 
+  - _key: Speaker
+    _valueAsString: 
+  - _key: curSpeaker
+    _valueAsString: Lupe
+  _globalTags: []
 --- !u!1001 &1231048030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3981,7 +4465,7 @@ Transform:
   m_GameObject: {fileID: 1396728428}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5, y: 1.25, z: 1.25}
+  m_LocalPosition: {x: 3.5, y: 1.625, z: 1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3999,9 +4483,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65cf3c185c8f84b4193c8c850771d62e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _storyParent: {fileID: 11400000, guid: 511f16d0c13794b4aa4c7fad67c1ae17, type: 2}
-  _interactionKey: scene1_2
-  _sprite: {fileID: 21300000, guid: 30c4f936a84952f47bb2a93feb9eeab3, type: 3}
+  _storyParent: {fileID: 11400000, guid: 3cc4aca1b43bc7f4a9c2fcf84c0e7338, type: 2}
+  _interactionKey: scene4_1.strange_symbol_on_fountain
+  _sprite: {fileID: 21300000, guid: 11b9059e920ee3c44b9615644a430f40, type: 3}
+  _interactSound:
+    Guid:
+      Data1: 1237607193
+      Data2: 1118749217
+      Data3: 653686435
+      Data4: -1081201298
+    Path: event:/SFX/Environment/obtainItem
   _isTarget: 0
   _isActive: 0
   _isComplete: 0
@@ -4096,7 +4587,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 30c4f936a84952f47bb2a93feb9eeab3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 11b9059e920ee3c44b9615644a430f40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4173,6 +4664,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ff55b1ebb631b694cb99990cc5b30958, type: 3}
   m_PrefabInstance: {fileID: 1414919052}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1448123971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: '[DS]Precinct_1'
+  m_EditorClassIdentifier: 
+  _inkFile: {fileID: 4900000, guid: 24523e61df377144ab40540e8fcb27f5, type: 3}
+  _knotAndStitchKeys:
+  - intro
+  - intro.ding
+  - intro.hello
+  - intro.soul
+  - intro.chastise
+  - intro.scared
+  - intro.introductions
+  - intro.silence
+  - intro.niceToMeet
+  - intro.precinct
+  - intro.Company
+  - intro.treeFell
+  - intro.snoop
+  - intro.peek
+  - intro.wait
+  - intro.solo
+  - intro.transition_to_case
+  - intro.time
+  - intro.police_report
+  - intro.theRest
+  - intro.nothingHere
+  - intro.Evidence
+  - intro.Witnesses
+  - intro.Help
+  - intro.We
+  - intro.phone_call
+  - intro.voicemail
+  - intro.JokeBack
+  - intro.door
+  _variables:
+  - _key: reported_incident
+    _valueAsString: False
+  - _key: case_file_received
+    _valueAsString: False
+  - _key: love_points
+    _valueAsString: 0
+  - _key: tease_level
+    _valueAsString: 0
+  - _key: sincerity_level
+    _valueAsString: 0
+  - _key: spooked
+    _valueAsString: False
+  - _key: snooped
+    _valueAsString: False
+  _globalTags: []
 --- !u!1 &1483361435
 GameObject:
   m_ObjectHideFlags: 0
@@ -4799,6 +5349,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5089acd2b0b0e17419159a66bba44309, type: 3}
+--- !u!114 &1845979090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: '[L1]GasStation_1Draft'
+  m_EditorClassIdentifier: 
+  _inkFile: {fileID: 4900000, guid: e213b1a1a92f79b4d8032ca97aabf5af, type: 3}
+  _knotAndStitchKeys:
+  - intro
+  - scene1_1
+  - scene1_1.fallen_tree
+  - scene1_1.gas_pump
+  - scene1_1.car
+  - scene1_1.npc
+  - scene1_2
+  - scene1_2.main
+  - scene1_2.employee
+  - scene1_2.employee2
+  - scene1_2.employee3
+  - scene1_2.pay_for_gas
+  - scene1_2.backroom
+  - scene1_2.goop
+  - scene1_2.mel
+  - scene1_2.is_broken
+  - scene1_2.playtest_go_to_precinct
+  _variables:
+  - _key: current_npc
+    _valueAsString: 
+  - _key: first_interact
+    _valueAsString: False
+  - _key: paid_for_gas
+    _valueAsString: False
+  - _key: tree_fell
+    _valueAsString: False
+  - _key: knows_cash_is_broken
+    _valueAsString: False
+  - _key: knows_how_to_fix_cash
+    _valueAsString: False
+  _globalTags: []
 --- !u!1001 &1869038469
 PrefabInstance:
   m_ObjectHideFlags: 0

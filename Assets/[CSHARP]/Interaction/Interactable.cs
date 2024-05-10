@@ -29,6 +29,8 @@ public class Interactable : MonoBehaviour, IInteract
     [Header("Components")]
     [SerializeField] Sprite _sprite;
 
+    [SerializeField] FMODUnity.EventReference _interactSound;
+
     [Header("State Flags")]
     [ShowOnly, SerializeField] bool _isTarget;
     [ShowOnly, SerializeField] bool _isActive;
@@ -111,6 +113,7 @@ public class Interactable : MonoBehaviour, IInteract
         if (!isActive)
         {
             OnFirstInteraction?.Invoke();
+            FMODManager.Instance.PlayEvent(_interactSound);
         }
 
         isTarget = false;

@@ -330,6 +330,13 @@ MonoBehaviour:
   _storyParent: {fileID: 11400000, guid: 3cc4aca1b43bc7f4a9c2fcf84c0e7338, type: 2}
   _interactionKey: scene4_3.arcade
   _sprite: {fileID: 0}
+  _interactSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _isTarget: 0
   _isActive: 0
   _isComplete: 0
@@ -1127,6 +1134,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6ef9618fea55f943a7e6e877e539c66, type: 3}
+--- !u!1001 &210374252
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875938405744345426, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
+      propertyPath: m_Name
+      value: '[SINGLETON] GameManager'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
 --- !u!43 &219002698
 Mesh:
   m_ObjectHideFlags: 0
@@ -1801,6 +1865,13 @@ MonoBehaviour:
   _storyParent: {fileID: 11400000, guid: 3cc4aca1b43bc7f4a9c2fcf84c0e7338, type: 2}
   _interactionKey: scene4_3.arcade
   _sprite: {fileID: 3223386051870524753, guid: 2ece881934c7ef044a7bbc7cdebbfe57, type: 3}
+  _interactSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _isTarget: 0
   _isActive: 0
   _isComplete: 0
@@ -5051,9 +5122,25 @@ PrefabInstance:
       propertyPath: _interactionKey
       value: scene4_1.Misra_dialogue
       objectReference: {fileID: 0}
-    - target: {fileID: 7692910416353583211, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
-      propertyPath: showGizmos
-      value: 1
+    - target: {fileID: 7247015523766141193, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _interactSound.Path
+      value: event:/SFX/Environment/obtainItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247015523766141193, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _interactSound.Guid.Data1
+      value: 1237607193
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247015523766141193, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _interactSound.Guid.Data2
+      value: 1118749217
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247015523766141193, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _interactSound.Guid.Data3
+      value: 653686435
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247015523766141193, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _interactSound.Guid.Data4
+      value: -1081201298
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16652,6 +16739,13 @@ MonoBehaviour:
   _storyParent: {fileID: 11400000, guid: 3cc4aca1b43bc7f4a9c2fcf84c0e7338, type: 2}
   _interactionKey: scene4_1.the_rockin_kettle
   _sprite: {fileID: 0}
+  _interactSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _isTarget: 0
   _isActive: 0
   _isComplete: 0
@@ -17770,6 +17864,13 @@ MonoBehaviour:
   _storyParent: {fileID: 11400000, guid: 3cc4aca1b43bc7f4a9c2fcf84c0e7338, type: 2}
   _interactionKey: scene4_1.goop_on_fountain
   _sprite: {fileID: 9073935357443152132, guid: 4401bafa78919cc43988ffbca896c150, type: 3}
+  _interactSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   _isTarget: 0
   _isActive: 0
   _isComplete: 0
@@ -22911,3 +23012,4 @@ SceneRoots:
   - {fileID: 879418905}
   - {fileID: 479793840}
   - {fileID: 565432227}
+  - {fileID: 210374252}
