@@ -8,12 +8,9 @@ using Darklight.Game.Grid;
 public class PlayerInteractor : OverlapGrid2D
 {
     public PlayerController playerController => GetComponent<PlayerController>();
-
     protected HashSet<IInteract> interactables = new HashSet<IInteract>();
-    [SerializeField, ShowOnly] IInteract _activeInteraction;
     [SerializeField, ShowOnly] int _interactablesCount;
 
-    public IInteract ActiveInteractable => _activeInteraction;
 
     public override void Update()
     {
@@ -59,64 +56,36 @@ public class PlayerInteractor : OverlapGrid2D
 
         // Get the Target Interactable
         IInteract targetInteractable = interactables.First();
-        if (targetInteractable == null || targetInteractable.isComplete) return false;
         targetInteractable.TargetClear();
+        if (targetInteractable.isComplete) return false;
 
-        // If the target is not the same as the active interaction, 
-        // then set the active interaction to the target and subscribe to the events
-        if (_activeInteraction != targetInteractable)
+        targetInteractable.Interact(); // << MAIN INTERACTION
+
+        // Check if the target is complete
+        if (targetInteractable.isComplete)
         {
-            _activeInteraction = targetInteractable;
-            _activeInteraction.OnInteraction += OnInteraction;
-            _activeInteraction.OnCompleted += OnComplete;
+            UIManager.Instance.DestroySpeechBubble();
+            playerController.ExitInteraction();
+            interactables.Remove(targetInteractable);
         }
 
-        // Continue the Interaction
-        _activeInteraction.Interact();
-        if (_activeInteraction.isComplete)
+        if (targetInteractable is NPC_Interactable)
         {
-            _activeInteraction.OnInteraction -= OnInteraction;
-            _activeInteraction.OnCompleted -= OnComplete;
-            _activeInteraction = null;
-            return false;
-        }
-        return true;
-    }
-
-    void OnInteraction(string text)
-    {
-        if (_activeInteraction is NPC_Interactable)
-        {
-            NPC_Interactable npcInteractable = _activeInteraction as NPC_Interactable;
+            NPC_Interactable npcInteractable = targetInteractable as NPC_Interactable;
             playerController.cameraController.SetOffsetRotation(playerController.transform, npcInteractable.transform);
             //npcInteractable.DialogueBubble.TextureUpdate();
         }
-
         // Show the player's dialogue bubble
-        else if (_activeInteraction is Interactable)
+        else if (targetInteractable is Interactable)
         {
-            Interactable interactable = _activeInteraction as Interactable;
-            //playerDialogueHandler.Sh
+            Interactable interactable = targetInteractable as Interactable;
+            OverlapGrid2D_Data targetData = GetBestData();
+            UIManager.Instance.CreateSpeechBubble(targetData.worldPosition, interactable.currentText, targetData.cellSize);
         }
 
-        Debug.Log($"Interacting with {_activeInteraction} => {text}");
+        return true;
     }
 
-    void OnComplete()
-    {
-        //playerDialogueHandler.HideDialogueBubble();
-        playerController.ExitInteraction();
-        interactables.Remove(_activeInteraction);
-    }
-
-    private void OnDestroy()
-    {
-        if (_activeInteraction != null)
-        {
-            _activeInteraction.OnInteraction -= OnInteraction;
-            _activeInteraction.OnCompleted -= OnComplete;
-        }
-    }
 
     public Vector3 GetMidpoint(Vector3 point1, Vector3 point2)
     {
@@ -126,6 +95,8 @@ public class PlayerInteractor : OverlapGrid2D
     void OnTriggerEnter2D(Collider2D other)
     {
         IInteract interactable = other.GetComponent<IInteract>();
+        Debug.Log($"Player Interactor :: {interactable}");
+
         if (interactable == null) return;
         if (interactable.isComplete) return;
         interactables.Add(interactable);

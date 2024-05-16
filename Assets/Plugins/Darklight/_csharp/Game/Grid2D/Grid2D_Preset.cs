@@ -125,7 +125,7 @@ public class Grid2D_Preset : ScriptableObject
             Grid2D_Preset preset = target as Grid2D_Preset;
             if (preset != null && selectedGameObject != null)
             {
-                Grid2D.DrawGrid2D(preset, selectedGameObject.transform.position);
+                //Grid2D.DrawGrid2D(preset);
             }
         }
 

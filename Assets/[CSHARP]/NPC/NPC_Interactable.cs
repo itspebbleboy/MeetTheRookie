@@ -19,6 +19,8 @@ public class NPC_Interactable : Interactable, IInteract
 
     public void Start()
     {
+        Reset();
+
         // >> ON FIRST INTERACTION -------------------------------
         this.OnFirstInteraction += () => stateBeforeTalkedTo = stateMachine.CurrentState;
 
@@ -39,12 +41,14 @@ public class NPC_Interactable : Interactable, IInteract
         if (_storyIterator.CurrentState != InkyStoryIterator.State.END)
         {
             // Create a speech bubble at the best data position
-            UIManager.Instance.CreateSpeechBubble(GetBestData().worldPosition, _storyIterator.CurrentText);
+            Grid2D_Data bestData = GetBestData();
+            Vector3 worldPosition = bestData.worldPosition;
+            float cellSize = bestData.cellSize;
+            UIManager.Instance.CreateSpeechBubble(worldPosition, _storyIterator.CurrentText, cellSize);
 
             // If the statemachine is not null, go to the speak state
             stateMachine?.GoToState(NPCState.SPEAK);
         }
-
     }
 
     public override void Complete()

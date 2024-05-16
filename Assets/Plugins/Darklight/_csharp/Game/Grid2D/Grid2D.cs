@@ -14,7 +14,7 @@ namespace Darklight.Game.Grid
     #region ---- [[ GRID2D ]] -----------------------------------------------------------
     public abstract class Grid2D : MonoBehaviour
     {
-        private const string DEFAULT_PRESET_PATH = "Grid2D/Simple_1x3";
+        private const string DEFAULT_PRESET_PATH = "Grid2D/Simple_1x1";
 
         [Header("Grid2D")]
         [Expandable, Tooltip("A scriptable object that contains the preset settings for a Grid2D instance.")]
@@ -53,14 +53,9 @@ namespace Darklight.Game.Grid
         /// <returns>The world space position of the specified position key.</returns>
         public Vector3 GetWorldPositionOfCell(Vector2Int positionKey)
         {
-            // Calculate the world space position
-            Vector2Int offsetPosition = positionKey - OriginKey;
-            Vector3 vec3_position = new Vector3(offsetPosition.x, offsetPosition.y, 0);
-            vec3_position *= Preset.cellSize;
-
-            // Transform the position to world space using this transform as the parent
-            Vector3 worldSpacePosition = transform.TransformVector(transform.position + vec3_position);
-            return worldSpacePosition;
+            Vector3 origin = transform.position + new Vector3(OriginKey.x * Preset.cellSize, OriginKey.y * Preset.cellSize, 0);
+            Vector3 cellPos = origin + (new Vector3(positionKey.x, positionKey.y) * Preset.cellSize);
+            return cellPos;
         }
 
         /// <summary>
@@ -72,17 +67,14 @@ namespace Darklight.Game.Grid
         /// <param name="originWorldPosition">
         ///     The world position of the origin cell of the grid.
         /// </param>
-        public static void DrawGrid2D(Grid2D_Preset preset, Vector3 originWorldPosition)
+        public static void DrawGrid2D(Grid2D grid2D)
         {
-            if (preset == null) return;
-            if (originWorldPosition == null) originWorldPosition = Vector3.zero;
-
-            Vector3 origin = originWorldPosition + new Vector3(preset.originKeyX * preset.cellSize, preset.originKeyY * preset.cellSize, 0);
+            Grid2D_Preset preset = grid2D.Preset;
             for (int x = 0; x < preset.gridSizeX; x++)
             {
                 for (int y = 0; y < preset.gridSizeY; y++)
                 {
-                    Vector3 cellPos = origin + new Vector3(x * preset.cellSize, y * preset.cellSize, 0);
+                    Vector3 cellPos = grid2D.GetWorldPositionOfCell(new Vector2Int(x, y));
                     CustomGizmos.DrawWireSquare(cellPos, preset.cellSize, Vector3.forward, Color.green);
                 }
             }
@@ -90,7 +82,7 @@ namespace Darklight.Game.Grid
 
         public virtual void OnDrawGizmosSelected()
         {
-            DrawGrid2D(Preset, transform.position);
+            DrawGrid2D(this);
         }
     }
 

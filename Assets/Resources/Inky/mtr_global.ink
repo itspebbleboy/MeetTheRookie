@@ -10,7 +10,6 @@
 // ====== INCLUDE == >>
 INCLUDE _characters/Misra.ink
 
-
 // ====== SPEAKER HANDLING == >>
 LIST Speaker = (Unkown), Misra, Lupe, Chief_Thelton, Marlowe, Beth, Mel, Roy_Rodgerson, Jenny, Calvin, Josh, Irene, Jenkins
 VAR CURRENT_SPEAKER = Speaker.Lupe

@@ -6,9 +6,8 @@
 // ---------------------------------------------- >>/^*
 INCLUDE mtr_global.ink
 
-
-
-=== level1 ===
+-> debug_level1
+=== debug_level1 ===
 * [Scene1_0] -> scene1_0
 * [Scene1_1] -> scene1_1
 * [Scene1_2] -> scene1_2
@@ -32,8 +31,6 @@ Hey, it's Lupe. Had to change my route; tank was running low. I pit stopped outs
 ~ SetActiveQuestChain(Level1_Quests)
 ~ StartQuest(FIRST_INTERACT)
 -> DONE
-
-
 
 = gas_pump
 ~ CompleteQuest(FIRST_INTERACT)

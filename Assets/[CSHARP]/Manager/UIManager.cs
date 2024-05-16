@@ -159,7 +159,6 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
 
     [Header("Speech Bubble")]
     [SerializeField] UXML_UIDocumentPreset _speechBubblePreset;
-    public float speechBubbleScalar = 1.5f;
     [ShowOnly] public UXML_RenderTextureObject speechBubble;
 
 
@@ -189,11 +188,12 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     }
 
     // ----- [[ PUBLIC METHODS ]] ------------------------------------>
-    public void ShowInteractIcon(Vector3 worldPosition)
+    public void ShowInteractIcon(Vector3 worldPosition, float scale = 1)
     {
         if (interactIcon == null)
             interactIcon = CreateRenderTextureObject(_interactIconPreset);
         interactIcon.transform.position = worldPosition;
+        interactIcon.SetLocalScale(scale);
     }
 
     public void RemoveInteractIcon()
@@ -206,12 +206,12 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
         interactIcon = null;
     }
 
-    public void CreateSpeechBubble(Vector3 worldPosition, string text)
+    public void CreateSpeechBubble(Vector3 worldPosition, string text, float scale = 1f)
     {
         if (speechBubble == null)
             speechBubble = CreateRenderTextureObject(_speechBubblePreset);
         speechBubble.transform.position = worldPosition;
-        speechBubble.SetLocalScale(speechBubbleScalar);
+        speechBubble.SetLocalScale(scale);
 
         // Set the text of the speech bubble
         speechBubble.ElementQuery<SpeechBubble>().text = text;

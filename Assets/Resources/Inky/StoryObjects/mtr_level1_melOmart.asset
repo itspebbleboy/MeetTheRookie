@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inkyTextAsset: {fileID: 4900000, guid: e65680929613ccb44bac06bb6e1e4789, type: 3}
   _knots:
-  - name: level1
+  - name: debug_level1
     stitches: []
   - name: scene1_0
     stitches: []

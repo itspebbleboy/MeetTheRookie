@@ -15,7 +15,7 @@ MonoBehaviour:
   uniqueID: d93f264dc42673241aa321114de22965
   gridSizeX: 1
   gridSizeY: 1
-  cellSize: 1
+  cellSize: 0.5
   originKeyX: 0
   originKeyY: 0
   keys:

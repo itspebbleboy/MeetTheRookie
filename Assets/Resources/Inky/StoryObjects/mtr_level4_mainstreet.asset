@@ -19,6 +19,8 @@ MonoBehaviour:
   - name: scene4_1
     stitches:
     - scene4_1.talk_to_misra
+    - scene4_1.idahome_and_goods
+    - scene4_1.powerup_arcade
     - scene4_1.strange_symbol_on_fountain
     - scene4_1.goop_on_fountain
     - scene4_1.the_rockin_kettle

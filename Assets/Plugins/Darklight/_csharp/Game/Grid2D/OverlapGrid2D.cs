@@ -17,6 +17,7 @@ namespace Darklight.Game.Grid
         [SerializeField,
         Tooltip("OverlapGrid2D uses OverlapBoxAll to detect colliders in the grid. This is the layer mask used to filter which colliders are detected.")]
         private LayerMask layerMask;
+        public bool editMode = false;
 
         public override void Awake()
         {
@@ -97,7 +98,7 @@ namespace Darklight.Game.Grid
 
         public override void OnDrawGizmosSelected()
         {
-            OverlapGrid2DEditor.DrawOverlapGrid(this, transform.position);
+            //OverlapGrid2DEditor.DrawOverlapGrid(this, transform.position);
         }
 
     }
@@ -133,15 +134,13 @@ namespace Darklight.Game.Grid
 
         public void OnSceneGUI()
         {
-
+            grid2D = (OverlapGrid2D)target;
+            DrawOverlapGrid(grid2D, grid2D.editMode);
         }
 
-        public static void DrawOverlapGrid(OverlapGrid2D grid2D, Vector3 originWorldPosition, bool editMode = false)
+        public static void DrawOverlapGrid(OverlapGrid2D grid2D, bool editMode = false)
         {
             Grid2D_Preset preset = grid2D.Preset;
-            if (preset == null) return;
-            if (originWorldPosition == null) originWorldPosition = Vector3.zero;
-            Vector3 origin = originWorldPosition + new Vector3(preset.originKeyX * preset.cellSize, preset.originKeyY * preset.cellSize, 0);
             float cellSize = preset.cellSize;
 
             for (int x = 0; x < preset.gridSizeX; x++)
@@ -152,16 +151,19 @@ namespace Darklight.Game.Grid
                     Grid2D_Data data = grid2D.GetData(positionKey);
                     if (data.initialized == false) continue; // Skip uninitialized data
 
-                    Vector3 cellPos = origin + new Vector3(x * preset.cellSize, y * preset.cellSize, 0);
+                    Vector3 cellPos = grid2D.GetWorldPositionOfCell(positionKey);
 
-                    CustomGizmos.DrawWireSquare(cellPos, cellSize, Vector3.forward, data.GetColor());
+                    CustomGizmos.DrawWireSquare(cellPos, preset.cellSize, Vector3.forward, data.GetColor());
                     CustomGizmos.DrawLabel($"{positionKey}", cellPos, CustomGUIStyles.CenteredStyle);
 
-                    // Draw the button handle only if the grid is in edit mode
-                    CustomGizmos.DrawButtonHandle(cellPos, cellSize * 0.75f, Vector3.forward, data.GetColor(), () =>
+                    if (editMode)
                     {
-                        data.CycleDataState();
-                    }, Handles.RectangleHandleCap);
+                        // Draw the button handle only if the grid is in edit mode
+                        CustomGizmos.DrawButtonHandle(cellPos, cellSize * 0.75f, Vector3.forward, data.GetColor(), () =>
+                        {
+                            data.CycleDataState();
+                        }, Handles.RectangleHandleCap);
+                    }
                 }
             }
         }

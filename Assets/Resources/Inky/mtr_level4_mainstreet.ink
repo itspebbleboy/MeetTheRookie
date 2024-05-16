@@ -9,6 +9,8 @@
 // Last Edited By : Sky 5/15
 // **** HEAVILY MODIFIED VERSION - 5/15 Build - in Unity Only
 //      + missing 4.2 onward
+//
+// **** NOTES:
 // ---------------------------------------------- >>/^*
 INCLUDE mtr_global.ink
 
@@ -17,8 +19,8 @@ VAR closed_signs = 0
 
 
 // Debug Knot for Inky Testing
+-> debug_level4
 === debug_level4 ===
-Hello Main - Level 4
 * [Scene 4_1 - Main Street] -> scene4_1
 
 
@@ -33,25 +35,32 @@ Hello Main - Level 4
 ~ SetActiveQuestChain(Level4_Quests)
 
 + [talk to misra] -> talk_to_misra
-+ [the rockin kettle] -> the_rockin_kettle
-+ [strange symbol] -> strange_symbol_on_fountain
-+ [goop] -> goop_on_fountain
-+ [idahome and goods] 
-    //-> scene4_2
-    -> DONE
-+ [power up arcade] 
-    //-> scene4_3
-    -> DONE
-+ [laundromat] -> laundromat_closed_sign
+
++ [go to gen store] -> idahome_and_goods
++ [go to arcade] -> powerup_arcade
++ [go to bar] -> the_rockin_kettle
+
++ [laundromat sign] -> laundromat_closed_sign
 + [einab sign] -> einab_closed_sign
-+ [apartments for lease] -> apartments_for_lease_sign
++ [apartments sign] -> apartments_for_lease_sign
 + [diner closed sign] -> diner_closed_sign
 + [clothing store closed sign] -> clothing_store_closed_sign
+
++ [strange symbol] -> strange_symbol_on_fountain
++ [goop] -> goop_on_fountain
+
 + {closed_signs >= 5} ["The Heart of Kettle Rock" seems a bit...barren.]
 -> DONE
 
 = talk_to_misra
--> Misra_Dialogue
+    -> Misra_Dialogue
+
+= idahome_and_goods
+    -> DONE
+    
+
+= powerup_arcade
+    -> DONE
 
 = strange_symbol_on_fountain
     {IsQuestComplete(visited_symbol):
@@ -93,6 +102,7 @@ Hello Main - Level 4
 
 
    
+
 = the_rockin_kettle
     {IsQuestComplete(visited_gen_store) && IsQuestComplete(visited_arcade):
         ~ SetSpeaker(Speaker.Misra)
@@ -124,6 +134,7 @@ Hello Main - Level 4
     -> DONE
     }
     
+
 = laundromat_closed_sign
     ~ closed_signs ++ 
     ~ SetSpeaker(Speaker.Misra)
@@ -131,7 +142,6 @@ Hello Main - Level 4
     ~ SetSpeaker(Speaker.Lupe)
     [Lupe] Doesn't seem very 24/7 to me.
         -> DONE
-
 
 = einab_closed_sign
     ~ closed_signs ++ 
@@ -143,11 +153,11 @@ Hello Main - Level 4
     [Lupe] Hm..
         -> DONE
     
+
 = diner_closed_sign
     ~ closed_signs ++ 
     [Lupe] Jeez, what <i>is</i> open?
     -> DONE
-
 
 = clothing_store_closed_sign
    ~ closed_signs ++ 
@@ -157,6 +167,7 @@ Hello Main - Level 4
    ~ SetSpeaker(Speaker.Lupe)
         -> DONE
         
+
 = heart_of_kettle
         ~ SetSpeaker(Speaker.Misra)
         [Misra] It has slowed down.

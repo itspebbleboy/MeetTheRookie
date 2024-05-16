@@ -1,4 +1,3 @@
--> Misra_Dialogue.default
 
 === Misra_Dialogue ===
 #NPC tag

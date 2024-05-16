@@ -37,7 +37,7 @@ public interface IGrid2D_Data
     /// <summary>
     /// The size of the coordinate in the grid.
     /// </summary>
-    public float coordinateSize { get; }
+    public float cellSize { get; }
 
     /// <summary>
     /// Event to notify listeners of a data state change.
@@ -89,7 +89,7 @@ public class Grid2D_Data : IGrid2D_Data
     public bool disabled { get; protected set; }
     public int weight { get; protected set; }
     public Vector3 worldPosition { get; set; }
-    public float coordinateSize { get; private set; }
+    public float cellSize { get; private set; }
 
     /// <summary>
     /// Event to notify listeners of a data state change.
@@ -102,7 +102,7 @@ public class Grid2D_Data : IGrid2D_Data
         this.disabled = false;
         this.weight = 0;
         this.worldPosition = Vector3.zero;
-        this.coordinateSize = 1;
+        this.cellSize = 1;
     }
 
     public Grid2D_Data(Vector2Int positionKey, bool disabled, int weight, Vector3 worldPosition, float coordinateSize)
@@ -114,14 +114,14 @@ public class Grid2D_Data : IGrid2D_Data
 
     public virtual void Initialize(Grid2D_Data data)
     {
-        Initialize(data.positionKey, data.disabled, data.weight, data.worldPosition, data.coordinateSize);
+        Initialize(data.positionKey, data.disabled, data.weight, data.worldPosition, data.cellSize);
     }
 
     public virtual void Initialize(Grid2D_SerializedData serializedData, Vector3 worldPosition, float coordinateSize)
     {
         Initialize(serializedData.ToData()); // Load the data from the serialized data object
         this.worldPosition = worldPosition; // Set the world position
-        this.coordinateSize = coordinateSize; // Set the coordinate size
+        this.cellSize = coordinateSize; // Set the coordinate size
     }
 
     public virtual void Initialize(Vector2Int positionKey, bool disabled, int weight, Vector3 worldPosition, float coordinateSize)
@@ -130,7 +130,7 @@ public class Grid2D_Data : IGrid2D_Data
         this.disabled = disabled;
         this.weight = weight;
         this.worldPosition = worldPosition;
-        this.coordinateSize = coordinateSize;
+        this.cellSize = coordinateSize;
         initialized = true;
     }
 
@@ -248,7 +248,7 @@ public class OverlapGrid2D_Data : Grid2D_Data
     public override void UpdateData()
     {
         // Update the collider data
-        this.colliders = Physics2D.OverlapBoxAll(worldPosition, Vector2.one * coordinateSize, 0, layerMask);
+        this.colliders = Physics2D.OverlapBoxAll(worldPosition, Vector2.one * cellSize, 0, layerMask);
         if (!disabledInitially)
         {
             this.disabled = colliders.Length > 0;
