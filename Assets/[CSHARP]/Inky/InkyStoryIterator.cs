@@ -13,7 +13,7 @@ public class InkyStoryIterator : StateMachine<InkyStoryIterator.State>
     public enum State { NULL, START, DIALOGUE, CHOICE, END }
     private const string Prefix = "[InkyKnot] >> ";
     private InkyStoryObject _storyObject;
-    private Story story => _storyObject.Story;
+    private Story story => _storyObject.story;
     private Dictionary<Choice, int> _choiceMap = new Dictionary<Choice, int>();
 
     // ------------------- [[ PUBLIC ACCESSORS ]] -------------------
@@ -54,7 +54,7 @@ public class InkyStoryIterator : StateMachine<InkyStoryIterator.State>
         }
     }
 
-    public void ContinueKnot()
+    public void ContinueStory()
     {
 
         // Check if null
@@ -123,7 +123,7 @@ public class InkyStoryIterator : StateMachine<InkyStoryIterator.State>
         Choice choice = story.currentChoices[choiceIndex];
         story.ChooseChoiceIndex(choice.index);
         _choiceMap.Clear();
-        ContinueKnot();
+        ContinueStory();
     }
 
 
@@ -155,5 +155,7 @@ public class InkyStoryIterator : StateMachine<InkyStoryIterator.State>
 
         }
     }
+
+
 }
 

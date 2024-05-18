@@ -390,8 +390,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/Resources/FMOD/MeetTheRookie.fspro
-  sourceBankPath: Assets/Resources/FMOD/Build
+  sourceProjectPath: Assets/Resources/MTR_FMOD_Repo/Meeting the Rookie.fspro
+  sourceBankPath: Assets/Resources/MTR_FMOD_Repo/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -415,12 +415,12 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - DatingAmbience
   - DatingMusic
   - DatingSFX
   - GeneralSFX
   - HorrorMusic
   - HorrorSFX
+  - TownAmbience
   - TownMusic
   BanksToLoad: []
   LiveUpdatePort: 9264
@@ -435,7 +435,7 @@ MonoBehaviour:
   SharedLibraryTimeSinceStart: 0
   CurrentVersion: 131618
   HideSetupWizard: 1
-  LastEventReferenceScanVersion: 131617
+  LastEventReferenceScanVersion: 131618
   Platforms:
   - {fileID: -8642606825536281111}
   - {fileID: -7862366813153210628}

@@ -3,6 +3,8 @@ using Darklight.UnityExt.Editor;
 using Darklight.Game.Grid;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
+using NaughtyAttributes;
 
 
 #if UNITY_EDITOR
@@ -20,7 +22,7 @@ public class Interactable : OverlapGrid2D, IInteract
         get
         {
             if (_storyObject == null) return new List<string>();
-            return InkyStoryObject.GetAllKnots(_storyObject.Story);
+            return InkyStoryObject.GetAllKnots(_storyObject.story);
         }
     }
 
@@ -31,7 +33,7 @@ public class Interactable : OverlapGrid2D, IInteract
         {
             if (_storyObject == null) return new List<string>();
             if (_sceneKnot == null || _sceneKnot == "") return new List<string>();
-            return InkyStoryObject.GetAllStitchesInKnot(_storyObject.Story, _sceneKnot);
+            return InkyStoryObject.GetAllStitchesInKnot(_storyObject.story, _sceneKnot);
         }
     }
 
@@ -39,8 +41,9 @@ public class Interactable : OverlapGrid2D, IInteract
 
     //[HorizontalLine(color: EColor.Gray)]
     [Header("Interactable")]
-    [SerializeField] Sprite _sprite;
+    [SerializeField, ShowAssetPreview] Sprite _sprite;
 
+    [Header("InkyStory")]
     [Tooltip("The parent InkyStoryObject that this interactable belongs to. This is equivalent to a 'Level' of the game.")]
     [SerializeField] protected InkyStoryObject _storyObject;
 
@@ -50,6 +53,11 @@ public class Interactable : OverlapGrid2D, IInteract
     [DropdownAttribute("_interactionStitches")]
     public string _interactionStitch;
     protected InkyStoryIterator _storyIterator;
+
+    [Header("FMOD One Shots")]
+    [SerializeField] EventReference _onFirstInteraction;
+    [SerializeField] EventReference _onContinuedInteraction;
+    [SerializeField] EventReference _onCompleteInteraction;
 
     [Header("State Flags")]
     [ShowOnly, SerializeField] bool _isTarget;
@@ -110,7 +118,7 @@ public class Interactable : OverlapGrid2D, IInteract
     {
         isTarget = true;
         OverlapGrid2D_Data targetData = GetBestData();
-        UIManager.Instance.ShowInteractIcon(targetData.worldPosition, targetData.cellSize);
+        UIManager.Instance.ShowInteractIcon(transform.position, targetData.cellSize);
     }
 
     public virtual void TargetClear()
@@ -130,11 +138,15 @@ public class Interactable : OverlapGrid2D, IInteract
             isActive = true;
             isComplete = false;
 
+            // Go To the Interaction Stitch
             _storyIterator = new InkyStoryIterator(storyObject, InkyStoryIterator.State.NULL);
             _storyIterator.GoToKnotOrStitch(_interactionStitch);
 
             // >> TEMPORARY COLOR CHANGE
             StartCoroutine(ColorChangeRoutine(_interactionTint, 0.25f));
+
+            // Play FMOD One Shot
+            SoundManager.PlayOneShot(_onFirstInteraction);
 
             OnFirstInteraction?.Invoke();
             Debug.Log($"INTERACT :: {name} >> First Interaction");
@@ -150,7 +162,10 @@ public class Interactable : OverlapGrid2D, IInteract
         }
 
         // Continue the interaction
-        _storyIterator.ContinueKnot();
+        _storyIterator.ContinueStory();
+
+        SoundManager.PlayOneShot(_onContinuedInteraction);
+
         OnInteraction?.Invoke(_storyIterator.CurrentText);
         Debug.Log($"INTERACT :: {name} >> Continue Interaction");
     }
@@ -161,6 +176,8 @@ public class Interactable : OverlapGrid2D, IInteract
         isTarget = false;
         isComplete = true;
         _storyIterator = null;
+
+        SoundManager.PlayOneShot(_onCompleteInteraction);
 
         OnCompleted?.Invoke();
     }

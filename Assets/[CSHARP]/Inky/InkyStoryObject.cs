@@ -16,11 +16,11 @@ public class InkyKnot
 /// <summary>
 /// Scriptable Object to store Ink stories and their associated data.
 /// </summary>
-[CreateAssetMenu(menuName = "Darklight/Inky/Story")]
+[CreateAssetMenu(menuName = "Darklight/Inky/StoryObject")]
 public class InkyStoryObject : ScriptableObject
 {
     // << STORY >>
-    public Story Story
+    public Story story
     {
         get
         {
@@ -137,5 +137,28 @@ public class InkyStoryObject : ScriptableObject
 
         // Set up error handling
         _story.onError += (message, lineNum) => Debug.LogError($"Ink Error: {message} at line {lineNum}");
+    }
+
+    public InkyVariable GetVariable(string variableName)
+    {
+        return _variables.Find(variable => variable.Key == variableName);
+    }
+
+    public void BindExternalFunction(string funcName, Story.ExternalFunction function, bool lookaheadSafe = false)
+    {
+        story.BindExternalFunctionGeneral(funcName, function, lookaheadSafe);
+    }
+
+    public object RunExternalFunction(string func, object[] args)
+    {
+        if (story.HasFunction(func))
+        {
+            return story.EvaluateFunction(func, args);
+        }
+        else
+        {
+            Debug.LogError("Could not find function: " + func);
+            return null;
+        }
     }
 }

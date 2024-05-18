@@ -15,61 +15,21 @@ using UnityEditor;
 [RequireComponent(typeof(InkyStoryLoader))]
 public class InkyStoryManager : MonoBehaviourSingleton<InkyStoryManager>
 {
-    // ----- [[ STATIC FIELDS ]] ----- >>
-    public static Story currentStory;
+    public InkyStoryLoader storyLoader => GetComponent<InkyStoryLoader>();
 
-    // ----- [[ SERIALIZED FIELDS ]] ----- >>
-    [SerializeField] InkyStoryObject currentStoryObject;
-    [SerializeField] InkyStoryIterator currentKnotIterator;
+    public InkyStoryObject globalStoryObject;
 
-    public void ContinueStory()
+    [SerializeField] private string _currentSpeaker;
+
+    public override void Awake()
     {
-        Story story = currentStoryObject.Story;
+        base.Awake();
 
-        if (story.canContinue)
+        if (globalStoryObject != null)
         {
-            if (currentKnotIterator != null)
-            {
-                currentKnotIterator.ContinueKnot();
-            }
-            else
-            {
-                // Continue the main story thread
-                string text = story.Continue();
-                text = text.TrimEnd('\n');
-                Console.Log($"{Prefix} ContinueStory -> {text}");
-            }
-        }
-        else if (story.currentChoices.Count > 0)
-        {
-            Console.Log($"{Prefix} Choices: {story.currentChoices.Count}", 1);
-
-            foreach (Choice choice in story.currentChoices)
-            {
-                Console.Log($"{Prefix} Choice: {choice.text}", 1);
-            }
-        }
-        else
-        {
-            Console.Log($"{Prefix} End of Story");
-        }
-    }
-
-    public void BindExternalFunction(string funcName, Story.ExternalFunction function, bool lookaheadSafe = false)
-    {
-        currentStory.BindExternalFunctionGeneral(funcName, function, lookaheadSafe);
-    }
-
-    public object RunExternalFunction(string func, object[] args)
-    {
-        if (currentStory.HasFunction(func))
-        {
-            return currentStory.EvaluateFunction(func, args);
-        }
-        else
-        {
-            Debug.LogError("Could not find function: " + func);
-            return null;
+            InkyVariable currentSpeaker = globalStoryObject.GetVariable("CURRENT_SPEAKER");
+            if (currentSpeaker != null)
+                _currentSpeaker = currentSpeaker.Value.ToString();
         }
     }
 }
@@ -93,11 +53,10 @@ public class InkyStoryManagerCustomEditor : Editor
 
         EditorGUI.BeginChangeCheck();
 
-        base.DrawDefaultInspector();
+        base.OnInspectorGUI();
 
         if (EditorGUI.EndChangeCheck())
         {
-            _script.Awake();
             _serializedObject.ApplyModifiedProperties();
         }
     }

@@ -9,6 +9,7 @@ namespace Darklight.UXML.Element
     [UxmlElement]
     public partial class SelectableButton : SelectableVisualElement<Button>
     {
+        public class SelectableButtonFactory : UxmlFactory<SelectableButton> { }
 
         [UxmlAttribute]
         public string text
@@ -42,6 +43,8 @@ namespace Darklight.UXML.Element
     [UxmlElement]
     public partial class SelectableSceneChangeButton : SelectableButton
     {
+        public class SelectableSceneChangeButtonFactory : UxmlFactory<SelectableSceneChangeButton> { }
+
         [UxmlAttribute]
         public SceneAsset scene;
         public SelectableSceneChangeButton()

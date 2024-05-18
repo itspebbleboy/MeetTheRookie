@@ -7,9 +7,7 @@
     <engine:VisualElement name="body">
         <engine:VisualElement style="flex-grow: 1;" />
         <engine:GroupBox class="vert-direction">
-            <Darklight.Selectable.SelectableSceneChangeButton name="play-button" text-override="PLAY" scene="project://database/Assets/Scenes/Build/SCENE_1.1.unity?fileID=102900000&amp;guid=dec0233f10f64f342aa5bb6310fcb246&amp;type=3#SCENE_1.1" text="Play from Start (Scene1.1)" />
-            <Darklight.Selectable.SelectableSceneChangeButton name="town-button" text-override="PLAY" scene="project://database/Assets/Scenes/Build/SCENE_4.1%20-%20Main%20Street.unity?fileID=102900000&amp;guid=1518c46f984580d4eb70249f8d0ba859&amp;type=3#SCENE_4.1 - Main Street" text="Skip to Main Street (Scene 4.1)" />
-            <Darklight.Selectable.SelectableButton name="quit-button" text="Quit" />
+            <Darklight.UXML.Element.SelectableSceneChangeButton text="Play" scene="project://database/Assets/Scenes/Build/SCENE_4_1%20-%20Main%20Street.unity?fileID=102900000&amp;guid=938279deb4ab77d4596376237e2dadaa&amp;type=3#SCENE_4_1 - Main Street" />
         </engine:GroupBox>
         <engine:VisualElement style="flex-grow: 1;" />
     </engine:VisualElement>

@@ -3,6 +3,10 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Darklight.UnityExt.Editor;
 using Darklight.UnityExt;
+using UnityEngine.SceneManagement;
+using UnityEditor.SceneManagement;
+
+
 
 
 
@@ -114,12 +118,17 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             count++;
         }
 
-        Debug.Log($"{count} hidden objects have been destroyed.");
+        Debug.Log($"{count} UIDocuments have been destroyed.");
     }
 #endif
     #endregion <<< ======= [[ STATIC METHODS ]] =======
 
     // ----- [[ UI CONTROLLERS ]] ------------------------------------>
+    [Header("Main Menu Controller")]
+    private MainMenuController _mainMenu;
+    [SerializeField] UXML_UIDocumentPreset _mainMenuPreset;
+    [SerializeField] SceneAsset _mainMenuScene;
+
 
     [Header("Game UI Controller")]
     private GameUIController _gameUI;
@@ -177,9 +186,15 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
     {
         base.Awake(); // << Update the Singleton instance
 
-        CleanUpDocuments(); // << Clean up hidden documents
-
-        gameUIController?.Initialize(_gameUIPreset);
+        //CleanUpDocuments(); // << Clean up hidden documents
+        /*
+        if (SceneManager.GetActiveScene().name == _mainMenuScene.name)
+        {
+            _mainMenu = CreateUIDocumentObject<MainMenuController>(_mainMenuPreset);
+            _mainMenu.Initialize(_mainMenuPreset);
+        }
+        */
+        //gameUIController?.Initialize(_gameUIPreset);
     }
 
     void Update()
@@ -194,6 +209,9 @@ public class UIManager : MonoBehaviourSingleton<UIManager>
             interactIcon = CreateRenderTextureObject(_interactIconPreset);
         interactIcon.transform.position = worldPosition;
         interactIcon.SetLocalScale(scale);
+
+        //VisualElement icon = interactIcon.ElementQuery<VisualElement>();
+        //ScaleElementToScreenSize(icon, scale);
     }
 
     public void RemoveInteractIcon()

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab6be8fcf6d2428095dffd6197dee33, type: 3}
+  m_Name: MainMenuPreset
+  m_EditorClassIdentifier: 
+  visualTreeAsset: {fileID: 9197481963319205126, guid: 7c8cfc67c6d619841b8976b5d44e773f, type: 3}
+  panelSettings: {fileID: 11400000, guid: 9b3a92b9a918eea40b11e9a8e06da64b, type: 2}

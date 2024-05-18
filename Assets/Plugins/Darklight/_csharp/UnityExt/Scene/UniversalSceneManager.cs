@@ -90,11 +90,11 @@ namespace Darklight.UnityExt.Scene
                 LoadBuildScenes();
             }
 
-            SceneSelector();
 
             // Save changes
             if (GUI.changed)
             {
+                SceneSelector();
                 EditorUtility.SetDirty(_script);
                 EditorSceneManager.MarkSceneDirty(_script.gameObject.scene);
             }

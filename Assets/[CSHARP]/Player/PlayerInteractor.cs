@@ -8,31 +8,28 @@ using Darklight.Game.Grid;
 public class PlayerInteractor : OverlapGrid2D
 {
     public PlayerController playerController => GetComponent<PlayerController>();
-    protected HashSet<IInteract> interactables = new HashSet<IInteract>();
-    [SerializeField, ShowOnly] int _interactablesCount;
+    [SerializeField, ShowOnly] protected List<Interactable> _foundInteractables = new List<Interactable>();
 
+    [ShowOnly] public Interactable targetInteractable;
 
     public override void Update()
     {
         base.Update();
         RefreshRadar();
 
-        if (interactables.Count == 0) return;
+        if (_foundInteractables.Count == 0) return;
         // Because this method is called every frame, this line will keep the target at the correct position
-        interactables.First().TargetSet();
+        //interactables.First().TargetSet();
     }
 
     void RefreshRadar()
     {
-        if (interactables.Count == 0) return;
+        if (_foundInteractables.Count == 0) return;
 
         // Temporary list to hold items to be removed
-        List<IInteract> toRemove = new List<IInteract>();
+        List<Interactable> toRemove = new List<Interactable>();
 
-        // Update the interaction count
-        _interactablesCount = interactables.Count;
-
-        foreach (IInteract interactable in interactables)
+        foreach (Interactable interactable in _foundInteractables)
         {
             if (interactable == null) continue;
             if (interactable.isComplete)
@@ -44,35 +41,26 @@ public class PlayerInteractor : OverlapGrid2D
         }
 
         // Remove the completed interactions from the HashSet
-        foreach (IInteract completedInteraction in toRemove)
+        foreach (Interactable completedInteraction in toRemove)
         {
-            interactables.Remove(completedInteraction);
+            _foundInteractables.Remove(completedInteraction);
         }
     }
 
     public bool InteractWithTarget()
     {
-        if (interactables.Count == 0) return false;
+        if (_foundInteractables.Count == 0) return false;
 
         // Get the Target Interactable
-        IInteract targetInteractable = interactables.First();
+        Interactable targetInteractable = _foundInteractables.First();
+        if (targetInteractable == null) return false;
         targetInteractable.TargetClear();
-        if (targetInteractable.isComplete) return false;
-
         targetInteractable.Interact(); // << MAIN INTERACTION
-
-        // Check if the target is complete
-        if (targetInteractable.isComplete)
-        {
-            UIManager.Instance.DestroySpeechBubble();
-            playerController.ExitInteraction();
-            interactables.Remove(targetInteractable);
-        }
 
         if (targetInteractable is NPC_Interactable)
         {
             NPC_Interactable npcInteractable = targetInteractable as NPC_Interactable;
-            playerController.cameraController.SetOffsetRotation(playerController.transform, npcInteractable.transform);
+            //playerController.cameraController.SetOffsetRotation(playerController.transform, npcInteractable.transform);
             //npcInteractable.DialogueBubble.TextureUpdate();
         }
         // Show the player's dialogue bubble
@@ -83,7 +71,19 @@ public class PlayerInteractor : OverlapGrid2D
             UIManager.Instance.CreateSpeechBubble(targetData.worldPosition, interactable.currentText, targetData.cellSize);
         }
 
+        if (targetInteractable.isComplete)
+        {
+            ExitInteraction();
+            return false;
+        }
+
         return true;
+    }
+
+    public void ExitInteraction()
+    {
+        UIManager.Instance.DestroySpeechBubble();
+        playerController.ExitInteraction();
     }
 
 
@@ -94,20 +94,22 @@ public class PlayerInteractor : OverlapGrid2D
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        IInteract interactable = other.GetComponent<IInteract>();
+        Interactable interactable = other.GetComponent<Interactable>();
         Debug.Log($"Player Interactor :: {interactable}");
 
         if (interactable == null) return;
         if (interactable.isComplete) return;
-        interactables.Add(interactable);
+        _foundInteractables.Add(interactable);
+        interactable.TargetSet();
+
     }
 
 
     void OnTriggerExit2D(Collider2D other)
     {
-        IInteract interactable = other.GetComponent<IInteract>();
+        Interactable interactable = other.GetComponent<Interactable>();
         if (interactable == null) return;
-        interactables.Remove(interactable);
+        _foundInteractables.Remove(interactable);
         interactable.TargetClear();
     }
 }

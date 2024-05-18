@@ -20,31 +20,34 @@ namespace Darklight.Game.Camera
     [ExecuteAlways]
     public class CameraRig : MonoBehaviour
     {
+
+        // << GET ALL CAMERAS IN CHILDREN >> -----------------------------------
+        [Header("Cameras")]
+        [Tooltip("All cameras that are children of this object.")]
         [SerializeField] UnityEngine.Camera[] _camerasInChildren = new UnityEngine.Camera[0];
         public void GetCamerasInChildren()
         {
             _camerasInChildren = GetComponentsInChildren<UnityEngine.Camera>();
         }
 
+        // << FOCUS TARGET >> -------------------------------------------------
+        [Header("Focus Target")]
+        [Tooltip("The target that the camera will focus on.")]
         [SerializeField] private Transform _focusTarget;
+        [SerializeField, ShowOnly] private Vector3 _focusTargetPosition = Vector3.zero;
+        [SerializeField, ShowOnly] private Vector3 _focusTargetPositionOffset = Vector3.zero;
+        [SerializeField, Range(-5f, 5)] float _focusOffsetY = 0f;
         public void SetFocusTarget(Transform target)
         {
             _focusTarget = target;
         }
 
         [SerializeField, ShowOnly] private Vector3 _offsetPosition;
-        [SerializeField, ShowOnly] private Vector3 _offsetRotation = Vector3.zero;
         public void SetOffsetRotation(Transform mainTarget, Transform secondTarget)
         {
             float mainX = mainTarget.position.x;
             float secondX = secondTarget.position.x;
             float middleX = (secondX - mainX) / 2;
-            _offsetRotation = new Vector3(middleX, 0, 0);
-        }
-
-        public void ResetOffsetRotation()
-        {
-            _offsetRotation = Vector3.zero;
         }
 
         [Header("Lerp Speed")]
@@ -57,7 +60,9 @@ namespace Darklight.Game.Camera
 
         [Space(10), Header("Distance")]
         [SerializeField, Range(-50, 50)] private float _distanceY = 0f; // distance from the target on the Y axis
-        [SerializeField, Range(0, 100)] private float _distanceZ = 10f; // distance from the targeton the Z axis
+        [SerializeField, Range(0, 100)] private float _distanceZ = 10f; // distance from the target on the Z axis
+
+
 
         [Header("Field of View")]
         [SerializeField, Range(0.1f, 190)] private float _baseFOV = 5f;
@@ -77,16 +82,26 @@ namespace Darklight.Game.Camera
         {
             GetCamerasInChildren();
 
+            // << IF THERE IS NO FOCUS TARGET, SET THE POSITION TO ZERO >>
+            if (_focusTarget == null)
+            {
+                _focusTargetPosition = Vector3.zero;
+            }
+            else
+            {
+                _focusTargetPosition = _focusTarget.position;
+            }
+
             // set the offsets
             _offsetPosition = new Vector3(0, _distanceY, -_distanceZ);
-            //_offsetRotation = Vector3.zero;
+            _focusTargetPositionOffset = new Vector3(0, _focusOffsetY, 0);
 
             // set the position
-            Vector3 newPosition = _focusTarget.position + _offsetPosition;
+            Vector3 newPosition = _focusTargetPosition + _offsetPosition;
             transform.position = Vector3.Lerp(transform.position, newPosition, _positionLerpSpeed * Time.deltaTime);
 
             // set the rotation
-            Quaternion newRotation = GetLookRotation(newPosition, _focusTarget.position + _offsetRotation);
+            Quaternion newRotation = GetLookRotation(newPosition, _focusTargetPosition + _focusTargetPositionOffset);
             transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, _rotationLerpSpeed * Time.deltaTime);
 
             // << UPDATE ALL CAMERAS >>

@@ -195,11 +195,12 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Interact()
     {
-        if (stateMachine.CurrentState != PlayerState.INTERACTION)
+
+        bool result = interactor.InteractWithTarget();
+        if (result && stateMachine.CurrentState != PlayerState.INTERACTION)
         {
             stateMachine.GoToState(PlayerState.INTERACTION);
         }
-        interactor.InteractWithTarget();
     }
 
     public void ExitInteraction()

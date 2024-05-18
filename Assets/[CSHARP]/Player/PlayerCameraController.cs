@@ -11,9 +11,9 @@ public class PlayerCameraController : CameraController
     PlayerController _playerController;
 
     [Header(">> Player Camera State Adjustments")]
-    [SerializeField] private float defaultStateFOVOffset = 0f;
-    [SerializeField] private float followTargetStateFOVOffset = -0.25f;
-    [SerializeField] private float closeUpStateFOVOffset = -0.5f;
+    [SerializeField, Range(-1, 1)] private float defaultStateFOVOffset = 0f;
+    [SerializeField, Range(-1, 1)] private float followTargetStateFOVOffset = -0.25f;
+    [SerializeField, Range(-1, 1)] private float closeUpStateFOVOffset = -0.5f;
 
     public void Awake()
     {

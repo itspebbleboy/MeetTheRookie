@@ -11,9 +11,9 @@ public class RunSynthesisRealQuick : MonoBehaviour
     }
 
     void Initialize() {
-        InkyStoryManager.Instance.ContinueStory();
-        InkyStoryManager.Instance.ContinueStory();
-        InkyStoryManager.Instance.ContinueStory();
-        InkyStoryManager.Instance.ContinueStory();
+        //InkyStoryManager.Instance.ContinueStory();
+        //InkyStoryManager.Instance.ContinueStory();
+        //InkyStoryManager.Instance.ContinueStory();
+        //InkyStoryManager.Instance.ContinueStory();
     }
 }

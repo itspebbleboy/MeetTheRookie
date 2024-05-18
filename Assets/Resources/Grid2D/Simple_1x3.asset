@@ -17,7 +17,7 @@ MonoBehaviour:
   gridSizeY: 1
   cellSize: 0.45
   originKeyX: -1
-  originKeyY: 0
+  originKeyY: 1
   keys:
   - {x: 0, y: 0}
   - {x: 2, y: 0}

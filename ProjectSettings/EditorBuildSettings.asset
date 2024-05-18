@@ -5,30 +5,24 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/[SCENES]/_main/MAIN_MENU.unity
-    guid: 14a5101b082acf5438a57e39dc7731e0
   - enabled: 1
-    path: Assets/Scenes/Build/SCENE_1.1.unity
-    guid: dec0233f10f64f342aa5bb6310fcb246
-  - enabled: 1
-    path: Assets/Scenes/Build/SCENE_1.2.unity
-    guid: dc4b8b818db9b2049b1ab0c869ec409f
+    path: Assets/Scenes/Build/MAIN_MENU.unity
+    guid: a592b47d8bf5b4d45999c7e160d41f46
   - enabled: 1
     path: Assets/Scenes/Build/SCENE_2 - The Precinct.unity
     guid: 69689f5ac1cb84bfda539d32a95238b7
-  - enabled: 0
-    path: Assets/[SCENES]/_main/SCENE_4.1 - Main Street.unity
-    guid: 63763f0be6c4b4d1097c3d112abd37e4
   - enabled: 1
-    path: Assets/Scenes/Build/SCENE_4.2 - General Store.unity
-    guid: 501a8c988ea034a919b0576b7dc59ee5
+    path: Assets/Scenes/Build/SCENE_4_1 - Main Street.unity
+    guid: 938279deb4ab77d4596376237e2dadaa
   - enabled: 1
-    path: Assets/Scenes/Build/SCENE_4.3 - Arcade.unity
-    guid: ba975b12f38e24506a5bc67460fe2aca
+    path: Assets/Scenes/Build/SCENE_4_2 - The General Store.unity
+    guid: f2f40d719c0e59c4ab90748c1adb5f30
   - enabled: 1
-    path: Assets/Scenes/Build/SCENE_4.1 - Main Street.unity
-    guid: 1518c46f984580d4eb70249f8d0ba859
+    path: Assets/Scenes/Build/SCENE_4_3 - The Arcade.unity
+    guid: 17f16897cc8084646a39475ff74ecdb2
+  - enabled: 1
+    path: Assets/Scenes/Build/SCENE_4_4 - The Bar.unity
+    guid: c8653d8be9c2df7428c2bb8d63c91bbf
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: c49fea8164ad24743add484f2fe7ed41, type: 2}
   m_UseUCBPForAssetBundles: 0

@@ -45,6 +45,18 @@ public class InkyStoryLoader : MonoBehaviour
         allStoriesLoaded = true;
     }
 
+    public InkyStoryObject GetStoryObject(string storyName)
+    {
+        if (_storyObjectDict.ContainsKey(storyName))
+        {
+            return _storyObjectDict[storyName];
+        }
+        else
+        {
+            Debug.LogError($"InkyStoryLoader: Story '{storyName}' not found.");
+            return null;
+        }
+    }
 
 #if UNITY_EDITOR
 

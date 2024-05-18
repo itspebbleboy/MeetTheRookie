@@ -6,8 +6,10 @@ using Darklight.UnityExt.Editor;
 public class InkyVariable
 {
     [SerializeField, ShowOnly] private string _key;
-    [SerializeField, HideInInspector] private object _value;  // Hide in Inspector because Unity cannot display 'object' directly
-    [SerializeField, ShowOnly] private string _valueAsString;  // For inspector display and possibly for serialization
+    // Hide in Inspector because Unity cannot display 'object' directly
+    [SerializeField, HideInInspector] private object _value;
+    // For inspector display and possibly for serialization   
+    [SerializeField, ShowOnly] private string _valueAsString;
 
     public string Key { get => _key; set => _key = value; }
     public object Value
