@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -152,22 +152,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: paper_medium2_0
+      name: melomart_detectiveCar_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 8
-        width: 251
-        height: 109
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f44ef3577fe14af30800000000000000
-      internalID: 4585824368742884431
+      spriteID: 8417a9fc378253149b27f7521904ea21
+      internalID: 2029054847
       vertices: []
       indices: 
       edges: []
@@ -175,7 +175,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2aa5c099be7ee3a479724a630d504868
     internalID: 0
     vertices: []
     indices: 
@@ -183,7 +183,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      paper_medium2_0: 4585824368742884431
+      melomart_detectiveCar_0: 2029054847
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

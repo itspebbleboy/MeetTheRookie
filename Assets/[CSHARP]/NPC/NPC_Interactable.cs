@@ -11,7 +11,7 @@ using UnityEditor;
 [RequireComponent(typeof(NPC_Controller))]
 public class NPC_Interactable : Interactable, IInteract
 {
-    private NPCState stateBeforeTalkedTo = NPCState.NONE;
+    private NPCState stateBeforeTalkedTo = NPCState.IDLE;
     NPC_StateMachine stateMachine => GetComponent<NPC_Controller>().stateMachine;
 
 

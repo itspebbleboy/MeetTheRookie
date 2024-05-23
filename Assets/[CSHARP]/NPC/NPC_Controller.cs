@@ -9,7 +9,7 @@ using Darklight.Utility;
 using Darklight.UnityExt.Editor;
 using System;
 
-[RequireComponent(typeof(NPC_Animator), typeof(NPC_Interactable))]
+[RequireComponent(typeof(NPC_Animator))]
 public class NPC_Controller : MonoBehaviour
 {
     public NPC_StateMachine stateMachine;
@@ -19,13 +19,34 @@ public class NPC_Controller : MonoBehaviour
     // =============== [ PUBLIC INSPECTOR VALUES ] =================== //
     public GameObject player => FindFirstObjectByType<PlayerController>().gameObject;
     public NPCState startingState = NPCState.IDLE;
+
+    public bool idleWalkLoop = false;
+
+    [Tooltip("State to return to after animation")]
+    public NPCState stateAfterAnimation = NPCState.IDLE;
+
+    [Tooltip("Speed for the WALK state")]
     [Range(0.1f, 1f)] public float npcSpeed = .2f;
+
+    [Tooltip("Speed for the FOLLOW state")]
     [Range(0.1f, 1f)] public float followSpeed = .5f;
+
+    [Tooltip("Speed for the HIDE state")]
     [Range(0.1f, 1f)] public float hideSpeed = .5f;
+
+    [Tooltip("Speed for the CHASE state")]
     [Range(0.1f, 1f)] public float chaseSpeed = .5f;
+
+    [Tooltip("Left bound for the WALK state")]
     public float leftBound;
+
+    [Tooltip("Right bound for the WALK state")]
     public float rightBound;
+
+    [Tooltip("Distance the NPC will follow the player")]
     public float followDistance = 1;
+
+    [Tooltip("Distance to cause dialogue in the SPEAK state")]
     public float chaseSpeakDistance = .75f;
     [Range(0f, 10f)] public float idleMaxDuration = 3f;
     [Range(0f, 10f)] public float walkMaxDuration = 3f;
@@ -34,12 +55,13 @@ public class NPC_Controller : MonoBehaviour
     void Start()
     {
         // Create instances of the states
-        IdleState idleState = new(NPCState.IDLE, new object[] { stateMachine, this, idleMaxDuration });
-        WalkState walkState = new(NPCState.WALK, new object[] { stateMachine, this, npcSpeed, walkMaxDuration, leftBound, rightBound });
+        IdleState idleState = new(NPCState.IDLE, new object[] { stateMachine, this, idleMaxDuration, idleWalkLoop });
+        WalkState walkState = new(NPCState.WALK, new object[] { stateMachine, this, npcSpeed, walkMaxDuration, leftBound, rightBound, idleWalkLoop });
         SpeakState speakState = new(NPCState.SPEAK, new object[] { stateMachine });
         FollowState followState = new(NPCState.FOLLOW, new object[] { stateMachine, this, followDistance, followSpeed });
         HideState hideState = new(NPCState.HIDE, new object[] { stateMachine, this, hideSpeed });
         ChaseState chaseState = new(NPCState.CHASE, new object[] { stateMachine, chaseSpeakDistance, chaseSpeed });
+        PlayAnimationState playAnimationState= new(NPCState.PLAY_ANIMATION, new object[] { stateMachine, stateAfterAnimation});
 
         // Create dictionary to hold the possible states
         Dictionary<NPCState, FiniteState<NPCState>> possibleStates = new()
@@ -50,6 +72,7 @@ public class NPC_Controller : MonoBehaviour
             { NPCState.FOLLOW, followState },
             { NPCState.HIDE, hideState },
             { NPCState.CHASE, chaseState },
+            { NPCState.PLAY_ANIMATION, playAnimationState}, 
         };
 
         // Create the NPCStateMachine
@@ -63,6 +86,7 @@ public class NPC_Controller : MonoBehaviour
         followState._stateMachine = stateMachine;
         hideState._stateMachine = stateMachine;
         chaseState._stateMachine = stateMachine;
+        playAnimationState._stateMachine = stateMachine;
     }
 
     // Update is called once per frame

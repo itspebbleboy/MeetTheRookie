@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Darklight.Utility;
 using UnityEngine;
 
-public enum NPCState { NONE, IDLE, WALK, SPEAK, FOLLOW, HIDE, CHASE }
+public enum NPCState { NONE, IDLE, WALK, SPEAK, FOLLOW, HIDE, CHASE, PLAY_ANIMATION }
 
 public class NPC_StateMachine : FiniteStateMachine<NPCState>
 {
@@ -51,22 +51,27 @@ public class IdleState : FiniteState<NPCState>
     private Coroutine coroutine = null;
     private readonly float _maxDuration;
 
+    private readonly bool _idleWalkLoop;
+
     /// <param name="args">
     ///     args[0] = NPC_StateMachine (_stateMachine)
     ///     args[1] = MonoBehaviour (_coroutineRunner)
     ///     args[2] = float (_maxDuration)
+    ///     args[3] = bool  (_idleWalkLoop)
     /// </param>
     public IdleState(NPCState stateType, params object[] args) : base(stateType, args)
     {
         _stateMachine = (NPC_StateMachine)args[0];
         _coroutineRunner = (MonoBehaviour)args[1];
         _maxDuration = (float)args[2];
+        _idleWalkLoop = (bool)args[3];
     }
 
     public override void Enter()
     {
         if (_maxDuration == 0) { _stateMachine.GoToState(NPCState.WALK); }
-        coroutine = _coroutineRunner.StartCoroutine(IdleTimer());
+        
+        if (_idleWalkLoop) { coroutine = _coroutineRunner.StartCoroutine(IdleTimer()); }
     }
 
     public override void Exit()
@@ -98,6 +103,7 @@ public class WalkState : FiniteState<NPCState>
     private readonly float _leftBound;
     private readonly float _rightBound;
     private readonly float _walkSpeed;
+    private readonly bool _idleWalkLoop;
 
     private readonly MonoBehaviour _coroutineRunner;
     private Coroutine coroutine = null;
@@ -109,6 +115,7 @@ public class WalkState : FiniteState<NPCState>
     ///   args[3] = float (_maxDuration)
     ///   args[4] = float (_leftBound)
     ///   args[5] = float (_rightBound)
+    ///   args[6] = bool  (_idleWalkLoop)
     /// </param>
     public WalkState(NPCState stateType, params object[] args) : base(stateType, args)
     {
@@ -118,6 +125,7 @@ public class WalkState : FiniteState<NPCState>
         _maxDuration = (float)args[3];
         _leftBound = (float)args[4];
         _rightBound = (float)args[5];
+        _idleWalkLoop = (bool)args[6];
     }
 
     public override void Enter()
@@ -126,7 +134,8 @@ public class WalkState : FiniteState<NPCState>
 
         // When walking, it can be either direction randomly
         _walkDirection = (Random.Range(0, 2) == 0) ? -1 : 1;
-        coroutine = _coroutineRunner.StartCoroutine(WalkTimer());
+
+        if (_idleWalkLoop) { coroutine = _coroutineRunner.StartCoroutine(WalkTimer()); }
     }
 
     public override void Exit()
@@ -480,6 +489,31 @@ public class ChaseState : FiniteState<NPCState>
         // move the character
         npc.transform.position = Vector3.Lerp(npc.transform.position, new Vector3(targetX, npc.transform.position.y, npc.transform.position.z), Time.deltaTime);
         _stateMachine.animator.FrameAnimationPlayer.FlipTransform(new Vector2(-chaseDirection, 0));
+    }
+}
+
+#endregion
+
+#region ================== [ PLAY ANIMATION STATE ] ==================
+public class PlayAnimationState : FiniteState<NPCState>
+{
+    public NPC_StateMachine _stateMachine;
+    public NPCState _returnState;
+
+    public PlayAnimationState(NPCState stateType, params object[] args) : base(stateType, args)
+    {
+        _stateMachine = (NPC_StateMachine)args[0];
+        _returnState = (NPCState)args[1];
+    }
+
+    public override void Enter() { }
+    public override void Exit() { }
+    public override void Execute()
+    {
+        if ( _stateMachine.animator.FrameAnimationPlayer.AnimationIsOver() ) {
+            _stateMachine.GoToState(_returnState);
+        }
+
     }
 }
 
