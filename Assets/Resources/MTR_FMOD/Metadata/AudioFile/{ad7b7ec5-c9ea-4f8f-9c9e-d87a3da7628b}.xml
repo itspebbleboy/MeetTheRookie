@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ad7b7ec5-c9ea-4f8f-9c9e-d87a3da7628b}">
+		<property name="assetPath">
+			<value>Music/Horror/forest ambience.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>363.46775510204083</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{362f47f6-530f-4866-ae66-6ddfbfd4d2e8}</destination>
+		</relationship>
+	</object>
+</objects>

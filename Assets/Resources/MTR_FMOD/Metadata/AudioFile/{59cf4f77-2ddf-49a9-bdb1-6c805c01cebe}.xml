@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{59cf4f77-2ddf-49a9-bdb1-6c805c01cebe}">
+		<property name="assetPath">
+			<value>SFX/Doors/carDoorClose2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.36806250000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{362f47f6-530f-4866-ae66-6ddfbfd4d2e8}</destination>
+		</relationship>
+	</object>
+</objects>

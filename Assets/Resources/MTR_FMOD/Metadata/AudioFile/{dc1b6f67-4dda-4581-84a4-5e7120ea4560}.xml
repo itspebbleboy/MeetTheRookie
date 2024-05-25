@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{dc1b6f67-4dda-4581-84a4-5e7120ea4560}">
+		<property name="assetPath">
+			<value>Ambience/Forest/Tree brustling 3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>8.25</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{362f47f6-530f-4866-ae66-6ddfbfd4d2e8}</destination>
+		</relationship>
+	</object>
+</objects>

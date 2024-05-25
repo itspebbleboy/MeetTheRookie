@@ -4216,6 +4216,68 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &420308925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 420308928}
+  - component: {fileID: 420308927}
+  - component: {fileID: 420308926}
+  m_Layer: 0
+  m_Name: 'MonoBehaviourSingleton :: InkyStoryManager'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &420308926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420308925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b3c4e64aa07ea74e9045f25b7ec0e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _globalStoryObject: {fileID: 0}
+  _currentSpeaker: 
+  _speakerList: []
+  sceneData: []
+--- !u!114 &420308927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420308925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b486296396653634187305e1a8d85f4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _storyObjects: []
+--- !u!4 &420308928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420308925}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &434835506
 Mesh:
   m_ObjectHideFlags: 0
@@ -6812,7 +6874,7 @@ PrefabInstance:
     - target: {fileID: 949951112859401814, guid: 87e52de097739084ca9c3b783fb0bb50, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4257475269257040620, guid: 1b4984283f284664abae2c35fb0b3905, type: 3}
+      objectReference: {fileID: -6521527979389369535, guid: 1b4984283f284664abae2c35fb0b3905, type: 3}
     - target: {fileID: 949951112859401814, guid: 87e52de097739084ca9c3b783fb0bb50, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -6840,10 +6902,50 @@ PrefabInstance:
     - target: {fileID: 2698937323319930210, guid: 87e52de097739084ca9c3b783fb0bb50, type: 3}
       propertyPath: _sprite
       value: 
-      objectReference: {fileID: -8903238982833652902, guid: 1b4984283f284664abae2c35fb0b3905, type: 3}
+      objectReference: {fileID: 8609721151305637149, guid: 1b4984283f284664abae2c35fb0b3905, type: 3}
     - target: {fileID: 2698937323319930210, guid: 87e52de097739084ca9c3b783fb0bb50, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698937323319930210, guid: 87e52de097739084ca9c3b783fb0bb50, type: 3}
+      propertyPath: _onFirstInteraction.Path
+      value: event:/SFX/Generic/NPC_Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698937323319930210, guid: 87e52de097739084ca9c3b783fb0bb50, type: 3}
+      propertyPath: _onCompleteInteraction.Path
+      value: event:/SFX/Generic/NPC_Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698937323319930210, guid: 87e52de097739084ca9c3b783fb0bb50, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data1
+      value: -1644116464
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698937323319930210, guid: 87e52de097739084ca9c3b783fb0bb50, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data2
+      value: 1275719455
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698937323319930210, guid: 87e52de097739084ca9c3b783fb0bb50, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data3
+      value: 105296063
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698937323319930210, guid: 87e52de097739084ca9c3b783fb0bb50, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data4
+      value: -420808258
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698937323319930210, guid: 87e52de097739084ca9c3b783fb0bb50, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data1
+      value: -1644116464
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698937323319930210, guid: 87e52de097739084ca9c3b783fb0bb50, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data2
+      value: 1275719455
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698937323319930210, guid: 87e52de097739084ca9c3b783fb0bb50, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data3
+      value: 105296063
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698937323319930210, guid: 87e52de097739084ca9c3b783fb0bb50, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data4
+      value: -420808258
       objectReference: {fileID: 0}
     - target: {fileID: 2842237448514937618, guid: 87e52de097739084ca9c3b783fb0bb50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6924,8 +7026,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   editMode: 0
-  _sprite: {fileID: -8903238982833652902, guid: 1b4984283f284664abae2c35fb0b3905, type: 3}
-  _storyObject: {fileID: 11400000, guid: 29aeabcbeac95434baef9564f444ebae, type: 2}
+  _sprite: {fileID: -6521527979389369535, guid: 1b4984283f284664abae2c35fb0b3905, type: 3}
   _sceneKnot: scene4_3
   _interactionStitch: scene4_3.teens
   _onFirstInteraction:
@@ -6955,7 +7056,7 @@ MonoBehaviour:
   _defaultTint: {r: 1, g: 1, b: 1, a: 1}
   _interactionTint: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   _outlineMaterial: {fileID: 0}
-  speechBubble: {fileID: 0}
+  speakerTag: 
 --- !u!1001 &745073121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7007,6 +7108,46 @@ PrefabInstance:
     - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
       propertyPath: _interactionStitch
       value: scene4_3.teens
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onFirstInteraction.Path
+      value: event:/SFX/Generic/NPC_Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onCompleteInteraction.Path
+      value: event:/SFX/Generic/NPC_Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data1
+      value: -1644116464
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data2
+      value: 1275719455
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data3
+      value: 105296063
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data4
+      value: -420808258
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data1
+      value: -1644116464
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data2
+      value: 1275719455
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data3
+      value: 105296063
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data4
+      value: -420808258
       objectReference: {fileID: 0}
     - target: {fileID: 4138829041031667111, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
       propertyPath: _preset
@@ -7110,11 +7251,11 @@ PrefabInstance:
       objectReference: {fileID: 4802313167339451427, guid: 608472c639c92104a9e53e21068b760f, type: 3}
     - target: {fileID: 8403832537613495249, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.015686275
       objectReference: {fileID: 0}
     - target: {fileID: 8403832537613495249, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.92156863
       objectReference: {fileID: 0}
     - target: {fileID: 8703908369491067701, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
       propertyPath: walkMaxDuration
@@ -7158,7 +7299,6 @@ MonoBehaviour:
     m_Bits: 0
   editMode: 0
   _sprite: {fileID: 4802313167339451427, guid: 608472c639c92104a9e53e21068b760f, type: 3}
-  _storyObject: {fileID: 11400000, guid: 29aeabcbeac95434baef9564f444ebae, type: 2}
   _sceneKnot: scene4_3
   _interactionStitch: scene4_3.teens
   _onFirstInteraction:
@@ -7188,7 +7328,7 @@ MonoBehaviour:
   _defaultTint: {r: 1, g: 1, b: 1, a: 1}
   _interactionTint: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   _outlineMaterial: {fileID: 0}
-  speechBubble: {fileID: 0}
+  speakerTag: 
 --- !u!43 &750675882
 Mesh:
   m_ObjectHideFlags: 0
@@ -11855,16 +11995,15 @@ MonoBehaviour:
     m_Bits: 0
   editMode: 0
   _sprite: {fileID: 0}
-  _storyObject: {fileID: 11400000, guid: 29aeabcbeac95434baef9564f444ebae, type: 2}
   _sceneKnot: scene4_3
   _interactionStitch: 
   _onFirstInteraction:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1644116464
+      Data2: 1275719455
+      Data3: 105296063
+      Data4: -420808258
+    Path: event:/SFX/Generic/NPC_Interact
   _onContinuedInteraction:
     Guid:
       Data1: 0
@@ -11874,11 +12013,11 @@ MonoBehaviour:
     Path: 
   _onCompleteInteraction:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1644116464
+      Data2: 1275719455
+      Data3: 105296063
+      Data4: -420808258
+    Path: event:/SFX/Generic/NPC_Interact
   _isTarget: 0
   _isActive: 0
   _isComplete: 0
@@ -12719,7 +12858,6 @@ MonoBehaviour:
     m_Bits: 0
   editMode: 0
   _sprite: {fileID: -8793260508057991413, guid: a0370a8cb6fb5fa4d8c6df8e8ed157c7, type: 3}
-  _storyObject: {fileID: 11400000, guid: 29aeabcbeac95434baef9564f444ebae, type: 2}
   _sceneKnot: scene4_3
   _interactionStitch: scene4_3.teens
   _onFirstInteraction:
@@ -12749,7 +12887,7 @@ MonoBehaviour:
   _defaultTint: {r: 1, g: 1, b: 1, a: 1}
   _interactionTint: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   _outlineMaterial: {fileID: 0}
-  speechBubble: {fileID: 0}
+  speakerTag: 
 --- !u!43 &1163492741
 Mesh:
   m_ObjectHideFlags: 0
@@ -13922,16 +14060,15 @@ MonoBehaviour:
     m_Bits: 0
   editMode: 0
   _sprite: {fileID: -8708412444254385339, guid: d61dfe5d30384f848a92130347079233, type: 3}
-  _storyObject: {fileID: 11400000, guid: 29aeabcbeac95434baef9564f444ebae, type: 2}
   _sceneKnot: scene4_3
   _interactionStitch: scene4_3.exit_scene
   _onFirstInteraction:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1617930935
+      Data2: 1246835478
+      Data3: 1390344889
+      Data4: 923077266
+    Path: event:/SFX/Doors/doorOpen
   _onContinuedInteraction:
     Guid:
       Data1: 0
@@ -13941,11 +14078,11 @@ MonoBehaviour:
     Path: 
   _onCompleteInteraction:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -664964266
+      Data2: 1154211163
+      Data3: -382510715
+      Data4: -956841145
+    Path: event:/SFX/Doors/doorClose
   _isTarget: 0
   _isActive: 0
   _isComplete: 0
@@ -14777,6 +14914,46 @@ PrefabInstance:
     - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onFirstInteraction.Path
+      value: event:/SFX/Generic/NPC_Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onCompleteInteraction.Path
+      value: event:/SFX/Generic/NPC_Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data1
+      value: -1644116464
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data2
+      value: 1275719455
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data3
+      value: 105296063
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data4
+      value: -420808258
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data1
+      value: -1644116464
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data2
+      value: 1275719455
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data3
+      value: 105296063
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data4
+      value: -420808258
       objectReference: {fileID: 0}
     - target: {fileID: 4138829041031667111, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
       propertyPath: _preset
@@ -19189,63 +19366,6 @@ Transform:
   - {fileID: 37181217}
   m_Father: {fileID: 496812695}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1929438413
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8875938405744345426, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_Name
-      value: '[SINGLETON] GameManager'
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
 --- !u!1001 &1934774346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19258,6 +19378,46 @@ PrefabInstance:
       propertyPath: _sprite
       value: 
       objectReference: {fileID: 3796690502395988420, guid: 0ca2d1e0635aa194f8661738a48e7455, type: 3}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onFirstInteraction.Path
+      value: event:/SFX/Generic/NPC_Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onCompleteInteraction.Path
+      value: event:/SFX/Generic/NPC_Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data1
+      value: -1644116464
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data2
+      value: 1275719455
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data3
+      value: 105296063
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data4
+      value: -420808258
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data1
+      value: -1644116464
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data2
+      value: 1275719455
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data3
+      value: 105296063
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data4
+      value: -420808258
+      objectReference: {fileID: 0}
     - target: {fileID: 2983785582193056432, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
       propertyPath: m_Name
       value: '[NPC] Misra'
@@ -19265,14 +19425,14 @@ PrefabInstance:
     - target: {fileID: 4369842979011664183, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3796690502395988420, guid: 0ca2d1e0635aa194f8661738a48e7455, type: 3}
+      objectReference: {fileID: 4064383543977762312, guid: 0ca2d1e0635aa194f8661738a48e7455, type: 3}
     - target: {fileID: 4369842979011664183, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
       propertyPath: m_Color.b
-      value: 0.015686275
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4369842979011664183, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
       propertyPath: m_Color.g
-      value: 0.92156863
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5274619019409229800, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21095,10 +21255,10 @@ SceneRoots:
   m_Roots:
   - {fileID: 441265061}
   - {fileID: 1089438273}
-  - {fileID: 1929438413}
   - {fileID: 496812695}
   - {fileID: 1840193553}
   - {fileID: 783620960}
   - {fileID: 129445940}
   - {fileID: 668587694}
   - {fileID: 1350467074}
+  - {fileID: 420308928}

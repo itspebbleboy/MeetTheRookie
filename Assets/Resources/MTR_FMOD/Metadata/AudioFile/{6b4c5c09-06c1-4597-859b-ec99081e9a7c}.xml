@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{6b4c5c09-06c1-4597-859b-ec99081e9a7c}">
 		<property name="assetPath">
-			<value>Music/Low Mellotron Rumble.wav</value>
+			<value>Music/Horror/Low Mellotron Rumble.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

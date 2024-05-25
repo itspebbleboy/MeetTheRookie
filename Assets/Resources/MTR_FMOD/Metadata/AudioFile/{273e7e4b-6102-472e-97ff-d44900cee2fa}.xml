@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{273e7e4b-6102-472e-97ff-d44900cee2fa}">
 		<property name="assetPath">
-			<value>Ambience/paperStuff01.mp3</value>
+			<value>Ambience/General Store/genStore_paperStuff01.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

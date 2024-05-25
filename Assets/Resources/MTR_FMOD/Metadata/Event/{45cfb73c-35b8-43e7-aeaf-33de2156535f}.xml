@@ -72,9 +72,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{6a40daf0-2999-4fef-83de-79ae795f802e}">
-		<property name="volume">
-			<value>-3</value>
-		</property>
 		<relationship name="effectChain">
 			<destination>{5ed25d2d-c2f4-4a36-92b9-0f5112f299db}</destination>
 		</relationship>
@@ -125,7 +122,7 @@
 			<value>4</value>
 		</property>
 		<property name="frequencyA">
-			<value>640</value>
+			<value>250</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{43e337b0-4a05-4d8c-97df-a8b46c5bda54}</destination>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{3e612b09-e5f0-44ca-b962-61b799c554b5}">
 		<property name="assetPath">
-			<value>reversed Tokyo Drift.mp3</value>
+			<value>Music/Horror/reversed Tokyo Drift.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

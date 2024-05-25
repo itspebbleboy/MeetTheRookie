@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Plugins/Darklight/_thirdparty/NaughtyAttributes/Scripts/Core/DrawerAttributes.meta
-guid: 8038b943535ef4f5da9c1c77da06a86c
-========
-guid: f65dae63450d1ff4fba1071711764241
->>>>>>>> main:Assets/Resources/MTR_FMOD/Assets.meta
+guid: 927652144df2fa8428eb937cc9e6cdcd
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

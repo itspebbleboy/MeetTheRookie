@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{8d49d621-5a32-4e88-b53d-03acda1d23b8}">
 		<property name="assetPath">
-			<value>synthesis_enter_v2.wav</value>
+			<value>SFX/Synthesis/synthesis_enter_v2.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

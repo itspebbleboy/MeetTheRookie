@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{63e83048-a4e2-449b-b4cf-d361d7379317}">
 		<property name="assetPath">
-			<value>Music/synth_bip.wav</value>
+			<value>Music/Horror/synth_bip.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

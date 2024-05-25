@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{c652061b-a4f6-4656-af85-b96aad628d72}">
 		<property name="assetPath">
-			<value>weird fleshy sound_202405152327_2e.1chan.000.wav</value>
+			<value>Music/Horror/weird fleshy sound_202405152327_2e.1chan.000.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

@@ -538,7 +538,7 @@
 			<value>true</value>
 		</property>
 		<property name="triggerProbability">
-			<value>49.5</value>
+			<value>35</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{cf4d331c-a6bc-4e1d-b42b-699a47a0710c}</destination>
@@ -561,7 +561,7 @@
 			<value>true</value>
 		</property>
 		<property name="triggerProbability">
-			<value>50</value>
+			<value>35</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{cf4d331c-a6bc-4e1d-b42b-699a47a0710c}</destination>

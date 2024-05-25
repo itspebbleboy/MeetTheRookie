@@ -584,6 +584,69 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &293553313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: mtr_scene2_precinctDEMO
+  m_EditorClassIdentifier: 
+  _inkyTextAsset: {fileID: 4900000, guid: 128483559616cef4b9002c3e7c1d7d52, type: 3}
+  _knots:
+  - name: intro
+    stitches:
+    - intro.ding
+    - intro.hello
+    - intro.soul
+    - intro.chastise
+    - intro.scared
+    - intro.introductions
+    - intro.silence
+    - intro.niceToMeet
+    - intro.precinct
+    - intro.Company
+    - intro.treeFell
+    - intro.snoop
+    - intro.peek
+    - intro.wait
+    - intro.solo
+    - intro.transition_to_case
+    - intro.time
+    - intro.police_report
+    - intro.theRest
+    - intro.nothingHere
+    - intro.Evidence
+    - intro.Witnesses
+    - intro.Help
+    - intro.We
+    - intro.phone_call
+    - intro.voicemail
+    - intro.JokeBack
+    - intro.door
+  - name: global decl
+    stitches: []
+  _variables:
+  - _key: reported_incident
+    _valueAsString: False
+  - _key: case_file_received
+    _valueAsString: False
+  - _key: love_points
+    _valueAsString: 0
+  - _key: tease_level
+    _valueAsString: 0
+  - _key: sincerity_level
+    _valueAsString: 0
+  - _key: spooked
+    _valueAsString: False
+  - _key: snooped
+    _valueAsString: False
+  _globalTags:
+  - 'hide : Lupe'
 --- !u!1001 &335829853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -595,6 +658,50 @@ PrefabInstance:
     - target: {fileID: 2556373779886294289, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
       propertyPath: animationStateOverride
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 3796690502395988420, guid: 0ca2d1e0635aa194f8661738a48e7455, type: 3}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onFirstInteraction.Path
+      value: event:/SFX/Generic/NPC_Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onCompleteInteraction.Path
+      value: event:/SFX/Generic/NPC_Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data1
+      value: -1644116464
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data2
+      value: 1275719455
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data3
+      value: 105296063
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data4
+      value: -420808258
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data1
+      value: -1644116464
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data2
+      value: 1275719455
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data3
+      value: 105296063
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945277407265336810, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data4
+      value: -420808258
       objectReference: {fileID: 0}
     - target: {fileID: 2983785582193056432, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
       propertyPath: m_Name
@@ -615,7 +722,7 @@ PrefabInstance:
     - target: {fileID: 4369842979011664183, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4064383543977762312, guid: 0ca2d1e0635aa194f8661738a48e7455, type: 3}
+      objectReference: {fileID: 3796690502395988420, guid: 0ca2d1e0635aa194f8661738a48e7455, type: 3}
     - target: {fileID: 4369842979011664183, guid: ee70ebf7ce8e16444b2f4219e5b3a888, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -1498,11 +1605,11 @@ MonoBehaviour:
   _interactionStitch: scene4_2.merch_shirt
   _onFirstInteraction:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1644116464
+      Data2: 1275719455
+      Data3: 105296063
+      Data4: -420808258
+    Path: event:/SFX/Generic/NPC_Interact
   _onContinuedInteraction:
     Guid:
       Data1: 0
@@ -1512,11 +1619,11 @@ MonoBehaviour:
     Path: 
   _onCompleteInteraction:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1644116464
+      Data2: 1275719455
+      Data3: 105296063
+      Data4: -420808258
+    Path: event:/SFX/Generic/NPC_Interact
   _isTarget: 0
   _isActive: 0
   _isComplete: 0
@@ -1970,6 +2077,72 @@ Transform:
   - {fileID: 839325711}
   - {fileID: 339191996}
   - {fileID: 1678844640}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &516410570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 516410573}
+  - component: {fileID: 516410572}
+  - component: {fileID: 516410571}
+  m_Layer: 0
+  m_Name: 'MonoBehaviourSingleton :: InkyStoryManager'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &516410571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516410570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b3c4e64aa07ea74e9045f25b7ec0e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _globalStoryObject: {fileID: 0}
+  _currentSpeaker: 
+  _speakerList: []
+  sceneData: []
+--- !u!114 &516410572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516410570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b486296396653634187305e1a8d85f4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _storyObjects:
+  - {fileID: 867133066}
+  - {fileID: 293553313}
+  - {fileID: 733406384}
+  - {fileID: 1238889696}
+--- !u!4 &516410573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516410570}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &518817233
@@ -2602,11 +2775,11 @@ MonoBehaviour:
   _interactionStitch: Roy_Dialogue.pamphlet
   _onFirstInteraction:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1470849730
+      Data2: 1165224061
+      Data3: -1959113035
+      Data4: 851610127
+    Path: event:/SFX/interact_paper
   _onContinuedInteraction:
     Guid:
       Data1: 0
@@ -2616,11 +2789,11 @@ MonoBehaviour:
     Path: 
   _onCompleteInteraction:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1470849730
+      Data2: 1165224061
+      Data3: -1959113035
+      Data4: 851610127
+    Path: event:/SFX/interact_paper
   _isTarget: 0
   _isActive: 0
   _isComplete: 0
@@ -2759,6 +2932,201 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &733406384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: mtr_global
+  m_EditorClassIdentifier: 
+  _inkyTextAsset: {fileID: 4900000, guid: d3591a36bfee79947b7fe0046e67d8e2, type: 3}
+  _knots:
+  - name: SetSpeaker
+    stitches: []
+  - name: SetActiveQuestChain
+    stitches: []
+  - name: StartQuest
+    stitches: []
+  - name: CompleteQuest
+    stitches: []
+  - name: IsQuestComplete
+    stitches: []
+  - name: IsQuestActive
+    stitches: []
+  - name: DiscoverClue
+    stitches: []
+  - name: IsClueFound
+    stitches: []
+  - name: Misra_Dialogue
+    stitches:
+    - Misra_Dialogue.default
+    - Misra_Dialogue.4_1
+  - name: Roy_Dialogue
+    stitches:
+    - Roy_Dialogue.interogate
+    - Roy_Dialogue.personal_info
+    - Roy_Dialogue.town_history
+    - Roy_Dialogue.winery_closing
+    - Roy_Dialogue.window
+    - Roy_Dialogue.merch_shirt
+    - Roy_Dialogue.merch_sticker
+    - Roy_Dialogue.pamphlet
+    - Roy_Dialogue.potential_suspects
+    - Roy_Dialogue.teenagers
+  - name: Jenny_Dialogue
+    stitches:
+    - Jenny_Dialogue.interogate
+    - Jenny_Dialogue.hosi
+    - Jenny_Dialogue.4_3_jenny_questions
+  - name: Calvin_Dialogue
+    stitches:
+    - Calvin_Dialogue.4_3
+    - Calvin_Dialogue.4_3_calvin_questions
+    - Calvin_Dialogue.cal_hosi
+    - Calvin_Dialogue.HOSI_questions
+    - Calvin_Dialogue.HOSI_questions2
+    - Calvin_Dialogue.personal_info_calvin
+    - Calvin_Dialogue.winery_calvin
+    - Calvin_Dialogue.KR_calvin
+  - name: Josh_Dialogue
+    stitches:
+    - Josh_Dialogue.4_3
+    - Josh_Dialogue.4_3_josh_questions
+    - Josh_Dialogue.4_3_josh_personal_info
+    - Josh_Dialogue.4_3_KR_josh
+    - Josh_Dialogue.4_3_winery_josh
+  - name: Jenkins_Dialogue
+    stitches:
+    - Jenkins_Dialogue.jenkins_questions
+    - Jenkins_Dialogue.jenkins_winery_
+    - Jenkins_Dialogue.jenkins_last_night
+    - Jenkins_Dialogue.jenkins_kettle_rock
+    - Jenkins_Dialogue.jenkins_council
+    - Jenkins_Dialogue.jenkins_sarah
+    - Jenkins_Dialogue.jenkins_sacrifice
+  - name: Irene_Dialogue
+    stitches:
+    - Irene_Dialogue.irene_questions
+    - Irene_Dialogue.irene_goats
+    - Irene_Dialogue.irene_plaque
+    - Irene_Dialogue.irene_sacrifice
+    - Irene_Dialogue.irene_kettle_rock
+    - Irene_Dialogue.irene_winery
+    - Irene_Dialogue.irene_still_standing
+  - name: scene2
+    stitches:
+    - scene2.intro
+    - scene2.ding
+    - scene2.hello
+    - scene2.soul
+    - scene2.chastise
+    - scene2.scared
+    - scene2.introductions
+    - scene2.silence
+    - scene2.niceToMeet
+    - scene2.precinct
+    - scene2.Company
+    - scene2.treeFell
+    - scene2.snoop
+    - scene2.peek
+    - scene2.wait
+    - scene2.solo
+    - scene2.transition_to_case
+    - scene2.time
+    - scene2.police_report
+    - scene2.theRest
+    - scene2.nothingHere
+    - scene2.Evidence
+    - scene2.Witnesses
+    - scene2.Help
+    - scene2.We
+    - scene2.phone_call
+    - scene2.voicemail
+    - scene2.JokeBack
+    - scene2.door
+  - name: scene4_1
+    stitches:
+    - scene4_1.talk_to_misra
+    - scene4_1.idahome_and_goods
+    - scene4_1.powerup_arcade
+    - scene4_1.strange_symbol_on_fountain
+    - scene4_1.goop_on_fountain
+    - scene4_1.the_rockin_kettle
+    - scene4_1.laundromat_closed_sign
+    - scene4_1.einab_closed_sign
+    - scene4_1.apartments_for_lease_sign
+    - scene4_1.diner_closed_sign
+    - scene4_1.clothing_store_closed_sign
+    - scene4_1.heart_of_kettle
+  - name: scene4_2
+    stitches:
+    - scene4_2.store_window
+    - scene4_2.merch_shirt
+    - scene4_2.merch_sticker
+    - scene4_2.front_door
+  - name: scene4_3
+    stitches:
+    - scene4_3.arcade_machines
+    - scene4_3.teens
+    - scene4_3.teens_roulette
+    - scene4_3.teens_suspect
+    - scene4_3.exit_scene
+  - name: scene4_4
+    stitches:
+    - scene4_4.irene_text
+    - scene4_4.man
+    - scene4_4.goop
+    - scene4_4.memorial_plaque
+  - name: global decl
+    stitches: []
+  _variables:
+  - _key: reported_incident
+    _valueAsString: False
+  - _key: case_file_received
+    _valueAsString: False
+  - _key: love_points
+    _valueAsString: 0
+  - _key: tease_level
+    _valueAsString: 0
+  - _key: sincerity_level
+    _valueAsString: 0
+  - _key: spooked
+    _valueAsString: False
+  - _key: snooped
+    _valueAsString: False
+  - _key: closed_signs
+    _valueAsString: 0
+  - _key: Speaker
+    _valueAsString: Unkown, Misra, Lupe, Chief_Thelton, Marlowe, Beth, Mel, Roy_Rodgerson,
+      Jenny, Calvin, Josh, Irene, Jenkins
+  - _key: CURRENT_SPEAKER
+    _valueAsString: Lupe
+  - _key: MAIN_QUEST
+    _valueAsString: 
+  - _key: ACTIVE_QUEST_CHAIN
+    _valueAsString: 
+  - _key: COMPLETED_QUESTS
+    _valueAsString: 
+  - _key: GLOBAL_KNOWLEDGE
+    _valueAsString: 
+  - _key: Level1_Clues
+    _valueAsString: GAS_PUMP_BROKEN, CASHREG_BROKEN, CASHREG_FIX
+  - _key: Level1_Quests
+    _valueAsString: FIRST_INTERACT, PAY_FOR_GAS
+  - _key: Level3_Clues
+    _valueAsString: 
+  - _key: Level3_Quests
+    _valueAsString: 
+  - _key: Level4_Quests
+    _valueAsString: 
+  - _key: Level4_Clues
+    _valueAsString: 
+  _globalTags: []
 --- !u!43 &765055306
 Mesh:
   m_ObjectHideFlags: 0
@@ -3034,11 +3402,11 @@ MonoBehaviour:
   _interactionStitch: scene4_2.merch_sticker
   _onFirstInteraction:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1644116464
+      Data2: 1275719455
+      Data3: 105296063
+      Data4: -420808258
+    Path: event:/SFX/Generic/NPC_Interact
   _onContinuedInteraction:
     Guid:
       Data1: 0
@@ -3048,11 +3416,11 @@ MonoBehaviour:
     Path: 
   _onCompleteInteraction:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1644116464
+      Data2: 1275719455
+      Data3: 105296063
+      Data4: -420808258
+    Path: event:/SFX/Generic/NPC_Interact
   _isTarget: 0
   _isActive: 0
   _isComplete: 0
@@ -3985,6 +4353,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 496812695}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &867133066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: mtr_level2_precinct
+  m_EditorClassIdentifier: 
+  _inkyTextAsset: {fileID: 4900000, guid: 56d5c002448d20e4597414021daff05c, type: 3}
+  _knots:
+  - name: scene2
+    stitches:
+    - scene2.ding
+    - scene2.hello
+    - scene2.soul
+    - scene2.chastise
+    - scene2.scared
+    - scene2.introductions
+    - scene2.silence
+    - scene2.niceToMeet
+    - scene2.precinct
+    - scene2.Company
+    - scene2.treeFell
+    - scene2.snoop
+    - scene2.peek
+    - scene2.wait
+    - scene2.solo
+    - scene2.transition_to_case
+    - scene2.time
+    - scene2.police_report
+    - scene2.theRest
+    - scene2.nothingHere
+    - scene2.Evidence
+    - scene2.Witnesses
+    - scene2.Help
+    - scene2.We
+    - scene2.phone_call
+    - scene2.voicemail
+    - scene2.JokeBack
+    - scene2.door
+  - name: global decl
+    stitches: []
+  _variables:
+  - _key: reported_incident
+    _valueAsString: False
+  - _key: case_file_received
+    _valueAsString: False
+  - _key: love_points
+    _valueAsString: 0
+  - _key: tease_level
+    _valueAsString: 0
+  - _key: sincerity_level
+    _valueAsString: 0
+  - _key: spooked
+    _valueAsString: False
+  - _key: snooped
+    _valueAsString: False
+  _globalTags: []
 --- !u!4 &895662910 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5360866141128978865, guid: f38374023554ea349a889ef5ff8244e6, type: 3}
@@ -6139,6 +6569,26 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &1238889696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: synthesisTest
+  m_EditorClassIdentifier: 
+  _inkyTextAsset: {fileID: 4900000, guid: 66ae6d2237460114eb1cd5c052de6568, type: 3}
+  _knots:
+  - name: nada
+    stitches: []
+  - name: synthesize
+    stitches: []
+  _variables: []
+  _globalTags: []
 --- !u!1 &1244523642
 GameObject:
   m_ObjectHideFlags: 0
@@ -6604,11 +7054,11 @@ MonoBehaviour:
   _interactionStitch: 
   _onFirstInteraction:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1644116464
+      Data2: 1275719455
+      Data3: 105296063
+      Data4: -420808258
+    Path: event:/SFX/Generic/NPC_Interact
   _onContinuedInteraction:
     Guid:
       Data1: 0
@@ -6618,11 +7068,11 @@ MonoBehaviour:
     Path: 
   _onCompleteInteraction:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1644116464
+      Data2: 1275719455
+      Data3: 105296063
+      Data4: -420808258
+    Path: event:/SFX/Generic/NPC_Interact
   _isTarget: 0
   _isActive: 0
   _isComplete: 0
@@ -7872,179 +8322,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1001 &1929438413
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2433518505442435673, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: _mainMenuScene.m_SceneName
-      value: MAIN_MENU
-      objectReference: {fileID: 0}
-    - target: {fileID: 3935851452667166986, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: currentScene
-      value: Assets/Scenes/Build/MAIN_MENU.unity
-      objectReference: {fileID: 0}
-    - target: {fileID: 3935851452667166986, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: 'scenesInBuild.Array.data[0]'
-      value: Assets/Scenes/Build\MAIN_MENU.unity
-      objectReference: {fileID: 0}
-    - target: {fileID: 3935851452667166986, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: 'scenesInBuild.Array.data[1]'
-      value: Assets/Scenes/Build\SCENE_2 - The Precinct.unity
-      objectReference: {fileID: 0}
-    - target: {fileID: 3935851452667166986, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: 'scenesInBuild.Array.data[2]'
-      value: Assets/Scenes/Build\SCENE_4_1 - Main Street.unity
-      objectReference: {fileID: 0}
-    - target: {fileID: 3935851452667166986, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: 'scenesInBuild.Array.data[3]'
-      value: Assets/Scenes/Build\SCENE_4_2 - The General Store.unity
-      objectReference: {fileID: 0}
-    - target: {fileID: 3935851452667166986, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: 'scenesInBuild.Array.data[4]'
-      value: Assets/Scenes/Build\SCENE_4_3 - The Arcade.unity
-      objectReference: {fileID: 0}
-    - target: {fileID: 3935851452667166986, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: 'scenesInBuild.Array.data[5]'
-      value: Assets/Scenes/Build\SCENE_4_4 - The Bar.unity
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5953019589017212419, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_storyObjects.Array.data[0]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5953019589017212419, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_storyObjects.Array.data[1]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5953019589017212419, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_storyObjects.Array.data[2]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5953019589017212419, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_storyObjects.Array.data[3]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: sceneData.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: _speakerList.Array.size
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_speakerList.Array.data[0]'
-      value: Speaker.Unkown
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_speakerList.Array.data[1]'
-      value: Speaker.Misra
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_speakerList.Array.data[2]'
-      value: Speaker.Lupe
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_speakerList.Array.data[3]'
-      value: Speaker.Chief_Thelton
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_speakerList.Array.data[4]'
-      value: Speaker.Marlowe
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_speakerList.Array.data[5]'
-      value: Speaker.Beth
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_speakerList.Array.data[6]'
-      value: Speaker.Mel
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_speakerList.Array.data[7]'
-      value: Speaker.Roy_Rodgerson
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_speakerList.Array.data[8]'
-      value: Speaker.Jenny
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_speakerList.Array.data[9]'
-      value: Speaker.Calvin
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_speakerList.Array.data[10]'
-      value: Speaker.Josh
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_speakerList.Array.data[11]'
-      value: Speaker.Irene
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: '_speakerList.Array.data[12]'
-      value: Speaker.Jenkins
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: sceneData.Array.data[0].knotName
-      value: scene2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: sceneData.Array.data[0].sceneObject.m_SceneName
-      value: SCENE_2 - The Precinct
-      objectReference: {fileID: 0}
-    - target: {fileID: 8875938405744345426, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: m_Name
-      value: '[SINGLETON] GameManager'
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
 --- !u!1 &2059629335
 GameObject:
   m_ObjectHideFlags: 0
@@ -9133,14 +9410,14 @@ PrefabInstance:
     - target: {fileID: 2958673987988220936, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7597982200651353323, guid: 4cf2d8a27f080e84699715ad2df8e67b, type: 3}
+      objectReference: {fileID: -3766639757957820002, guid: 4cf2d8a27f080e84699715ad2df8e67b, type: 3}
     - target: {fileID: 2958673987988220936, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.015686275
       objectReference: {fileID: 0}
     - target: {fileID: 2958673987988220936, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.92156863
       objectReference: {fileID: 0}
     - target: {fileID: 3176214768115197876, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
       propertyPath: currentFrame
@@ -9149,7 +9426,7 @@ PrefabInstance:
     - target: {fileID: 4445833556569712823, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
       propertyPath: _sprite
       value: 
-      objectReference: {fileID: 7597982200651353323, guid: 4cf2d8a27f080e84699715ad2df8e67b, type: 3}
+      objectReference: {fileID: -3766639757957820002, guid: 4cf2d8a27f080e84699715ad2df8e67b, type: 3}
     - target: {fileID: 4445833556569712823, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
       propertyPath: _sceneKnot
       value: Roy_Dialogue
@@ -9157,6 +9434,46 @@ PrefabInstance:
     - target: {fileID: 4445833556569712823, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
       propertyPath: speakerTag
       value: Speaker.Roy_Rodgerson
+      objectReference: {fileID: 0}
+    - target: {fileID: 4445833556569712823, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
+      propertyPath: _onFirstInteraction.Path
+      value: event:/SFX/Generic/NPC_Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 4445833556569712823, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
+      propertyPath: _onCompleteInteraction.Path
+      value: event:/SFX/Generic/NPC_Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 4445833556569712823, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data1
+      value: -1644116464
+      objectReference: {fileID: 0}
+    - target: {fileID: 4445833556569712823, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data2
+      value: 1275719455
+      objectReference: {fileID: 0}
+    - target: {fileID: 4445833556569712823, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data3
+      value: 105296063
+      objectReference: {fileID: 0}
+    - target: {fileID: 4445833556569712823, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
+      propertyPath: _onFirstInteraction.Guid.Data4
+      value: -420808258
+      objectReference: {fileID: 0}
+    - target: {fileID: 4445833556569712823, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data1
+      value: -1644116464
+      objectReference: {fileID: 0}
+    - target: {fileID: 4445833556569712823, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data2
+      value: 1275719455
+      objectReference: {fileID: 0}
+    - target: {fileID: 4445833556569712823, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data3
+      value: 105296063
+      objectReference: {fileID: 0}
+    - target: {fileID: 4445833556569712823, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
+      propertyPath: _onCompleteInteraction.Guid.Data4
+      value: -420808258
       objectReference: {fileID: 0}
     - target: {fileID: 6879612917963182113, guid: d397d6ddf12e1c94baa3bae75b0ab2d0, type: 3}
       propertyPath: m_Name
@@ -9181,8 +9498,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1718096874}
-  - {fileID: 1929438413}
   - {fileID: 496812695}
   - {fileID: 335829853}
   - {fileID: 1702478069}
   - {fileID: 2142565212}
+  - {fileID: 516410573}
