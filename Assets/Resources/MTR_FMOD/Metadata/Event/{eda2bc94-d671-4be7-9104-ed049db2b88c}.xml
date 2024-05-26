@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{eda2bc94-d671-4be7-9104-ed049db2b88c}">
 		<property name="name">
-			<value>synthesis_select</value>
+			<value>synthesis_evidenceSelect</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>

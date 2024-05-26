@@ -1931,7 +1931,7 @@
 			<value>1</value>
 		</property>
 		<property name="name">
-			<value>0 intensity Synth</value>
+			<value>0 intensity Synthesis</value>
 		</property>
 		<property name="looping">
 			<value>2</value>
@@ -1975,7 +1975,7 @@
 			<value>1</value>
 		</property>
 		<property name="name">
-			<value>1 intensity Synth</value>
+			<value>1 intensity Synthesis</value>
 		</property>
 		<property name="looping">
 			<value>2</value>
@@ -2016,10 +2016,13 @@
 			<value>-80</value>
 		</property>
 		<property name="attackTime">
-			<value>500</value>
+			<value>320</value>
 		</property>
 		<property name="releaseTime">
 			<value>4000</value>
+		</property>
+		<property name="releaseShape">
+			<value>0.233672291</value>
 		</property>
 		<property name="finalValue">
 			<value>-80</value>
@@ -3893,7 +3896,7 @@
 			<value>1</value>
 		</property>
 		<property name="maximum">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{ac8827da-48c8-4631-80bf-249a05dc56c1}</destination>
@@ -3904,7 +3907,7 @@
 			<value>0</value>
 		</property>
 		<property name="maximum">
-			<value>0</value>
+			<value>0.50499999523162842</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{b30fa879-a684-4abb-b5c8-040a80a02e72}</destination>
@@ -3944,7 +3947,7 @@
 	</object>
 	<object class="ParameterCondition" id="{a12015fe-f8b8-493a-8796-d4d8196fc5ad}">
 		<property name="minimum">
-			<value>1</value>
+			<value>0.5</value>
 		</property>
 		<property name="maximum">
 			<value>1</value>
@@ -3979,7 +3982,7 @@
 			<value>1</value>
 		</property>
 		<property name="maximum">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{ac8827da-48c8-4631-80bf-249a05dc56c1}</destination>
@@ -3987,7 +3990,7 @@
 	</object>
 	<object class="ParameterCondition" id="{7a47c115-8b24-4c73-a82e-1ee233e05cf3}">
 		<property name="minimum">
-			<value>1</value>
+			<value>0.5</value>
 		</property>
 		<property name="maximum">
 			<value>1</value>
@@ -4820,7 +4823,7 @@
 			<value>132.92932702016472</value>
 		</property>
 		<property name="value">
-			<value>-17</value>
+			<value>-8</value>
 		</property>
 	</object>
 	<object class="Automator" id="{17932658-644b-45fa-8023-d930e8cb7979}">
