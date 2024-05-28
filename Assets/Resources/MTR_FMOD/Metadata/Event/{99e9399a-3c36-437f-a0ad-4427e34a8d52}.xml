@@ -31,6 +31,9 @@
 		<relationship name="parameters">
 			<destination>{7d53b998-2ad2-41ee-a2b1-2bd9433a9117}</destination>
 		</relationship>
+		<relationship name="banks">
+			<destination>{eeccd7ab-e83e-4184-b18e-e5fcf275067e}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{394a1365-b929-4df9-9f77-f53fcf164675}">
 		<relationship name="masterBus">
@@ -69,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{1e4e9915-345e-4b44-8ed6-a9b60d2c1e33}">
+		<property name="volume">
+			<value>-6.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{01c1dde7-d683-4167-abd2-8957adaa78c4}</destination>
 		</relationship>
@@ -81,7 +87,7 @@
 	</object>
 	<object class="MultiSound" id="{972a3e92-7871-432e-93b5-0573082bc628}">
 		<relationship name="sounds">
-			<destination>{c65eb167-f09a-46ac-8fdd-2afac915ba2a}</destination>
+			<destination>{955c14db-4b08-4a0a-bdc9-657d939a6cf7}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{41a8f32b-58e5-4db2-840a-97974b201311}">
@@ -96,11 +102,22 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{52ec3bfb-a59e-47cb-aec4-72ad78cdf4f7}" />
-	<object class="SingleSound" id="{c65eb167-f09a-46ac-8fdd-2afac915ba2a}">
+	<object class="SingleSound" id="{955c14db-4b08-4a0a-bdc9-657d939a6cf7}">
+		<relationship name="modulators">
+			<destination>{34edc761-6e74-413b-9bab-d940b4c04a1f}</destination>
+		</relationship>
 		<relationship name="audioFile">
-			<destination>{8337017b-7a81-4eff-90cc-b2393b9c19cd}</destination>
+			<destination>{777e68b5-2721-40bb-b263-b3c6b7195820}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{151845ed-23dc-47ca-a7d7-27c0d14d8cd7}" />
 	<object class="MixerBusFader" id="{302bd8e3-62d3-4219-ba1c-da2da0a5cc02}" />
+	<object class="RandomizerModulator" id="{34edc761-6e74-413b-9bab-d940b4c04a1f}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>13.5</value>
+		</property>
+	</object>
 </objects>
