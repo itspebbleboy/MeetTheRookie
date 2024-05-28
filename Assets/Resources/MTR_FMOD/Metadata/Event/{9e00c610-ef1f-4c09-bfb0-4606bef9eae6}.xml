@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{9e00c610-ef1f-4c09-bfb0-4606bef9eae6}">
 		<property name="name">
-			<value>NPC_InteractStart</value>
+			<value>NPC_Interact</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
