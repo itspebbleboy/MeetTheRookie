@@ -1961,12 +1961,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661124090213452017}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.77101356, z: 0, w: 0.6368187}
-  m_LocalPosition: {x: -5.2380257, y: 0.625, z: 2.1477044}
+  m_LocalRotation: {x: -0, y: 0.77101356, z: -0, w: 0.6368187}
+  m_LocalPosition: {x: -1.6611178, y: -2.58771, z: -15.796115}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6858905631795333557}
+  m_Father: {fileID: 3644230334627769191}
   m_LocalEulerAnglesHint: {x: 0, y: 100.89, z: 0}
 --- !u!212 &5384406280402492061
 SpriteRenderer:
@@ -4602,7 +4602,6 @@ Transform:
   - {fileID: 3067837009758886535}
   - {fileID: 2086830935258241023}
   - {fileID: 2961249515108223453}
-  - {fileID: 8505488732650254501}
   - {fileID: 6696228050400968669}
   - {fileID: 7171809277781013353}
   - {fileID: 5042743444082001307}
@@ -6519,6 +6518,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8505488732650254501}
   - {fileID: 922964693663145194}
   - {fileID: 7226766894358402574}
   - {fileID: 2004285093612485812}
@@ -6674,6 +6674,10 @@ PrefabInstance:
       propertyPath: 'spriteSheets.Array.data[4].spriteSheet.frames.Array.data[3]'
       value: 
       objectReference: {fileID: 7151748471517913395, guid: 38d13fb858422b644b434bc4b5b4bd7f, type: 3}
+    - target: {fileID: 2236245743877035675, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 1263404788, guid: 4cf2d8a27f080e84699715ad2df8e67b, type: 3}
     - target: {fileID: 4138829041031667111, guid: b14c70e91196741f9ab2b79af77ec54d, type: 3}
       propertyPath: layerMask.m_Bits
       value: 64

@@ -16,19 +16,18 @@ INCLUDE _characters/Josh.ink
 INCLUDE _characters/Jenkins.ink
 INCLUDE _characters/Irene.ink
 
-//INCLUDE _day 1/mtr_level1_melOmart.ink
+//INCLUDE mtr_level3_wineryMorning.ink
 
-INCLUDE _extra/mtr_scene2_precinctDEMO.ink
-//INCLUDE _day 1/mtr_level2_precinct.ink
-
-INCLUDE _day 1/mtr_level4.1_mainstreet.ink
-INCLUDE _day 1/mtr_level4.2_genstore.ink
-INCLUDE _day 1/mtr_level4.3_arcade.ink
+INCLUDE _day 1/mtr_level1_melOmart.ink
+INCLUDE _day 1/mtr_level3_wineryMorning.ink
+INCLUDE _day 1/mtr_level4_mainstreet.ink
 INCLUDE _day 1/mtr_level4.4_bar.ink
+INCLUDE _day 1/mtr_level4.3_arcade.ink
+INCLUDE _day 1/mtr_level4.2_genstore.ink
+
 
 // ====== SPEAKER HANDLING == >>
-LIST Speaker = (Unkown), (Misra), (Lupe), (Chief_Thelton), (Marlowe), (Beth), (Mel), (Roy_Rodgerson), (Jenny), (Calvin), (Josh), (Irene), (Jenkins)
-
+LIST Speaker = (Unknown), Misra, Lupe, Chief_Thelton, Marlowe, Beth, Mel, Roy_Rodgerson, Jenny, Calvin, Josh, Irene, Jenkins
 VAR CURRENT_SPEAKER = Speaker.Lupe
 == function SetSpeaker(value)
     # SetSpeaker >> {value}
@@ -69,14 +68,15 @@ LIST GLOBAL_KNOWLEDGE = DEFAULTCLUE
 // ----------------------------------------------------
 //  LEVEL 1 : Quests and Clues
 // ----------------------------------------------------
-LIST Level1_Clues = (GAS_PUMP_BROKEN), (CASHREG_BROKEN), (CASHREG_FIX)
-LIST Level1_Quests = (FIRST_INTERACT), (PAY_FOR_GAS)
+LIST Level1_Clues = (broken_gas_pump), (broken_cash_reg), (cashreg_fix)
+LIST Level1_Quests = (first_interact), (pay_for_gas)
 
 // ----------------------------------------------------
 //  LEVEL 3 : Quests and Clues
 // ----------------------------------------------------
-LIST Level3_Clues = broken_window , footsteps, fence, claw_marks, damages
-LIST Level3_Quests = FIRST_INTERACT_2, VISIT_FENCE, VISIT_WINDOW, DISCUSS_MISRA, VISIT_FOOTSTEPS, VISIT_FLOOR, VISIT_BARRELS, VISIT_BACKROOM_DOOR
+LIST Level3_Clues = (evidence_broken_window) , (evidence_footsteps), (evidence_fence), (evidence_claw_marks), (evidence_damages)
+LIST Level3_Quests = (talk_to_misra_quest), (visit_fence), (visit_window), (discover_outside_clues), (discuss_misra), (visit_footsteps), (visit_floor), (visit_barrels), (visit_backroom_door), (discover_inside_clues)
+
 
 // ----------------------------------------------------
 //  LEVEL 4 : Quests and Clues

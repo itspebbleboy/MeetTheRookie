@@ -31,7 +31,11 @@ MonoBehaviour:
   - name: IsClueFound
     stitches: []
   - name: Misra_Dialogue
-    stitches: []
+    stitches:
+    - Misra_Dialogue.default
+    - Misra_Dialogue.3_1
+    - Misra_Dialogue.3_2
+    - Misra_Dialogue.4_1
   - name: Roy_Dialogue
     stitches:
     - Roy_Dialogue.interogate
@@ -84,37 +88,46 @@ MonoBehaviour:
     - Irene_Dialogue.irene_kettle_rock
     - Irene_Dialogue.irene_winery
     - Irene_Dialogue.irene_still_standing
-  - name: scene2
+  - name: level1
+    stitches: []
+  - name: scene1_0
     stitches:
-    - scene2.intro
-    - scene2.ding
-    - scene2.hello
-    - scene2.soul
-    - scene2.chastise
-    - scene2.scared
-    - scene2.introductions
-    - scene2.silence
-    - scene2.niceToMeet
-    - scene2.precinct
-    - scene2.Company
-    - scene2.treeFell
-    - scene2.snoop
-    - scene2.peek
-    - scene2.wait
-    - scene2.solo
-    - scene2.transition_to_case
-    - scene2.time
-    - scene2.police_report
-    - scene2.theRest
-    - scene2.nothingHere
-    - scene2.Evidence
-    - scene2.Witnesses
-    - scene2.Help
-    - scene2.We
-    - scene2.phone_call
-    - scene2.voicemail
-    - scene2.JokeBack
-    - scene2.door
+    - scene1_0.thelton
+  - name: scene1_1
+    stitches:
+    - scene1_1.gas_pump
+    - scene1_1.car
+    - scene1_1.marlowe
+    - scene1_1.enter_store
+  - name: scene1_2
+    stitches:
+    - scene1_2.vending_machine
+    - scene1_2.employee
+    - scene1_2.door_to_backroom
+    - scene1_2.door_to_outside
+  - name: scene1_3
+    stitches:
+    - scene1_3.mel
+    - scene1_3.goop
+  - name: scene1_4
+    stitches:
+    - scene1_4.fallen_tree
+  - name: level3
+    stitches: []
+  - name: scene3_1
+    stitches:
+    - scene3_1.door
+    - scene3_1.fence
+    - scene3_1.window
+    - scene3_1.strange_footsteps
+  - name: scene3_2
+    stitches:
+    - scene3_2.claw_marks
+    - scene3_2.floor_splatters
+    - scene3_2.equipment
+    - scene3_2.wine_barrels
+    - scene3_2.backroom_door
+    - scene3_2.Winery_front_door
   - name: scene4_1
     stitches:
     - scene4_1.talk_to_misra
@@ -129,12 +142,12 @@ MonoBehaviour:
     - scene4_1.diner_closed_sign
     - scene4_1.clothing_store_closed_sign
     - scene4_1.heart_of_kettle
-  - name: scene4_2
+  - name: scene4_4
     stitches:
-    - scene4_2.store_window
-    - scene4_2.merch_shirt
-    - scene4_2.merch_sticker
-    - scene4_2.front_door
+    - scene4_4.irene_text
+    - scene4_4.man
+    - scene4_4.goop
+    - scene4_4.memorial_plaque
   - name: scene4_3
     stitches:
     - scene4_3.arcade_machines
@@ -142,34 +155,25 @@ MonoBehaviour:
     - scene4_3.teens_roulette
     - scene4_3.teens_suspect
     - scene4_3.exit_scene
-  - name: scene4_4
+  - name: scene4_2
     stitches:
-    - scene4_4.irene_text
-    - scene4_4.man
-    - scene4_4.goop
-    - scene4_4.memorial_plaque
+    - scene4_2.store_window
+    - scene4_2.merch_shirt
+    - scene4_2.merch_sticker
+    - scene4_2.front_door
   - name: global decl
     stitches: []
   _variables:
-  - _key: reported_incident
-    _valueAsString: False
-  - _key: case_file_received
-    _valueAsString: False
-  - _key: love_points
+  - _key: gas_pumps
     _valueAsString: 0
-  - _key: tease_level
-    _valueAsString: 0
-  - _key: sincerity_level
-    _valueAsString: 0
-  - _key: spooked
-    _valueAsString: False
-  - _key: snooped
-    _valueAsString: False
+  - _key: Clues_1
+    _valueAsString: GAS_PUMP_BROKEN, CASHREG_BROKEN, CASHREG_FIX
+  - _key: QuestChain_1
+    _valueAsString: FIRST_INTERACT, PAY_FOR_GAS
   - _key: closed_signs
     _valueAsString: 0
   - _key: Speaker
-    _valueAsString: Unkown, Misra, Lupe, Chief_Thelton, Marlowe, Beth, Mel, Roy_Rodgerson,
-      Jenny, Calvin, Josh, Irene, Jenkins
+    _valueAsString: Unknown
   - _key: CURRENT_SPEAKER
     _valueAsString: Lupe
   - _key: MAIN_QUEST
@@ -181,13 +185,16 @@ MonoBehaviour:
   - _key: GLOBAL_KNOWLEDGE
     _valueAsString: 
   - _key: Level1_Clues
-    _valueAsString: GAS_PUMP_BROKEN, CASHREG_BROKEN, CASHREG_FIX
+    _valueAsString: broken_gas_pump, broken_cash_reg, cashreg_fix
   - _key: Level1_Quests
-    _valueAsString: FIRST_INTERACT, PAY_FOR_GAS
+    _valueAsString: first_interact, pay_for_gas
   - _key: Level3_Clues
-    _valueAsString: 
+    _valueAsString: evidence_broken_window, evidence_footsteps, evidence_fence, evidence_claw_marks,
+      evidence_damages
   - _key: Level3_Quests
-    _valueAsString: 
+    _valueAsString: talk_to_misra_quest, visit_fence, visit_window, discover_outside_clues,
+      discuss_misra, visit_footsteps, visit_floor, visit_barrels, visit_backroom_door,
+      discover_inside_clues
   - _key: Level4_Quests
     _valueAsString: 
   - _key: Level4_Clues
