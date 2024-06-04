@@ -22,9 +22,9 @@
 			<value>neutral_1</value>
 			<value>inquisiting_1</value>
 			<value>curious_1</value>
-			<value>surprise_1</value>
+			<value>surprised_2</value>
 			<value>nervous_1</value>
-			<value>fright_1</value>
+			<value>fright_2</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>

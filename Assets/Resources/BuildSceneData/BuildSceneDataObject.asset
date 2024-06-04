@@ -56,14 +56,14 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: level1
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -676630717
+        Data2: 1282898668
+        Data3: -783550817
+        Data4: 2002162249
+      Path: event:/Music/townEmpty
   - _name: SCENE_1_0 - Intro
     _path: Assets/Scenes/Build/SCENE_1_0 - Intro.unity
     _knotNames:
@@ -107,7 +107,7 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: scene1_0
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
         Data1: 0
@@ -158,14 +158,14 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: scene1_1
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -676630717
+        Data2: 1282898668
+        Data3: -783550817
+        Data4: 2002162249
+      Path: event:/Music/townEmpty
   - _name: SCENE_1_2 - The Gas Station Int
     _path: Assets/Scenes/Build/SCENE_1_2 - The Gas Station Int.unity
     _knotNames:
@@ -209,14 +209,14 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: scene1_2
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -676630717
+        Data2: 1282898668
+        Data3: -783550817
+        Data4: 2002162249
+      Path: event:/Music/townEmpty
   - _name: SCENE_1_3 - The Gas Station Int Bathroom
     _path: Assets/Scenes/Build/SCENE_1_3 - The Gas Station Int Bathroom.unity
     _knotNames:
@@ -260,14 +260,14 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: scene1_3
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -676630717
+        Data2: 1282898668
+        Data3: -783550817
+        Data4: 2002162249
+      Path: event:/Music/townEmpty
   - _name: SCENE_1_4 - The Gas Station Ext.
     _path: Assets/Scenes/Build/SCENE_1_4 - The Gas Station Ext..unity
     _knotNames:
@@ -311,14 +311,65 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: scene1_4
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -676630717
+        Data2: 1282898668
+        Data3: -783550817
+        Data4: 2002162249
+      Path: event:/Music/townEmpty
+  - _name: SCENE_1_4 - The Gas Station Int.
+    _path: Assets/Scenes/Build/SCENE_1_4 - The Gas Station Int..unity
+    _knotNames:
+    - SetSpeaker
+    - SetActiveQuestChain
+    - StartQuest
+    - CompleteQuest
+    - IsQuestComplete
+    - IsQuestActive
+    - DiscoverClue
+    - IsClueFound
+    - Misra_Dialogue
+    - Roy_Dialogue
+    - askedAllQuestions
+    - askedJennysQuestions
+    - askedCalvinsQuestions
+    - askedJoshsQuestions
+    - Teens_Dialogue
+    - Jenny_Dialogue
+    - Calvin_Dialogue
+    - Josh_Dialogue
+    - Jenkins_Dialogue
+    - Irene_Dialogue
+    - level1
+    - scene1_0
+    - scene1_1
+    - scene1_2
+    - scene1_3
+    - scene1_4
+    - scene2_DS
+    - outsideCluesFound
+    - insideCluesFound
+    - scene3_1
+    - scene3_2
+    - scene4_1
+    - scene4_1_GOLDENHOUR
+    - scene4_1_DUSK
+    - scene4_2
+    - mainStreetCheck
+    - isAnyTeenSus
+    - scene4_3
+    - scene4_4
+    - global decl
+    knot: SetSpeaker
+    backgroundMusicEvent:
+      Guid:
+        Data1: -676630717
+        Data2: 1282898668
+        Data3: -783550817
+        Data4: 2002162249
+      Path: event:/Music/townEmpty
   - _name: SCENE_2_0 - The Precinct - Dating Sim
     _path: Assets/Scenes/Build/SCENE_2_0 - The Precinct - Dating Sim.unity
     _knotNames:
@@ -362,14 +413,14 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: scene2_DS
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1214400848
+        Data2: 1121225987
+        Data3: -1898062926
+        Data4: 1934244084
+      Path: event:/Music/datingGeneric
   - _name: SCENE_3_1 - The Winery Ext.
     _path: Assets/Scenes/Build/SCENE_3_1 - The Winery Ext..unity
     _knotNames:
@@ -413,14 +464,14 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: scene3_1
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1009970235
+        Data2: 1170209264
+        Data3: -62989660
+        Data4: -619185197
+      Path: event:/Music/investigate
   - _name: SCENE_3_2 - The Winery Int.
     _path: Assets/Scenes/Build/SCENE_3_2 - The Winery Int..unity
     _knotNames:
@@ -464,14 +515,65 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: scene3_2
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1009970235
+        Data2: 1170209264
+        Data3: -62989660
+        Data4: -619185197
+      Path: event:/Music/investigate
+  - _name: SCENE_3_3 - The Winery Ext.
+    _path: Assets/Scenes/Build/SCENE_3_3 - The Winery Ext..unity
+    _knotNames:
+    - SetSpeaker
+    - SetActiveQuestChain
+    - StartQuest
+    - CompleteQuest
+    - IsQuestComplete
+    - IsQuestActive
+    - DiscoverClue
+    - IsClueFound
+    - Misra_Dialogue
+    - Roy_Dialogue
+    - askedAllQuestions
+    - askedJennysQuestions
+    - askedCalvinsQuestions
+    - askedJoshsQuestions
+    - Teens_Dialogue
+    - Jenny_Dialogue
+    - Calvin_Dialogue
+    - Josh_Dialogue
+    - Jenkins_Dialogue
+    - Irene_Dialogue
+    - level1
+    - scene1_0
+    - scene1_1
+    - scene1_2
+    - scene1_3
+    - scene1_4
+    - scene2_DS
+    - outsideCluesFound
+    - insideCluesFound
+    - scene3_1
+    - scene3_2
+    - scene4_1
+    - scene4_1_GOLDENHOUR
+    - scene4_1_DUSK
+    - scene4_2
+    - mainStreetCheck
+    - isAnyTeenSus
+    - scene4_3
+    - scene4_4
+    - global decl
+    knot: SetSpeaker
+    backgroundMusicEvent:
+      Guid:
+        Data1: 1009970235
+        Data2: 1170209264
+        Data3: -62989660
+        Data4: -619185197
+      Path: event:/Music/investigate
   - _name: 'SCENE_4_1 - Main Street [AFTERNOON]'
     _path: Assets/Scenes/Build/SCENE_4_1 - Main Street [AFTERNOON].unity
     _knotNames:
@@ -515,14 +617,14 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: scene4_1
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 147986987
+        Data2: 1285635400
+        Data3: -1874987639
+        Data4: 1898160848
+      Path: event:/Music/townSomber
   - _name: 'SCENE_4_1 - Main Street [DUSK]'
     _path: Assets/Scenes/Build/SCENE_4_1 - Main Street [DUSK].unity
     _knotNames:
@@ -566,14 +668,14 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: scene4_1_DUSK
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 147986987
+        Data2: 1285635400
+        Data3: -1874987639
+        Data4: 1898160848
+      Path: event:/Music/townSomber
   - _name: 'SCENE_4_1 - Main Street [GOLDEN HOUR]'
     _path: Assets/Scenes/Build/SCENE_4_1 - Main Street [GOLDEN HOUR].unity
     _knotNames:
@@ -617,14 +719,14 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: scene4_1_GOLDENHOUR
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 147986987
+        Data2: 1285635400
+        Data3: -1874987639
+        Data4: 1898160848
+      Path: event:/Music/townSomber
   - _name: SCENE_4_2 - The General Store
     _path: Assets/Scenes/Build/SCENE_4_2 - The General Store.unity
     _knotNames:
@@ -668,14 +770,14 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: scene4_2
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 147986987
+        Data2: 1285635400
+        Data3: -1874987639
+        Data4: 1898160848
+      Path: event:/Music/townSomber
   - _name: SCENE_4_3 - The Arcade
     _path: Assets/Scenes/Build/SCENE_4_3 - The Arcade.unity
     _knotNames:
@@ -719,14 +821,14 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: scene4_3
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 147986987
+        Data2: 1285635400
+        Data3: -1874987639
+        Data4: 1898160848
+      Path: event:/Music/townSomber
   - _name: SCENE_4_4 - The Bar
     _path: Assets/Scenes/Build/SCENE_4_4 - The Bar.unity
     _knotNames:
@@ -770,14 +872,14 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: scene4_4
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 147986987
+        Data2: 1285635400
+        Data3: -1874987639
+        Data4: 1898160848
+      Path: event:/Music/townSomber
   - _name: SCENE_4_5 - The Bar - Dating Sim
     _path: Assets/Scenes/Build/SCENE_4_5 - The Bar - Dating Sim.unity
     _knotNames:
@@ -824,11 +926,11 @@ MonoBehaviour:
     knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1136912644
+        Data2: 1147052450
+        Data3: -1984897099
+        Data4: 349765812
+      Path: event:/Music/datingLove
   - _name: SCENE_5_1 - Stakeout - Dating Sim
     _path: Assets/Scenes/Build/SCENE_5_1 - Stakeout - Dating Sim.unity
     _knotNames:
@@ -872,14 +974,14 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: 
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1009970235
+        Data2: 1170209264
+        Data3: -62989660
+        Data4: -619185197
+      Path: event:/Music/investigate
   - _name: 'SCENE_5_2 - The Winery Ext. [EVENING]'
     _path: Assets/Scenes/Build/SCENE_5_2 - The Winery Ext. [EVENING].unity
     _knotNames:
@@ -923,7 +1025,7 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: 
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
         Data1: 0
@@ -974,14 +1076,14 @@ MonoBehaviour:
     - scene4_3
     - scene4_4
     - global decl
-    knot: 
+    knot: SetSpeaker
     backgroundMusicEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -832811596
+        Data2: 1172840838
+        Data3: 2009673630
+        Data4: 1630228377
+      Path: event:/Music/horror
   - _name: SYNTHESIS_DEMO
     _path: Assets/Scenes/Build/SYNTHESIS_DEMO.unity
     _knotNames:

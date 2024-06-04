@@ -32,9 +32,6 @@
 		<relationship name="timeline">
 			<destination>{352dc2ee-009b-462f-9664-9d109c36bcd6}</destination>
 		</relationship>
-		<relationship name="banks">
-			<destination>{69e5a1b5-7ed2-4483-9276-d7ebdbea08be}</destination>
-		</relationship>
 	</object>
 	<object class="EventMixer" id="{35e6fd55-ac4c-468c-8d72-628f98ecf96e}">
 		<relationship name="masterBus">
@@ -102,6 +99,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{70d4075c-e009-4dc6-a4f4-1ac3a9853c43}">
+		<relationship name="modulators">
+			<destination>{6b24d013-914f-415d-84dc-bf1c1d34a927}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{51f812d4-2d7e-4343-96e7-5800e1c5044b}</destination>
 		</relationship>
@@ -279,10 +279,24 @@
 			<destination>{52e60db7-2d89-4bce-b30a-fc44a9c34e0d}</destination>
 		</relationship>
 	</object>
+	<object class="ADSRModulator" id="{6b24d013-914f-415d-84dc-bf1c1d34a927}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>300</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
 	<object class="MixerBusEffectChain" id="{51f812d4-2d7e-4343-96e7-5800e1c5044b}">
 		<relationship name="effects">
-			<destination>{1a35ce25-a7d4-48a6-a671-23508c93727e}</destination>
 			<destination>{c136d4ed-a0ce-4d30-85ae-8aae3d11cbd1}</destination>
+			<destination>{1a35ce25-a7d4-48a6-a671-23508c93727e}</destination>
 			<destination>{2ee18b8b-eb16-4518-9340-e92d5c5cefaa}</destination>
 		</relationship>
 	</object>
@@ -411,7 +425,6 @@
 			<destination>{e361b521-885a-43c8-81f8-40061cfbc2d6}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusFader" id="{1a35ce25-a7d4-48a6-a671-23508c93727e}" />
 	<object class="MultibandEqEffect" id="{c136d4ed-a0ce-4d30-85ae-8aae3d11cbd1}">
 		<property name="filterTypeB">
 			<value>4</value>
@@ -429,6 +442,7 @@
 			<destination>{f776fe4b-fb87-4198-984f-1b18799afb00}</destination>
 		</relationship>
 	</object>
+	<object class="MixerBusFader" id="{1a35ce25-a7d4-48a6-a671-23508c93727e}" />
 	<object class="SpatialiserEffect" id="{2ee18b8b-eb16-4518-9340-e92d5c5cefaa}" />
 	<object class="AutomationPoint" id="{80292949-7680-41f5-946f-156dec2daae0}">
 		<property name="position">

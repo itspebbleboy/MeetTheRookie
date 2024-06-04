@@ -5,7 +5,7 @@
 			<value>genstore_ambience</value>
 		</property>
 		<property name="outputFormat">
-			<value>5</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{990940fe-68fa-4126-b045-d5ad5a99e58d}</destination>
@@ -62,7 +62,14 @@
 			<destination>{8a22c975-4ee5-466b-b91b-80259caa8538}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{5338b49f-e264-442f-bced-61cfe35e5adf}" />
+	<object class="EventAutomatableProperties" id="{5338b49f-e264-442f-bced-61cfe35e5adf}">
+		<property name="minimumDistance">
+			<value>1.39999998</value>
+		</property>
+		<property name="maximumDistance">
+			<value>4</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{2e0a3188-65e1-46b7-80c4-4d5da1c18e92}" />
 	<object class="GroupTrack" id="{63fc31cb-29a9-4aa9-9447-003380c6843b}">
 		<relationship name="modules">
@@ -109,9 +116,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{bdcb3cf7-78c1-4ba3-858f-b51ae0cb435c}">
-		<property name="volume">
-			<value>10</value>
-		</property>
+		<relationship name="modulators">
+			<destination>{3750c4ec-f941-4c34-8698-c9cfbae3fdbd}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{5394bed5-93c9-4bfe-abd7-b41578d683c0}</destination>
 		</relationship>
@@ -194,7 +201,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{dcbeff67-33df-440a-8099-1a5f45a7fc0c}">
 		<property name="volume">
-			<value>-6.5</value>
+			<value>3</value>
 		</property>
 		<property name="name">
 			<value>Fluorescent light hum</value>
@@ -239,7 +246,7 @@
 			<value>5</value>
 		</property>
 		<property name="maximumScatterDistance">
-			<value>74</value>
+			<value>7.5999999</value>
 		</property>
 		<property name="pitchRandomization">
 			<value>0.949999988</value>
@@ -249,6 +256,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{e5b94ff9-5121-4764-b684-3ab352e68cc1}">
+		<property name="volume">
+			<value>6</value>
+		</property>
 		<property name="name">
 			<value>Plastics</value>
 		</property>
@@ -295,7 +305,7 @@
 			<value>3.60000014</value>
 		</property>
 		<property name="maximumScatterDistance">
-			<value>55</value>
+			<value>7</value>
 		</property>
 		<property name="pitchRandomization">
 			<value>0.949999988</value>
@@ -305,6 +315,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{f1bd151d-e652-4e0b-862d-15c9fbb293f2}">
+		<property name="volume">
+			<value>6</value>
+		</property>
 		<property name="name">
 			<value>Papers</value>
 		</property>
@@ -335,9 +348,25 @@
 			<destination>{0bcfc868-c887-4b39-a913-1463645677aa}</destination>
 		</relationship>
 	</object>
+	<object class="ADSRModulator" id="{3750c4ec-f941-4c34-8698-c9cfbae3fdbd}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>500</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
 	<object class="MixerBusEffectChain" id="{5394bed5-93c9-4bfe-abd7-b41578d683c0}">
 		<relationship name="effects">
+			<destination>{20c39a27-2590-45d8-b14e-bf4a3d5744db}</destination>
 			<destination>{772591d9-50bc-475a-b6a4-4ba69da6bfd7}</destination>
+			<destination>{f5319d7a-101d-46f9-93b7-7bbdc866bb42}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{328954b3-609d-4147-b0ac-5ee864127a5c}" />
@@ -481,7 +510,9 @@
 			<destination>{f5026399-217c-4a1e-bff2-3a50f66d7edd}</destination>
 		</relationship>
 	</object>
+	<object class="GainEffect" id="{20c39a27-2590-45d8-b14e-bf4a3d5744db}" />
 	<object class="MixerBusFader" id="{772591d9-50bc-475a-b6a4-4ba69da6bfd7}" />
+	<object class="SpatialiserEffect" id="{f5319d7a-101d-46f9-93b7-7bbdc866bb42}" />
 	<object class="AutomationPoint" id="{5657bde3-f74e-4512-a4e1-2da6a952bd9d}">
 		<property name="position">
 			<value>12</value>

@@ -75,6 +75,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{d01515e5-395a-4fe1-b103-9bc51fb942b6}">
+		<relationship name="modulators">
+			<destination>{333674e6-9e33-408a-b4c0-083e6aa4374b}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{7e55633f-5f95-4562-b0f7-06e7f6bee5b4}</destination>
 		</relationship>
@@ -98,11 +101,8 @@
 		<property name="polyphony">
 			<value>4</value>
 		</property>
-		<property name="minimumTimeBetweenSounds">
-			<value>250</value>
-		</property>
 		<property name="maximumTimeBetweenSounds">
-			<value>2000</value>
+			<value>4000</value>
 		</property>
 		<property name="minimumScatterDistance">
 			<value>0</value>
@@ -119,7 +119,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{316e77b4-4604-4e56-b812-568a38ce4992}">
 		<property name="volume">
-			<value>-16</value>
+			<value>-5</value>
 		</property>
 		<property name="name">
 			<value>Random splashes</value>
@@ -148,6 +148,20 @@
 			<destination>{016aae93-9a63-4c50-8b28-af26a9801f19}</destination>
 		</relationship>
 	</object>
+	<object class="ADSRModulator" id="{333674e6-9e33-408a-b4c0-083e6aa4374b}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>300</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
 	<object class="MixerBusEffectChain" id="{7e55633f-5f95-4562-b0f7-06e7f6bee5b4}">
 		<relationship name="effects">
 			<destination>{46c47431-e3fd-4da5-a99d-22c32afe44fa}</destination>
@@ -171,6 +185,7 @@
 		<relationship name="effects">
 			<destination>{6dd20b60-9440-4a38-9327-ad9becaa699e}</destination>
 			<destination>{661c111b-1641-4511-a581-b097bc277b68}</destination>
+			<destination>{2020013c-ca5e-456b-bda4-2b9eeb64c8be}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{ecd1e526-87d2-4585-b94c-8f1d0e6470c5}" />
@@ -214,16 +229,27 @@
 	<object class="MixerBusFader" id="{6dd20b60-9440-4a38-9327-ad9becaa699e}" />
 	<object class="SFXReverbEffect" id="{661c111b-1641-4511-a581-b097bc277b68}">
 		<property name="decayTime">
-			<value>3600</value>
+			<value>3700</value>
 		</property>
 		<property name="highCut">
-			<value>12000</value>
+			<value>5200</value>
 		</property>
 		<property name="wetLevel">
-			<value>-7.5</value>
+			<value>-2.5</value>
 		</property>
 		<property name="dryLevel">
-			<value>-4</value>
+			<value>-12</value>
+		</property>
+	</object>
+	<object class="ThreeEQEffect" id="{2020013c-ca5e-456b-bda4-2b9eeb64c8be}">
+		<property name="lowGain">
+			<value>-19.5</value>
+		</property>
+		<property name="highGain">
+			<value>-13.5</value>
+		</property>
+		<property name="highCrossover">
+			<value>7500</value>
 		</property>
 	</object>
 </objects>

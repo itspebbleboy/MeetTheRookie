@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{4ce05ede-c93f-49d3-9272-e122efd73647}">
 		<property name="name">
-			<value>synthesis_swapQuestion</value>
+			<value>synthesis_questionSelect</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>

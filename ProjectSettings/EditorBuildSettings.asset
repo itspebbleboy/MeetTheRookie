@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Build/SCENE_1_4 - The Gas Station Ext..unity
     guid: e20b042c02ea14ecaa264b0735a6365c
   - enabled: 1
+    path: Assets/Scenes/Build/SCENE_1_4 - The Gas Station Int..unity
+    guid: fdf27c545200445d4a252459e84fe396
+  - enabled: 1
     path: Assets/Scenes/Build/SCENE_2_0 - The Precinct - Dating Sim.unity
     guid: 69689f5ac1cb84bfda539d32a95238b7
   - enabled: 1
@@ -32,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Build/SCENE_3_2 - The Winery Int..unity
     guid: dd1987156ba4d41ef9d4c364b35f0e52
+  - enabled: 1
+    path: Assets/Scenes/Build/SCENE_3_3 - The Winery Ext..unity
+    guid: 19a90049d680c48abbff5ae62e7324e3
   - enabled: 1
     path: Assets/Scenes/Build/SCENE_4_1 - Main Street [AFTERNOON].unity
     guid: 938279deb4ab77d4596376237e2dadaa

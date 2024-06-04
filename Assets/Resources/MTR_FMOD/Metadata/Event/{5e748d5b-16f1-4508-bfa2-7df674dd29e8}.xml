@@ -65,10 +65,10 @@
 	</object>
 	<object class="EventAutomatableProperties" id="{2d391bce-55ac-42d9-b858-d41b2ad3285d}">
 		<property name="minimumDistance">
-			<value>4</value>
+			<value>7</value>
 		</property>
 		<property name="maximumDistance">
-			<value>450</value>
+			<value>15</value>
 		</property>
 	</object>
 	<object class="MarkerTrack" id="{bc33b531-2a5d-492b-a4c6-911ed27c7177}" />
@@ -156,6 +156,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{3e89d466-ce7e-49f1-b16d-1defb7ed1195}">
+		<relationship name="modulators">
+			<destination>{56736760-3da6-4831-8bad-4c1efe5c056d}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{b2bc5dd5-bf89-41d3-9617-75425712c85d}</destination>
 		</relationship>
@@ -214,7 +217,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{61e56b67-6198-4f49-a86e-0c0502a92314}">
 		<property name="volume">
-			<value>-5.5</value>
+			<value>-0.5</value>
 		</property>
 		<property name="name">
 			<value>Low Wind</value>
@@ -522,7 +525,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{3cf85fe1-0042-4b3a-b71a-b2554c789180}">
 		<property name="volume">
-			<value>-11.5</value>
+			<value>-6.5</value>
 		</property>
 		<property name="name">
 			<value>Trees</value>
@@ -635,7 +638,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{a312eb3d-4334-4c83-bd81-7a0854dab8dd}">
 		<property name="volume">
-			<value>-6</value>
+			<value>-1</value>
 		</property>
 		<property name="name">
 			<value>Morning Dove</value>
@@ -719,7 +722,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{9aadc721-e7dd-4c45-ad21-5338a74acb80}">
 		<property name="volume">
-			<value>-8</value>
+			<value>-3</value>
 		</property>
 		<property name="name">
 			<value>Birds/critters</value>
@@ -751,9 +754,22 @@
 			<destination>{ca8f3234-3797-4029-bc59-6da21bae54d3}</destination>
 		</relationship>
 	</object>
+	<object class="ADSRModulator" id="{56736760-3da6-4831-8bad-4c1efe5c056d}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>300</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
 	<object class="MixerBusEffectChain" id="{b2bc5dd5-bf89-41d3-9617-75425712c85d}">
 		<relationship name="effects">
-			<destination>{adcad631-f063-4318-a12a-af4f13a7f796}</destination>
 			<destination>{4d466370-6e47-4527-9ed2-19952d122d87}</destination>
 			<destination>{b9a26db3-5b04-4c7d-b8c2-051e7daa3fc5}</destination>
 		</relationship>
@@ -1657,11 +1673,6 @@
 			<destination>{6263ae08-3ca3-4bdc-bc41-f1895d1181a1}</destination>
 			<destination>{84784cb7-68a0-42f0-9df9-466ca2172683}</destination>
 		</relationship>
-	</object>
-	<object class="GainEffect" id="{adcad631-f063-4318-a12a-af4f13a7f796}">
-		<property name="gain">
-			<value>5</value>
-		</property>
 	</object>
 	<object class="MixerBusFader" id="{4d466370-6e47-4527-9ed2-19952d122d87}" />
 	<object class="SpatialiserEffect" id="{b9a26db3-5b04-4c7d-b8c2-051e7daa3fc5}">

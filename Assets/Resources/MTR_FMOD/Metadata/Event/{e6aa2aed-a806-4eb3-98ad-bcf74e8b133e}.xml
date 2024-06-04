@@ -196,6 +196,12 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{f99554bd-11c6-4426-9aa6-7d0eec365345}">
+		<property name="volume">
+			<value>6</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{37ebcf80-f20e-4bf1-8ec6-62b0618b8652}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{ae7f3351-6bc7-4d1a-ac4a-baedba52e938}</destination>
 		</relationship>
@@ -239,6 +245,9 @@
 		</property>
 	</object>
 	<object class="EventMixerGroup" id="{e7e9cfee-b8ce-45e9-9f01-a99f611b2459}">
+		<property name="volume">
+			<value>-10.5</value>
+		</property>
 		<property name="name">
 			<value>Fridge Bus</value>
 		</property>
@@ -572,9 +581,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{0ae2af59-3ef3-4b8a-b6db-0e522a0812c5}">
-		<property name="volume">
-			<value>-15.5</value>
-		</property>
 		<property name="name">
 			<value>Fridge Hum</value>
 		</property>
@@ -613,9 +619,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{3ecbc43e-fab5-44eb-adfa-4554a06ef3cf}">
-		<property name="volume">
-			<value>-15.5</value>
-		</property>
 		<property name="name">
 			<value>fridge hum crossfade</value>
 		</property>
@@ -691,16 +694,19 @@
 			<value>5000</value>
 		</property>
 		<property name="minimumScatterDistance">
-			<value>25</value>
+			<value>6</value>
 		</property>
 		<property name="maximumScatterDistance">
-			<value>35</value>
+			<value>6.55000019</value>
 		</property>
 		<relationship name="sound">
 			<destination>{b3c10f47-ed07-40c3-9b6f-102b5d60cabb}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{cf626279-a6bd-4e8c-bc7e-5fe0193db01e}">
+		<property name="volume">
+			<value>4</value>
+		</property>
 		<property name="name">
 			<value>Glass</value>
 		</property>
@@ -734,6 +740,9 @@
 		<property name="length">
 			<value>75.56276276526691</value>
 		</property>
+		<property name="volume">
+			<value>5</value>
+		</property>
 		<property name="minimumTimeBetweenSounds">
 			<value>3000</value>
 		</property>
@@ -741,7 +750,10 @@
 			<value>5000</value>
 		</property>
 		<property name="minimumScatterDistance">
-			<value>9.94999981</value>
+			<value>6</value>
+		</property>
+		<property name="maximumScatterDistance">
+			<value>6.5999999</value>
 		</property>
 		<relationship name="sound">
 			<destination>{1f8942cd-7edd-47a0-be89-2a748dd0e4b4}</destination>
@@ -749,7 +761,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{cdda257f-225c-4436-b151-7ff16f71ce30}">
 		<property name="volume">
-			<value>5.5</value>
+			<value>1.5</value>
 		</property>
 		<property name="name">
 			<value>Dishes</value>
@@ -791,16 +803,19 @@
 			<value>5000</value>
 		</property>
 		<property name="minimumScatterDistance">
-			<value>25</value>
+			<value>6.25</value>
 		</property>
 		<property name="maximumScatterDistance">
-			<value>35</value>
+			<value>6.80000019</value>
 		</property>
 		<relationship name="sound">
 			<destination>{d588ffef-57e8-4e69-a870-f8ec068bdbda}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{83207042-b77f-4f37-8ddd-08a39e0fbd7d}">
+		<property name="volume">
+			<value>-8</value>
+		</property>
 		<property name="name">
 			<value>Silverware</value>
 		</property>
@@ -857,6 +872,20 @@
 		<relationship name="transitionTimeline">
 			<destination>{6d5a0c21-6e3a-4298-8309-bbc569670545}</destination>
 		</relationship>
+	</object>
+	<object class="ADSRModulator" id="{37ebcf80-f20e-4bf1-8ec6-62b0618b8652}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>300</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{ae7f3351-6bc7-4d1a-ac4a-baedba52e938}">
 		<relationship name="effects">
@@ -1295,6 +1324,7 @@
 		<relationship name="effects">
 			<destination>{a18b8a71-c1dc-4ae2-9592-50547d8d7dbb}</destination>
 			<destination>{ddb3a8b4-aa17-44c3-99d0-8de93e68c27e}</destination>
+			<destination>{2ef3660c-81f7-4982-8b0b-1314d5869714}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{e415258b-be1c-471a-8715-7a50b25204a7}" />
@@ -2134,11 +2164,31 @@
 	</object>
 	<object class="MixerBusFader" id="{a18b8a71-c1dc-4ae2-9592-50547d8d7dbb}" />
 	<object class="SFXReverbEffect" id="{ddb3a8b4-aa17-44c3-99d0-8de93e68c27e}">
+		<property name="decayTime">
+			<value>2600</value>
+		</property>
+		<property name="lowShelfFrequency">
+			<value>380</value>
+		</property>
 		<property name="wetLevel">
-			<value>-20</value>
+			<value>-11</value>
 		</property>
 		<property name="dryLevel">
 			<value>-9</value>
+		</property>
+	</object>
+	<object class="ThreeEQEffect" id="{2ef3660c-81f7-4982-8b0b-1314d5869714}">
+		<property name="lowGain">
+			<value>-23.5</value>
+		</property>
+		<property name="highGain">
+			<value>-3</value>
+		</property>
+		<property name="lowCrossover">
+			<value>850</value>
+		</property>
+		<property name="highCrossover">
+			<value>5400</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{b27fe58b-de58-48a1-a84f-0fa1cc94e081}">
@@ -2282,7 +2332,7 @@
 			<value>0.83844241922120988</value>
 		</property>
 		<property name="value">
-			<value>3.5</value>
+			<value>4</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{e2ab94eb-24c0-47e1-8d9a-b8241d27b23e}">
@@ -2290,7 +2340,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-58.3333473</value>
+			<value>-56.6666794</value>
 		</property>
 	</object>
 </objects>

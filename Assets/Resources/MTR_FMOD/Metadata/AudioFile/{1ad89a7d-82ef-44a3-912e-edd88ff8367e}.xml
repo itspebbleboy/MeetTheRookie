@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
+<<<<<<<< HEAD:Assets/Resources/MTR_FMOD/Metadata/AudioFile/{1ad89a7d-82ef-44a3-912e-edd88ff8367e}.xml
 	<object class="AudioFile" id="{1ad89a7d-82ef-44a3-912e-edd88ff8367e}">
 		<property name="assetPath">
 			<value>SFX/Voice/Lupe/Lupe VO__Annoyed2-24b.wav</value>
+========
+	<object class="AudioFile" id="{1c430da6-973b-4937-9999-e453ec9ea592}">
+		<property name="assetPath">
+			<value>SFX/Voice/Lupe/Lupe VO__Fluster2-24b.wav</value>
+>>>>>>>> main:Assets/Resources/MTR_FMOD/Metadata/AudioFile/{1c430da6-973b-4937-9999-e453ec9ea592}.xml
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
