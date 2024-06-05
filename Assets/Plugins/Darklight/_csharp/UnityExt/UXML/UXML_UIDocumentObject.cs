@@ -23,7 +23,7 @@ namespace Darklight.UnityExt.UXML
         [SerializeField] public UXML_UIDocumentPreset preset;
         public UIDocument document => GetComponent<UIDocument>();
         public VisualElement root => document.rootVisualElement;
-        public bool isVisible { get; protected set; }
+        public Dictionary<string, VisualElement> uiElements { get; private set; } = new();
 
         public virtual void Initialize(UXML_UIDocumentPreset preset, string[] tags = null)
         {
@@ -64,24 +64,6 @@ namespace Darklight.UnityExt.UXML
             HashSet<T> elements = new HashSet<T>();
             root.Query<T>(tagOrClass).ForEach(element => elements.Add(element));
             return elements;
-        }
-
-        /// <summary>
-        /// Toggle the visibility of the root element.
-        /// </summary>
-        public void ToggleVisibility()
-        {
-            isVisible = !isVisible;
-            root.visible = isVisible;
-        }
-
-        /// <summary>
-        /// Set the visibility of the root element directly.
-        /// </summary>
-        public void SetVisibility(bool visible)
-        {
-            isVisible = visible;
-            root.visible = isVisible;
         }
     }
 

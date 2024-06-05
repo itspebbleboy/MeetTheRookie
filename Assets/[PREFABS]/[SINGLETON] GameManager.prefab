@@ -1,68 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &293430607668870812
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5312689513072785689}
-  - component: {fileID: 8926087301010099501}
-  - component: {fileID: 2859403104988845371}
-  m_Layer: 5
-  m_Name: SynthesisUIController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5312689513072785689
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293430607668870812}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5054830795790530424}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8926087301010099501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293430607668870812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PanelSettings: {fileID: 11400000, guid: 9b3a92b9a918eea40b11e9a8e06da64b, type: 2}
-  m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: ab649967a8885c04eb3f8d6f8d431f2a, type: 3}
-  m_SortingOrder: 0
---- !u!114 &2859403104988845371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293430607668870812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d77d174a9e8f19448b4dba46e02ebe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  preset: {fileID: 11400000, guid: b6ae11a3b89c76f49818ff6343792cd1, type: 2}
-  clueLibrary: {fileID: 11400000, guid: a3f42b5a64f1aa24bacc88d2196c2e28, type: 2}
 --- !u!1 &3100972142227852913
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +179,6 @@ Transform:
   m_Children:
   - {fileID: 7313103818091379476}
   - {fileID: 3073816321907884251}
-  - {fileID: 5312689513072785689}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2927568867421027592
@@ -301,12 +237,37 @@ MonoBehaviour:
   - Speaker.Josh
   - Speaker.Irene
   - Speaker.Jenkins
-  _globalKnotList: []
+  _globalKnots:
+  - SetSpeaker
+  - SetActiveQuestChain
+  - StartQuest
+  - CompleteQuest
+  - IsQuestComplete
+  - IsQuestActive
+  - DiscoverClue
+  - IsClueFound
+  - Misra_Dialogue
+  - Roy_Dialogue
+  - Jenny_Dialogue
+  - Calvin_Dialogue
+  - Josh_Dialogue
+  - Jenkins_Dialogue
+  - Irene_Dialogue
+  - level1
+  - scene1_0
+  - scene1_1
+  - scene1_2
+  - scene1_3
+  - scene1_4
+  - level3
+  - scene3_1
+  - scene3_2
+  - scene4_1
+  - scene4_4
+  - scene4_3
+  - scene4_2
+  - global decl
   _currentSpeaker: Lupe
-  _mainQuestName: 
-  _activeQuestChain: []
-  _completedQuestChain: []
-  _globalKnowledgeList: []
 --- !u!114 &2433518505442435673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,16 +280,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f9e632f00534402afc6812f07637ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _screenSize: {x: 1431, y: 805}
-  _screenAspectRatio: 1.7776397
-  characterColors: {fileID: 11400000, guid: e723c62cd5a684110a4fcbb8fbf2266d, type: 2}
+  _screenSize: {x: 1104, y: 621}
+  _screenAspectRatio: 1.7777778
   _mainMenuPreset: {fileID: 11400000, guid: 75276c9128e2d39448f28ebea66cabc9, type: 2}
+  _mainMenuScene:
+    m_SceneName: 
   _gameUIPreset: {fileID: 11400000, guid: d6ee095377e40494693ad19b0767a725, type: 2}
   _synthesisUIPreset: {fileID: 11400000, guid: b6ae11a3b89c76f49818ff6343792cd1, type: 2}
   _speechBubblePreset: {fileID: 11400000, guid: 9c492d3781fcb6f48b1e59445437799b, type: 2}
   speechBubbleObject: {fileID: 0}
-  speechBubbleFontSizeRange: {x: 96, y: 350}
-  speechBubbleWidth: 2048
+  speechBubbleFontSizeRange: {x: 114, y: 128}
   LTick_SpeechBubble: {fileID: 21300000, guid: 0b162cc3f1b244d2a9d9e7d9714ee803, type: 3}
   RTick_SpeechBubble: {fileID: 21300000, guid: 47845efcdff9e456bb60412abd6c84d7, type: 3}
   _interactIconPreset: {fileID: 11400000, guid: a710785f670e8194db4f43f3dd090d35, type: 2}
@@ -367,7 +328,7 @@ MonoBehaviour:
   - Assets/Scenes/Build/SCENE_5_1 - Stakeout - Dating Sim.unity
   - Assets/Scenes/Build/SCENE_5_2 - The Winery Ext..unity
   - Assets/Scenes/Build/SCENE_5_3 - The Winery Int..unity
-  buildSceneDataObject: {fileID: 11400000, guid: 985fee78f5f34b34ab4d7ddb85f37d9e, type: 2}
+  buildSceneDataObject: {fileID: 0}
 --- !u!114 &1103200859854054853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,20 +376,6 @@ MonoBehaviour:
       Data3: 1133846155
       Data4: -246206366
     Path: event:/SFX/Generic/NPC_InteractStop
-  menuSelectEventReference:
-    Guid:
-      Data1: -954684799
-      Data2: 1104147438
-      Data3: 728851383
-      Data4: -633248287
-    Path: event:/SFX/Generic/UI_select
-  menuHoverEventReference:
-    Guid:
-      Data1: -619712208
-      Data2: 1275090819
-      Data3: 672460202
-      Data4: 591725032
-    Path: event:/SFX/Generic/UI_hover
 --- !u!114 &6736551505315507451
 MonoBehaviour:
   m_ObjectHideFlags: 0

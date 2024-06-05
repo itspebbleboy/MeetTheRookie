@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/[USER%20INTERFACE]/Synthesis/SynthAlternative/CharacterStack/StackSynthUI.uss?fileID=7433441132597879392&amp;guid=161d545512230e642ba8fb65b5118381&amp;type=3#StackSynthUI" />
     <ui:VisualElement name="Background" style="flex-grow: 1; margin-top: auto; margin-right: auto; margin-bottom: auto; margin-left: auto; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; position: absolute; left: auto; right: 700px; top: 200px;">
-        <ui:VisualElement name="Stack" class="StackBase">
+        <ui:VisualElement name="Stack" class="StackBase" style="top: 0; left: 0;">
             <ui:VisualElement name="Irene" class="StackFile" style="background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/Synthesis/SynthAlternative/CharacterStack/IreneChar.png?fileID=2800000&amp;guid=ae0051634c8164082968816bea566aaf&amp;type=3#IreneChar&quot;);">
                 <ui:VisualElement name="Hovered" class="StackSelected" />
                 <ui:VisualElement name="TextHolder" class="StackTextHolder" />

@@ -33,13 +33,13 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "MenuButton",
-                    "type": "Button",
-                    "id": "68f36159-20da-4219-a657-9eb6ac26db36",
-                    "expectedControlType": "Button",
+                    "name": "Pointer",
+                    "type": "Value",
+                    "id": "cf343646-6d7a-4ad1-a52b-90052b2faa7d",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -188,12 +188,12 @@
                 },
                 {
                     "name": "",
-                    "id": "464428c1-98e4-4341-9009-edb5f8998a28",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "Tap",
+                    "id": "c2c038e8-48b6-49ab-b764-17025d85a2fb",
+                    "path": "*/{Point}",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MenuButton",
+                    "action": "Pointer",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,13 +1,25 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/[USER%20INTERFACE]/_stylesheets/SynthesisUI.uss?fileID=7433441132597879392&amp;guid=8f3ac6dfa1bea63449de71aeff8f70d1&amp;type=3#SynthesisUI" />
-    <engine:VisualElement name="container" tabindex="-1" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/Synthesis/SynthAlternative/VisualBase/synthesisBackground.jpeg?fileID=2800000&amp;guid=85b3aa261eb4d4d31a07a3dbada32500&amp;type=3#synthesisBackground&quot;); align-self: stretch; -unity-background-image-tint-color: rgba(212, 158, 255, 0.63); align-items: center; justify-content: flex-start;">
-        <engine:VisualElement name="Mystery" style="flex-grow: 0; height: 150px; justify-content: flex-start;">
-            <engine:VisualElement name="MysteryBG" style="flex-grow: 0; background-color: rgba(36, 35, 43, 0.83); flex-direction: row; justify-content: space-around; align-self: stretch; height: 150px; align-items: center;">
-                <engine:Button name="LeftArrow" class="Arrow" />
+    <Style src="project://database/Assets/[USER%20INTERFACE]/Synthesis/SynthAlternative/VisualBase/SynthVisuals.uss?fileID=7433441132597879392&amp;guid=5185de967380c44c7b9381aa27e58176&amp;type=3#SynthVisuals" />
+    <engine:VisualElement name="Base" tabindex="-1" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/Synthesis/SynthAlternative/VisualBase/synthesisBackground.jpeg?fileID=2800000&amp;guid=85b3aa261eb4d4d31a07a3dbada32500&amp;type=3#synthesisBackground&quot;);">
+        <engine:VisualElement name="Mystery" style="flex-grow: 0; height: 150px;">
+            <engine:VisualElement name="MysteryBG" style="flex-grow: 0; background-color: rgba(36, 35, 43, 0.83); flex-direction: row; justify-content: space-around; align-self: auto; height: 150px;">
+                <engine:Button text="Button" name="LeftArrow" class="Arrow" />
                 <engine:Label text="What Happened at the Winery?" name="MysteryTitle" style="-unity-text-align: middle-left; font-size: 50px; color: rgb(255, 255, 255);" />
-                <engine:Button name="RightArrow" class="Arrow" style="rotate: 180deg;" />
+                <engine:Button text="Button" name="RightArrow" class="Arrow" style="rotate: 180deg;" />
             </engine:VisualElement>
         </engine:VisualElement>
         <engine:VisualElement name="Items" style="flex-grow: 1;" />
+        <engine:VisualElement name="lupe" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/[SPRITES]/_characters/lupe_spritesheet.png?fileID=2800000&amp;guid=6b167707065891e4c826ace85794e423&amp;type=3#lupe_spritesheet&apos;); position: absolute; width: 256px; height: 512px; bottom: -250px; align-self: center;" />
+        <engine:VisualElement name="Bottom" style="flex-grow: 0; background-color: rgba(36, 35, 43, 0.83); height: 90px; flex-direction: row; justify-content: space-around;">
+            <engine:VisualElement class="Controls" style="background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/Synthesis/SynthAlternative/VisualBase/Z%20input%20.PNG?fileID=2800000&amp;guid=5b89e296700074cc0819e3f0878c2833&amp;type=3#Z input &quot;);">
+                <engine:Label text="Select" style="-unity-text-align: middle-center; color: rgb(255, 255, 255); left: 86px; top: 2px; font-size: 40px; -unity-font-definition: url(&quot;project://database/Assets/[USER%20INTERFACE]/_fonts/pixelplay.ttf?fileID=12800000&amp;guid=e2cb29917e71d184a9ea0469322749c1&amp;type=3#pixelplay&quot;);" />
+            </engine:VisualElement>
+            <engine:VisualElement class="Controls" style="background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/Synthesis/SynthAlternative/VisualBase/X%20input.PNG?fileID=2800000&amp;guid=fa0bd1da6ef7d4e0f9416c0356e12079&amp;type=3#X input&quot;);">
+                <engine:Label text="Deselect" style="-unity-text-align: middle-center; color: rgb(255, 255, 255); left: 97px; top: 2px; font-size: 40px; -unity-font-definition: url(&quot;project://database/Assets/[USER%20INTERFACE]/_fonts/pixelplay.ttf?fileID=12800000&amp;guid=e2cb29917e71d184a9ea0469322749c1&amp;type=3#pixelplay&quot;);" />
+            </engine:VisualElement>
+            <engine:VisualElement class="Controls" style="background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/Synthesis/SynthAlternative/VisualBase/C%20input.PNG?fileID=2800000&amp;guid=e2c7e5a36f69c4c4c88c304093d078ca&amp;type=3#C input&quot;);">
+                <engine:Label text="Swap" style="-unity-text-align: middle-center; color: rgb(255, 255, 255); left: 78px; top: 2px; font-size: 40px; -unity-font-definition: url(&quot;project://database/Assets/[USER%20INTERFACE]/_fonts/pixelplay.ttf?fileID=12800000&amp;guid=e2cb29917e71d184a9ea0469322749c1&amp;type=3#pixelplay&quot;);" />
+            </engine:VisualElement>
+        </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>

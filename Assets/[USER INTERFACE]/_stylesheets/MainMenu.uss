@@ -19,25 +19,3 @@ Button.MenuButton {
     margin-left: 0;
     transition-duration: 0.4s;
 }
-
-Button.MenuButton.Selected {
-    background-image: none;
-    background-color: rgba(255, 255, 255, 0);
-    border-left-color: rgba(255, 255, 255, 0);
-    border-right-color: rgba(255, 255, 255, 0);
-    border-top-color: rgba(255, 255, 255, 0);
-    border-bottom-color: rgba(255, 255, 255, 0);
-    font-size: 90px;
-    -unity-font-definition: url("project://database/Assets/[USER%20INTERFACE]/_fonts/cour.ttf?fileID=12800000&guid=728d930755b2040efae7a865907559c1&type=3#cour");
-    -unity-font-style: bold;
-    color: rgb(135, 0, 125);
-    border-top-width: 0;
-    border-right-width: 0;
-    border-bottom-width: 0;
-    border-left-width: 0;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    transition-duration: 0.4s;
-}

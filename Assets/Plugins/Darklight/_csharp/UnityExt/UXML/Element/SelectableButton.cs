@@ -1,4 +1,3 @@
-using System;
 using Darklight.UnityExt.Editor;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -8,25 +7,59 @@ namespace Darklight.UnityExt.UXML
     #region ---- [[ SELECTABLE BUTTON ]] ----
     // Specific implementation for a Button element.
     [UxmlElement]
-    public partial class SelectableButton : Button, ISelectable
+    public partial class SelectableButton : SelectableVisualElement<Button>
     {
         public class SelectableButtonFactory : UxmlFactory<SelectableButton> { }
 
-        public event Action OnSelect;
-        public event Action OnClick;
-        public SelectableButton()
+        [UxmlAttribute]
+        public string text
         {
-            text = "selectable-button";
-            this.clickable.clicked += () => InvokeClickAction();
+            get { return Element.text; }
+            set { Element.text = value; }
         }
 
-        public void SetSelected()
+        public SelectableButton()
         {
-            AddToClassList("selected");
-            OnSelect?.Invoke();
+            Element = (Button)this;
+
+            if (Element == null)
+            {
+                Element = new Button();
+                Add(Element);
+            }
+            Element.text = "selectable-button";
+            Element.clickable.clicked += ClickAction;
         }
-        public void Deselect() => RemoveFromClassList("selected");
-        public void InvokeClickAction() => OnClick?.Invoke();
+
+        private void ClickAction()
+        {
+            Click();
+            Element.clickable.clicked -= ClickAction;
+        }
+    }
+    #endregion
+
+    #region ---- [[ SELECTABLE SCENE CHANGE BUTTON ]] ----
+    [UxmlElement]
+    public partial class SelectableSceneChangeButton : SelectableButton
+    {
+        public class SelectableSceneChangeButtonFactory : UxmlFactory<SelectableSceneChangeButton> { }
+
+        [UxmlAttribute]
+        public string scene;
+        public SelectableSceneChangeButton()
+        {
+            OnClick += ChangeScene;
+        }
+
+        private void ChangeScene()
+        {
+            if (scene != null)
+            {
+                SceneManager.LoadScene(scene);
+                OnClick -= ChangeScene; // Ensure this is only called once
+            }
+        }
     }
     #endregion
 }

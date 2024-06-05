@@ -1,0 +1,28 @@
+.synthesis-object {
+    color: rgb(255, 255, 255);
+    -unity-text-align: upper-left;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0);
+    transition-duration: 0.2s;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    align-self: flex-start;
+}
+
+.highlight {
+    background-color: rgba(187, 157, 0, 0.53);
+}
+
+.selected {
+    background-color: rgba(121, 175, 200, 0.63);
+}
+
+.selected.highlight {
+    background-color: rgba(224, 150, 79, 0.73);
+}
+
+.hover {
+    background-color: rgb(255, 0, 0);
+}

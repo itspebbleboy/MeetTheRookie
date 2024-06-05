@@ -1,6 +1,6 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/[USER%20INTERFACE]/_stylesheets/SynthesisUI.uss?fileID=7433441132597879392&amp;guid=8f3ac6dfa1bea63449de71aeff8f70d1&amp;type=3#SynthesisUI" />
-    <engine:VisualElement name="Base">
+    <Style src="project://database/Assets/Resources/Synthesis/testuss.uss?fileID=7433441132597879392&amp;guid=d7e7fa8bd647c314d84fe72e595d54e1&amp;type=3#testuss" />
+    <engine:VisualElement name="Base" style="flex-grow: 1; position: absolute; left: 518px; top: 414px;">
         <engine:VisualElement name="Selected" class="Paper" style="flex-grow: 0; position: absolute; background-image: none; width: 128px; height: 70px; rotate: -2deg; background-color: rgba(188, 162, 0, 0);" />
         <engine:VisualElement name="Paper" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/Synthesis/SynthAlternative/medium%20paper%203%20.png?fileID=2800000&amp;guid=bb1e77a5ddb2d48f2b4e238da200b286&amp;type=3#medium paper 3 &quot;); rotate: 2deg; width: 256px; height: 128px; position: absolute;" />
         <engine:Label text="Claw Marks" style="-unity-font-definition: url(&quot;project://database/Assets/[USER%20INTERFACE]/_fonts/pixelplay.ttf?fileID=12800000&amp;guid=e2cb29917e71d184a9ea0469322749c1&amp;type=3#pixelplay&quot;); font-size: 40px; left: 9px; top: -5px;" />

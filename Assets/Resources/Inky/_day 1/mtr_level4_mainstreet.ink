@@ -7,11 +7,6 @@
 // ---------------------------------------------- >>/^*
 // ---- [[ LOCAL VARIABLES ]] ---- >>
 VAR closed_signs = 0
-VAR teensFirst = false
-VAR royFirst = false
-VAR canStreetRoyCutscene = true
-VAR canStreetTeensCutscene = true
-VAR canIntroArcade = true
 
 // ============================================================
 // ========================== SCENE 4.1 =======================
@@ -38,128 +33,22 @@ VAR canIntroArcade = true
 + [strange symbol] -> strange_symbol_on_fountain
 + [goop] -> goop_on_fountain
 
-+ [lupe_car] -> lupe_car
-
 + {closed_signs >= 5} ["The Heart of Kettle Rock" seems a bit...barren.]
 -> DONE
-
-= misra_cutscene_afternoon
+= misra_cutscene
     ~ CompleteQuest(visited_misra)
     ~ SetSpeaker(Speaker.Misra)
-    Here we are! 
-    Kettle Rock, Main Street. Heart of the Downtown. 
-    There's bound to be some locals around - where do you want to start?
+    [Misra] Here we are! 
+    [Misra] Kettle Rock, Main Street. Heart of the Downtown. 
+    [Misra] There's bound to be some locals around - where do you want to start?
     ~ SetSpeaker(Speaker.Lupe)
     ->DONE
-= misra_cutscene_golden_hour
-    {
-    - (IsQuestComplete(jenny_suspicion) || IsQuestComplete(calvin_suspicion) || IsQuestComplete(josh_suspicion) ):
-        {canStreetTeensCutscene:
-            ~canStreetTeensCutscene = false
-            ~ teensFirst = true
-            -> misra_cutscene_after_teens
-        }
-        ->DONE
-    -(IsClueFound(roys_suspicion)):
-        {canStreetRoyCutscene:
-            ~ canStreetRoyCutscene = false
-            ~ royFirst = true
-            ->misra_cutscene_after_general_store
-        }
-        ->DONE
-    }
-= misra_cutscene_dusk
-    {
-        
-    -teensFirst && IsClueFound(roys_suspicion) && canStreetRoyCutscene:
-        ~ canStreetRoyCutscene = false
-        ->misra_cutscene_after_general_store
-    -royFirst && (IsQuestComplete(jenny_suspicion) || IsQuestComplete(calvin_suspicion) || IsQuestComplete(josh_suspicion) ) && canStreetTeensCutscene:
-        ~canStreetRoyCutscene = false
-        ->misra_cutscene_after_teens
-    
-    }
-    
-= misra_cutscene_after_general_store
-    ~ SetSpeaker(Speaker.Misra)
-    I'm sorry if Roy seems like a bit of a downer.
-    He has no faith.
-    ~ SetSpeaker(Speaker.Lupe)
-    He seems like he's got a pretty good acceptance of the situation.
-    From what I can tell.
-    ~ SetSpeaker(Speaker.Misra)
-    Well, you've only been here a day...
-    ~ SetSpeaker(Speaker.Lupe)
-    -> DONE
-
-=misra_cutscene_after_teens
-    ~ SetSpeaker(Speaker.Misra)
-     Those guys are the worst.
-    ~ SetSpeaker(Speaker.Lupe)
-     They're definitely hiding <i>something</i>.
-    ~ SetSpeaker(Speaker.Misra)
-     Good luck getting anything out of them.
-    ~ SetSpeaker(Speaker.Lupe)
-     // Add to Synthesis: Who broke into the Winery?
--> DONE
-
-= lupe_car
-{IsQuestComplete(car_first_interact):
-  ~ SetSpeaker(Speaker.Misra)
-    {Your park job, may I say, is impeccable!| Hot wheels for a hot...let's continue. | Have you ever considered getting one of those little hula dashboard figurines? You know, to spice it up!| I don't think it's time to go yet, we should look around more!}
-
-    -> DONE
-
-- else:
-  ~ CompleteQuest(car_first_interact)
-  ~ SetSpeaker(Speaker.Lupe)
-  Are you sure it's okay for me to park here?
-  ~ SetSpeaker(Speaker.Misra)
-  Yup!
-  ~ SetSpeaker(Speaker.Lupe)
-  Just...in the middle of the road like this?
- ~ SetSpeaker(Speaker.Misra)
-  Well, normally I would give you a ticket. 
-  But for you, I can let it slide!
-  Beside, tickets aren't that bad around here, anyway.
- ~ SetSpeaker(Speaker.Lupe)
-    How much are they, usually?
-  ~ SetSpeaker(Speaker.Misra)
-  ...
-  $0.
-  It's just a note.
-  That usually says, "Please don't park here again! Have a nice day :)"
-   ~ SetSpeaker(Speaker.Lupe)
-   ...
-   Ay, Dios Mio.
-   -> DONE
- }
-    
 = talk_to_misra
     -> Misra_Dialogue.4_1
-    
 = door_idahome_and_goods
     ~ ChangeGameScene("scene4_2")
     -> DONE
 = door_powerup_arcade
-    {canIntroArcade:
-        ~ SetSpeaker("Speaker.Misra")
-        Okay...
-        Just so you know, these guys in here are a litte...
-        ...<i>intense.</i>
-        ~ SetSpeaker("Speaker.Lupe")
-        I deal with intense people all the time.
-        ~ SetSpeaker("Speaker.Misra")
-        Yeah?
-        ~ SetSpeaker("Speaker.Lupe")
-        Criminals.
-        Convicts.
-        Killers.
-        I'm not afraid of whoever is in there.
-        ~ SetSpeaker("Speaker.Misra")
-        If you say so...
-        ~ CompleteQuest(entered_arcade)
-    }
     ~ ChangeGameScene("scene4_3")
     -> DONE
 
@@ -201,43 +90,35 @@ VAR canIntroArcade = true
     }
 
 = door_the_rockin_kettle
-    {(IsQuestComplete(jenny_suspicion) or IsQuestComplete(calvin_suspicion) or IsQuestComplete(josh_suspicion) ):
-        {IsClueFound(roys_suspicion):
-            ~ SetSpeaker(Speaker.Misra)
-            Looks like the Bar is open! Shall we?
-            ~ SetSpeaker(Speaker.Lupe)
-            I shouldn't drink.
-            I still need to drive back out tonight once the road is cleared.
-            ~ SetSpeaker(Speaker.Misra)
-            Right, about that...
-            I forgot to tell you, but the earliest I can get someone out there to clear the tree is tomorrow morning.
-            I'm really sorry.
-            I know you had somewhere to be.
-            ~ SetSpeaker(Speaker.Lupe)
-            Ah...
-            Well, that's not great.
-            But I suppose there's nothing you can do about it.
-            ~ SetSpeaker(Speaker.Misra)
-            Think of it this way...we get more time to crack this case!
-            But in the meantime, let's take a bit of a break...
-            ~ SetSpeaker(Speaker.Lupe)
-             ~ ChangeGameScene("scene4_4")
-             ->DONE
-        - else:
-            ~ SetSpeaker(Speaker.Misra)
-            Someone wants a drink, I see.
-            The Rockin Kettle doesn't open until happy hour! 
-            We can come back later.
-            ~ SetSpeaker(Speaker.Lupe)
-            -> DONE
-        }
+    {IsQuestComplete(complete_gen_store) && IsQuestComplete(complete_arcade):
+        ~ SetSpeaker(Speaker.Misra)
+        Looks like the Bar is open! Shall we?
+        ~ SetSpeaker(Speaker.Lupe)
+        I shouldn't drink.
+        I still need to drive back out tonight once the road is cleared.
+        ~ SetSpeaker(Speaker.Misra)
+        Right, about that...
+        I forgot to tell you, but the earliest I can get someone out there to clear the tree is tomorrow morning.
+        I'm really sorry.
+        I know you had somewhere to be.
+        ~ SetSpeaker(Speaker.Lupe)
+        Ah...
+        Well, that's not great.
+        But I suppose there's nothing you can do about it.
+        ~ SetSpeaker(Speaker.Misra)
+        Think of it this way...we get more time to crack this case!
+        But in the meantime, let's take a bit of a break...
+        ~ SetSpeaker(Speaker.Lupe)
+         ~ ChangeGameScene("scene4_4")
+         ->DONE
+        
     - else:
         ~ SetSpeaker(Speaker.Misra)
         Someone wants a drink, I see.
         The Rockin Kettle doesn't open until happy hour! 
         We can come back later.
         ~ SetSpeaker(Speaker.Lupe)
-        -> DONE
+    -> DONE
     }
     
 
@@ -256,7 +137,7 @@ VAR canIntroArcade = true
 
 = apartments_for_lease_sign
     ~ closed_signs ++ 
-        Hm...
+    [Lupe] Hm..
         -> DONE
     
 
@@ -284,8 +165,4 @@ VAR canIntroArcade = true
     Breaks my heart a bit.
     // Add to Synthesis - The Town of KR
     -> DONE
-=== scene4_1_GOLDENHOUR ===
-->DONE
-=== scene4_1_DUSK ===
-->DONE
 

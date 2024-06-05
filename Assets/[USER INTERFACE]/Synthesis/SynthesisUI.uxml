@@ -1,0 +1,11 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/[USER%20INTERFACE]/_stylesheets/synthesis.uss?fileID=7433441132597879392&amp;guid=8f3ac6dfa1bea63449de71aeff8f70d1&amp;type=3#synthesis" />
+    <engine:VisualElement name="background" style="background-color: rgba(0, 0, 0, 0.41); justify-content: flex-start; position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%;">
+        <engine:VisualElement style="flex-grow: 0; height: 15%; background-color: rgba(145, 65, 176, 0.55); flex-shrink: 0;">
+            <engine:Label text="What Happened at the Winery?" style="width: 100%; height: 100%; -unity-text-align: middle-center; font-size: 52px;" />
+        </engine:VisualElement>
+        <engine:VisualElement name="objects" style="flex-grow: 1; flex-direction: row; justify-content: center; flex-wrap: wrap;" />
+        <engine:Button text="SYNTHESIZE!" name="title" style="align-self: center; font-size: 52px;" />
+        <engine:VisualElement style="flex-grow: 0; height: 15%; background-color: rgba(145, 65, 176, 0.55); flex-shrink: 0;" />
+    </engine:VisualElement>
+</engine:UXML>

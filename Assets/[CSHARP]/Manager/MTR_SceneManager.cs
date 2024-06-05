@@ -7,8 +7,6 @@ using FMODUnity;
 using Ink.Runtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using NaughtyAttributes;
-
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -17,26 +15,24 @@ using UnityEditor;
 [System.Serializable]
 public class MTR_SceneData : BuildSceneData
 {
-    private InkyStoryObject _globalStoryObject;
-    [SerializeField, HideInInspector] private List<string> _knotNames = new List<string> { "default" };
+    private List<string> _knotNames
+    {
+        get
+        {
+            List<string> names = new List<string>();
+            if (InkyStoryManager.Instance != null)
+            {
+                return InkyStoryManager.GlobalStoryObject.KnotNames;
+            }
+            return names;
+        }
+    }
 
-    [Dropdown("_knotNames")]
+    [NaughtyAttributes.Dropdown("_knotNames")]
     public string knot;
 
     public EventReference backgroundMusicEvent;
-
-    public override void InitializeData(string path)
-    {
-        base.InitializeData(path);
-
-        if (InkyStoryManager.Instance != null)
-        {
-            _globalStoryObject = InkyStoryManager.GlobalStoryObject;
-            _knotNames = _globalStoryObject.KnotNameList;
-        }
-    }
 }
-
 
 /// <summary>
 /// Custom Scriptable object to hold MTR_SceneData.
@@ -101,7 +97,7 @@ public class MTR_SceneManager : BuildSceneDataManager<MTR_SceneData>
     /// </summary>
     /// <param name="args">0 : The name of the sceneKnot</param>
     /// <returns>False if BuildSceneData is null. True if BuildSceneData is valid.</returns>
-    object ChangeGameScene(string knotName)
+    public object ChangeGameScene(string knotName)
     {
         MTR_SceneData data = _mtrSceneDataObject.GetSceneDataByKnot(knotName);
 
@@ -116,11 +112,6 @@ public class MTR_SceneManager : BuildSceneDataManager<MTR_SceneData>
     public MTR_SceneData GetSceneData(Scene sceneName)
     {
         return _mtrSceneDataObject.GetSceneData(sceneName);
-    }
-
-    public MTR_SceneData GetSceneDataByKnot(string knot)
-    {
-        return this._mtrSceneDataObject.GetSceneDataByKnot(knot);
     }
 
     public MTR_SceneData GetActiveSceneData()

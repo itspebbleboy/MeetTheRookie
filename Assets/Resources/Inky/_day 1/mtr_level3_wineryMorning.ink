@@ -1,9 +1,9 @@
 // SCENE 3: The Winery
 // --- scene 3 ---
-=== function outsideCluesFound() ===
-    ~ return IsClueFound(evidence_fence) && IsClueFound(evidence_broken_window) && IsClueFound(evidence_footsteps)
-=== function insideCluesFound() ===
-    ~ return IsQuestComplete(visit_barrels) && IsClueFound(evidence_damages) && IsQuestComplete(visit_floor) && IsClueFound(evidence_claw_marks) && IsClueFound(evidence_handprint) && IsQuestComplete(visit_inside_window)
+=== level3 ===
+Level 3
+-> scene3_1
+
 === scene3_1 ===
 // location : The Winery, outside
 
@@ -18,20 +18,8 @@
 // Needed evidence to progress to inside the Winery: window evidence, fence evidence, footsteps evidence
 = misra 
 -> Misra_Dialogue.3_1
-
-= intro
-    ~ SetSpeaker(Speaker.Misra)
-    Here we are! Kettle Rock's pride and joy. Best wine north of California.
-    ~ SetSpeaker(Speaker.Lupe)
-    You said this place closed a few weeks ago? It looks like it's been abandoned for years.
-    ~ SetSpeaker(Speaker.Misra)
-    Well, it <i>has</i> been a bit neglected recently. But make no mistake, this is a piece of town history! 
-    ~ SetSpeaker(Speaker.Lupe)
-    Right... 
-    ~ CompleteQuest(talk_to_misra_quest)
-    -> DONE
 = door_main_room
-{outsideCluesFound():
+{IsQuestComplete(discover_outside_clues):
     ~ SetSpeaker(Speaker.Lupe)
     In we go.
     ~ ChangeGameScene("scene3_2")
@@ -59,6 +47,7 @@
 }
 
 = window
+{IsQuestComplete(talk_to_misra_quest):
     // Lupe approaches a window on the front of the Winery that has been shattered into a million pieces on the ground. Puzzling...
     // ADD TO SYNTHESIS
     ~ DiscoverClue(evidence_broken_window)
@@ -67,6 +56,12 @@
     ~ SetSpeaker(Speaker.Lupe)
     Yeah, it's definitely been broken by force. But something about this seems off to me...
     -> DONE
+    
+- else:
+    ~ SetSpeaker(Speaker.Lupe)
+    Eek. Watch your step. 
+    -> DONE
+}
 
 
 = strange_footsteps
@@ -192,7 +187,7 @@
     -> DONE
 
 = door_winery_exterior
-    {insideCluesFound():
+    {IsQuestComplete(discover_inside_clues):
         ~ ChangeGameScene("scene4_1")
         -> DONE
     - else:

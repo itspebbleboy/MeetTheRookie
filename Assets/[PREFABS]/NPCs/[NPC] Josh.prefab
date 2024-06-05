@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1685560299, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
+  m_Sprite: {fileID: 382276574, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -135,10 +135,8 @@ MonoBehaviour:
     spriteSheet:
       loop: 1
       frames:
-      - {fileID: -1589077834, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
-      - {fileID: -1204895362, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
-      - {fileID: -1685560299, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
-      - {fileID: -1846156357, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
+      - {fileID: 382276574, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
+      - {fileID: -1822385958, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
   - state: 2
     spriteSheet:
       loop: 1
@@ -151,10 +149,8 @@ MonoBehaviour:
     spriteSheet:
       loop: 1
       frames:
-      - {fileID: -1589077834, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
-      - {fileID: -1204895362, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
-      - {fileID: -1685560299, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
-      - {fileID: -1846156357, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
+      - {fileID: 382276574, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
+      - {fileID: -1822385958, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
   - state: 4
     spriteSheet:
       loop: 1
@@ -191,11 +187,9 @@ MonoBehaviour:
   spriteSheet:
     loop: 1
     frames:
-    - {fileID: -1589077834, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
-    - {fileID: -1204895362, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
-    - {fileID: -1685560299, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
-    - {fileID: -1846156357, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
-  currentFrame: 2
+    - {fileID: 382276574, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
+    - {fileID: -1822385958, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
+  currentFrame: 0
 --- !u!61 &6562033029251709814
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -230,7 +224,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -257,12 +251,11 @@ MonoBehaviour:
   _preset: {fileID: 11400000, guid: 0af6dde00b8423242a55ec1e859f58a0, type: 2}
   layerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   editMode: 0
   _sprite: {fileID: 382276574, guid: a98f4ec49de2070429102d0f0823eed7, type: 3}
-  onStart: 0
   _sceneKnot: scene4_3
-  _interactionStitch: scene4_3.josh
+  _interactionStitch: scene4_3.teens
   _isTarget: 0
   _isActive: 0
   _isComplete: 0

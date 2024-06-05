@@ -4,8 +4,6 @@ using Darklight.UnityExt.Inky;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-
-
 public class SynthVisuals : MonoBehaviour
 {
     public VisualElement root;

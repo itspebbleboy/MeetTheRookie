@@ -19,7 +19,5 @@ public class MTR_Misra_Controller : NPC_Controller {
         stateMachine.AddState(grabbedState);
         stateMachine.AddState(struggleState);
         stateMachine.AddState(draggedState);
-
-        stateMachine.ClearState();
     }
 }

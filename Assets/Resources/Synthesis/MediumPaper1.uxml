@@ -1,0 +1,7 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Resources/Synthesis/testuss.uss?fileID=7433441132597879392&amp;guid=d7e7fa8bd647c314d84fe72e595d54e1&amp;type=3#testuss" />
+    <engine:VisualElement name="VisualElement" class="Paper" style="flex-grow: 0; position: relative; background-image: none; width: 260px; height: 128px; rotate: -2deg; flex-shrink: 0; top: 350px;">
+        <engine:VisualElement name="PaperBackground" style="flex-grow: 0; width: 128px; height: 50%; flex-shrink: 0; top: 0; rotate: -4deg; background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/Synthesis/SynthAlternative/medium%20paper%201%20.png?fileID=2800000&amp;guid=75555a7e2aed7478d94f77419772f4cf&amp;type=3#medium paper 1 &quot;); left: 4px;" />
+        <engine:Label text="Label" style="position: absolute; left: 5px; top: 5px;" />
+    </engine:VisualElement>
+</engine:UXML>
