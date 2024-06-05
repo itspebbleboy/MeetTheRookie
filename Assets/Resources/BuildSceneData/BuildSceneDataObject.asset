@@ -134,6 +134,17 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+  - _name: SCENE_4_1 - Main Street 1
+    _path: Assets/Scenes/Build/SCENE_4_1 - Main Street 1.unity
+    _sceneFound: 1
+    knot: 
+    backgroundMusicEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
   - _name: SCENE_4_1 - Main Street
     _path: Assets/Scenes/Build/SCENE_4_1 - Main Street.unity
     _sceneFound: 1

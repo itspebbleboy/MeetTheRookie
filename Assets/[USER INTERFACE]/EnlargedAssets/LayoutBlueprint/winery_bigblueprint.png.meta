@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      winery_bigblueprint_0: -5452270956612086569
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

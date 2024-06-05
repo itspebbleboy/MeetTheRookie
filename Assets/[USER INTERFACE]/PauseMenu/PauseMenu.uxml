@@ -10,22 +10,23 @@
         <engine:VisualElement name="Sounds" class="Menus" style="background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/PauseMenu/pause%20menu%203.png?fileID=2800000&amp;guid=95d3d11c002e9644bb010a644bc592fb&amp;type=3#pause menu 3&quot;);">
             <engine:GroupBox class="MenuBox" style="justify-content: space-evenly;">
                 <engine:SliderInt label="Music" value="42" high-value="100" show-input-field="true" name="Music" class="SoundSlider SliderInt" />
-                <engine:SliderInt label="Sound Effects" value="42" high-value="100" show-input-field="true" name="Game" class="SoundSlider" />
+                <engine:SliderInt label="Sounds" value="42" high-value="100" show-input-field="true" name="Game" class="SoundSlider" />
                 <engine:SliderInt label="Dialogue" value="42" high-value="100" show-input-field="true" name="Dialogue" class="SoundSlider" />
             </engine:GroupBox>
             <engine:Label text="Sound" name="TabTitle" class="TabTitle" style="position: absolute; left: 754px; top: 26px;" />
         </engine:VisualElement>
-        <engine:VisualElement name="Controls" class="Menus" style="background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/PauseMenu/pause%20menu%202.png?fileID=2800000&amp;guid=78792f5d5e373e145ba9d36a2705a760&amp;type=3#pause menu 2&quot;); visibility: visible; display: flex;">
+        <engine:VisualElement name="Controls" class="Menus" style="background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/PauseMenu/pause%20menu%202.png?fileID=2800000&amp;guid=78792f5d5e373e145ba9d36a2705a760&amp;type=3#pause menu 2&quot;); visibility: visible; display: none;">
             <engine:Label text="Controls" name="TabTitle" class="TabTitle" style="left: 492px; top: 26px; width: 109px;" />
+            <engine:Label text="W - Up&#10;A - Left&#10;S - Down&#10;D - Right&#10;Z - Select/Interact&#10;X - Deselect/Back OR Open Synthesis&#10;C - Combine/Flip Character Stack&#10;? - Open Synthesis&#10;" style="position: absolute; top: 101px; left: 161px; width: 584px; height: 311px; -unity-font-definition: url(&quot;project://database/Assets/[USER%20INTERFACE]/_fonts/cour.ttf?fileID=12800000&amp;guid=728d930755b2040efae7a865907559c1&amp;type=3#cour&quot;); -unity-font-style: bold; font-size: 36px;" />
         </engine:VisualElement>
-        <engine:VisualElement name="GeneralSettings" class="Menus" style="background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/PauseMenu/pause%20menu%201.png?fileID=2800000&amp;guid=5eaf87856b4d3eb468c0a8dc6ba25aae&amp;type=3#pause menu 1&quot;); display: flex;">
+        <engine:VisualElement name="GeneralSettings" class="Menus" style="background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/PauseMenu/pause%20menu%201.png?fileID=2800000&amp;guid=5eaf87856b4d3eb468c0a8dc6ba25aae&amp;type=3#pause menu 1&quot;); display: none;">
             <engine:GroupBox class="MenuBox" style="-unity-text-align: middle-left;">
                 <engine:Button text="Resume" name="Resume" class="GenSettingsButton" />
                 <engine:Button text="Main Menu" name="MainMenu" class="GenSettingsButton" />
                 <engine:Button text="Quit Game" name="QuitGame" class="GenSettingsButton" />
             </engine:GroupBox>
             <engine:Label text="General Settings" name="TabTitle" class="TabTitle" style="top: 25px; position: absolute; left: 172px;" />
-            <engine:Button name="Fullscreen" icon-image="project://database/Assets/[USER%20INTERFACE]/PauseMenu/fullscreen.png?fileID=2800000&amp;guid=2fa6addc82e39da45aecdf07addd0ce2&amp;type=3#fullscreen" class="Fullscreen" style="width: 50px; height: 50px; left: 979px; top: 466px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-color: rgba(188, 188, 188, 0); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
+            <engine:Button name="Fullscreen" class="Fullscreen" style="width: 50px; height: 50px; left: 959px; top: 448px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); -unity-background-image-tint-color: rgb(0, 0, 0);" />
         </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>

@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Build/SCENE_3_3 - The Winery Ext..unity
     guid: 19a90049d680c48abbff5ae62e7324e3
   - enabled: 1
+    path: Assets/Scenes/Build/SCENE_4_1 - Main Street 1.unity
+    guid: 06c62d3a4018e2f459e19f212296d681
+  - enabled: 1
     path: Assets/Scenes/Build/SCENE_4_1 - Main Street.unity
     guid: 938279deb4ab77d4596376237e2dadaa
   - enabled: 1

@@ -30,6 +30,7 @@ namespace Darklight.UnityExt.Input
         [SerializeField, ShowOnly] private Vector2 _moveInput;
         [SerializeField, ShowOnly] private bool _primaryInteract;
         [SerializeField, ShowOnly] private bool _secondaryInteract;
+        [SerializeField, ShowOnly] private bool _pauseInteract;
 
         // -------------- [[ INPUT ACTION MAPS ]] -------------- >>
         InputActionMap _activeActionMap;
@@ -41,6 +42,7 @@ namespace Darklight.UnityExt.Input
         InputAction _move => _activeActionMap.FindAction("MoveInput");
         InputAction _primary => _activeActionMap.FindAction("PrimaryInteract");
         InputAction _secondary => _activeActionMap.FindAction("SecondaryInteract");
+        InputAction _pause => _activeActionMap.FindAction("PauseInteract");
 
         // -------------- [[ INPUT EVENTS ]] -------------- >>
         public delegate void OnInput_Trigger();
@@ -58,6 +60,10 @@ namespace Darklight.UnityExt.Input
         /// <summary> Event for the secondary interaction input from the active device. </summary>
         public static event OnInput_Trigger OnSecondaryInteract;
         public static event OnInput_Trigger OnSecondaryInteractCanceled;
+
+        /// <summary> Event for the Pause interaction input from the active device. </summary>
+        public static event OnInput_Trigger OnPauseInteract;
+        public static event OnInput_Trigger OnPauseInteractCanceled;
 
         public override void Initialize()
         {
@@ -90,6 +96,12 @@ namespace Darklight.UnityExt.Input
             {
                 _secondary.performed -= HandleSecondaryPerformed;
                 _secondary.canceled -= HandleSecondaryCanceled;
+            }
+
+            if (_pause != null)
+            {
+                _pause.performed -= HandlePausePerformed;
+                _pause.canceled -= HandlePauseCanceled;
             }
 
             DisableAllActionMaps();
@@ -157,6 +169,7 @@ namespace Darklight.UnityExt.Input
             _move.Enable();
             _primary.Enable();
             _secondary.Enable();
+            _pause.Enable();
 
             // << -- Set the input events -- >>
             _move.started += HandleMoveStarted;
@@ -168,6 +181,10 @@ namespace Darklight.UnityExt.Input
 
             _secondary.performed += HandleSecondaryPerformed;
             _secondary.canceled += HandleSecondaryCanceled;
+
+            _pause.performed += HandlePausePerformed;
+            _pause.canceled += HandlePauseCanceled;
+            
             return true;
         }
         #endregion
@@ -222,6 +239,16 @@ namespace Darklight.UnityExt.Input
             OnSecondaryInteractCanceled?.Invoke();
         }
 
+        private void HandlePausePerformed(InputAction.CallbackContext ctx)
+        {
+            _pauseInteract = true;
+            OnPauseInteract?.Invoke();
+        }
 
+        private void HandlePauseCanceled(InputAction.CallbackContext ctx)
+        {
+            _pauseInteract = false;
+            OnPauseInteractCanceled?.Invoke();
+        }
     }
 }

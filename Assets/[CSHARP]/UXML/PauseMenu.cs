@@ -28,6 +28,7 @@ public class PauseMenu : MonoBehaviour
         UniversalInputManager.OnMoveInputStarted += OnMoveInputStartAction;
         UniversalInputManager.OnPrimaryInteract += OnPrimaryInteractAction;
         UniversalInputManager.OnSecondaryInteract += OnSecondaryInteractAction;
+        UniversalInputManager.OnPauseInteract += OnPauseInteractAction;
     }
     void OpenPauseMenu()
     {
@@ -98,6 +99,7 @@ public class PauseMenu : MonoBehaviour
                 {
                     Interactors.Add(option);
                 }
+                Interactors.Add(GeneralMenu.Q<Button>("Fullscreen"));
                 CurrentElement = Interactors[optionsnav];
                 CurrentElement.AddToClassList("Selected");
             }
@@ -240,7 +242,7 @@ public class PauseMenu : MonoBehaviour
     }
     void GenDown()
     {
-        if (optionsnav < 2)
+        if (optionsnav < 3)
         {
             CurrentElement.RemoveFromClassList("Selected");
             optionsnav += 1;
@@ -263,21 +265,26 @@ public class PauseMenu : MonoBehaviour
         {
             Debug.Log("QuitButtonClicked");
         }
+        if (button.name == "Fullscreen")
+        {
+            Screen.fullScreen = !Screen.fullScreen;
+        }
     }
-    // Update is called once per frame
+    void OnPauseInteractAction()
+    {
+        Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAA");
+        if (flicker.enabled == true)
+        {
+            ClosePauseMenu();
+        }
+        else if (flicker.enabled == false)
+        {
+            OpenPauseMenu();
+        }
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (flicker.enabled == true)
-            {
-                ClosePauseMenu();
-            }
-            else if (flicker.enabled == false)
-            {
-                OpenPauseMenu();
-            }
-        }
+
     }
     void SliderRemoveDefaultControls()
     {
