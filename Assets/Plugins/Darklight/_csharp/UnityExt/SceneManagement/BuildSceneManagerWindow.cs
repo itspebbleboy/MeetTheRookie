@@ -135,8 +135,6 @@ namespace Darklight.UnityExt.SceneManagement
             {
                 serializedObject.ApplyModifiedProperties();
             }
-            Repaint();
-
         }
     }
 #endif

@@ -1,16 +1,16 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/[USER%20INTERFACE]/_stylesheets/Global.uss?fileID=7433441132597879392&amp;guid=37b11a59d10b548be8719ac25628bde6&amp;type=3#Global" />
-    <engine:VisualElement name="background" style="background-image: url(&quot;project://database/Assets/[SPRITES]/_mainMenu/title%20screen%201.png?fileID=2800000&amp;guid=536e2bd47da60d3428ea8bef772c4844&amp;type=3#title screen 1&quot;);" />
-    <engine:VisualElement name="header" style="flex-grow: 1;" />
-    <engine:VisualElement name="body" style="flex-grow: 1; justify-content: flex-start; align-self: stretch; align-items: stretch; flex-direction: row;">
-        <engine:VisualElement name="left-panel" style="flex-grow: 1; flex-basis: 100%; margin-left: 2%; margin-top: 10%; margin-right: 5%;">
-            <engine:Label text="Meet The Rookie" name="title" />
-            <engine:GroupBox name="button-group" style="margin-top: 0; margin-right: 64px; margin-bottom: 64px; margin-left: 64px;">
-                <Darklight.UnityExt.UXML.SelectableButton text="Play" name="play-button" />
-                <Darklight.UnityExt.UXML.SelectableButton text="Options" name="options-button" />
-                <Darklight.UnityExt.UXML.SelectableButton text="Quit" name="quit-button" />
-            </engine:GroupBox>
-        </engine:VisualElement>
-        <engine:VisualElement name="right-panel" style="flex-grow: 1; flex-basis: 100%;" />
+    <Style src="project://database/Assets/[USER%20INTERFACE]/_stylesheets/MainMenu.uss?fileID=7433441132597879392&amp;guid=8058b8da24596504c83f0ab0062694b8&amp;type=3#MainMenu" />
+    <engine:VisualElement name="background" style="display: flex; background-image: url(&quot;project://database/Assets/[SPRITES]/_mainMenu/title%20screen%201.png?fileID=2800000&amp;guid=536e2bd47da60d3428ea8bef772c4844&amp;type=3#title screen 1&quot;); background-color: rgb(255, 255, 255); flex-grow: 1;" />
+    <engine:Label text="Meet the Rookie" name="Title" style="position: absolute; align-self: auto; -unity-font-definition: url(&quot;project://database/Assets/[USER%20INTERFACE]/_fonts/cour.ttf?fileID=12800000&amp;guid=728d930755b2040efae7a865907559c1&amp;type=3#cour&quot;); font-size: 100px; top: 583px; -unity-font-style: bold; color: rgb(226, 220, 217); left: 124px;" />
+    <engine:GroupBox name="Selectables" style="flex-grow: 0; flex-shrink: 1; position: absolute; top: 738px; color: rgb(27, 27, 27); -unity-background-image-tint-color: rgba(255, 255, 255, 0); align-items: flex-start; left: 108px; justify-content: center;">
+        <engine:Button text="Play Game" name="Play" class="MenuButton" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+        <engine:Button text="Options" name="Options" class="MenuButton" style="background-image: none; background-color: rgba(255, 255, 255, 0); border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); font-size: 70px; -unity-font-definition: url(&quot;project://database/Assets/[USER%20INTERFACE]/_fonts/cour.ttf?fileID=12800000&amp;guid=728d930755b2040efae7a865907559c1&amp;type=3#cour&quot;); -unity-font-style: bold; color: rgb(226, 220, 217); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+        <engine:Button text="Quit Game" name="Quit" class="MenuButton" style="background-image: none; background-color: rgba(255, 255, 255, 0); border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); font-size: 70px; -unity-font-definition: url(&quot;project://database/Assets/[USER%20INTERFACE]/_fonts/cour.ttf?fileID=12800000&amp;guid=728d930755b2040efae7a865907559c1&amp;type=3#cour&quot;); -unity-font-style: bold; color: rgb(226, 220, 217); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+    </engine:GroupBox>
+    <engine:VisualElement name="body" style="display: none;">
+        <engine:VisualElement style="flex-grow: 1;" />
+        <engine:GroupBox class="vert-direction" />
+        <engine:VisualElement style="flex-grow: 1;" />
+        <Darklight.UnityExt.UXML.SelectableSceneChangeButton scene="SCENE_1_0 - Intro" text="Play Game" style="color: rgba(255, 255, 255, 0); -unity-background-image-tint-color: rgba(255, 255, 255, 0);" />
     </engine:VisualElement>
 </engine:UXML>

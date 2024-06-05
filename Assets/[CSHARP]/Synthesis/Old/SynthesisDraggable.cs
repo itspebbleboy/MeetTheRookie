@@ -35,7 +35,7 @@ public class SynthesisDraggable : PointerManipulator
     Vector2 targetStart;
 
 
-    SynthesisClueElement wantToCombine;
+    SynthesisObject wantToCombine;
     void PointerDown(PointerDownEvent evt) {
         target.CapturePointer(evt.pointerId);
         start = evt.position;

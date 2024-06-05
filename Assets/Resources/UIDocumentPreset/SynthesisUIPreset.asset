@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SynthesisUIPreset
   m_EditorClassIdentifier: 
   visualTreeAsset: {fileID: 9197481963319205126, guid: ab649967a8885c04eb3f8d6f8d431f2a, type: 3}
-  panelSettings: {fileID: 11400000, guid: 9b3a92b9a918eea40b11e9a8e06da64b, type: 2}
+  panelSettings: {fileID: 11400000, guid: 3bfa1e52c1c4745bd8e479ef40135cc0, type: 2}

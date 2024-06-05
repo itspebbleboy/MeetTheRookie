@@ -7,10 +7,6 @@ using UnityEngine.UIElements;
 using Darklight.UnityExt.UXML;
 using Darklight.UnityExt.Utility;
 using Darklight.UnityExt.Inky;
-using NaughtyAttributes;
-using Darklight.UnityExt.Editor;
-
-
 
 
 #if UNITY_EDITOR
@@ -18,44 +14,34 @@ using UnityEditor;
 #endif
 
 /// <summary>
-/// Handle the UI and <see cref="SynthesisClueElement"/>s.
+/// Handle the UI and <see cref="SynthesisObject"/>s.
 /// </summary>
 [RequireComponent(typeof(UIDocument))]
-public class SynthesisManager : UXML_UIDocumentObject, IUnityEditorListener
+public class SynthesisManager : UXML_UIDocumentObject
 {
-    public void OnEditorReloaded()
-    {
-        Show(false);
-    }
-
-    const string LIBRARY_PATH = "Assets/Resources/Synthesis";
-    const string LIBRARY_NAME = "SynthesisClueLibrary";
-    public SynthesisClueLibrary clueLibrary;
-
-    protected Dictionary<string, SynthesisClueElement> synthesisItems = new Dictionary<string, SynthesisClueElement>();
+    [SerializeField] private UXML_UIDocumentPreset _preset;
+    protected Dictionary<string, SynthesisObject> synthesisItems = new Dictionary<string, SynthesisObject>();
     public SelectableVectorField<VisualElement> itemsSelection = new SelectableVectorField<VisualElement>();
-
 
     /// <summary>
     /// Our group for showing the objects visually.
     /// </summary>
-    VisualElement mystery1Container;
+    VisualElement objects;
     VisualElement synthesizeButton;
+    public void Awake()
+    {
+        document.visualTreeAsset = _preset.visualTreeAsset;
+        document.panelSettings = _preset.panelSettings;
+    }
+
     bool synthesisActive = false;
-
-
     void Start()
     {
-        Show(false);
+        document.rootVisualElement.visible = false;
+        objects = document.rootVisualElement.Q("objects");
 
-        clueLibrary = ScriptableObjectUtility.CreateOrLoadScriptableObject<SynthesisClueLibrary>(LIBRARY_PATH, LIBRARY_NAME);
-        clueLibrary.LoadMysteryClues();
-
-        mystery1Container = ElementQuery<GroupBox>("mystery1");
         synthesizeButton = ElementQuery<VisualElement>("title");
         itemsSelection.Add(synthesizeButton);
-
-        Initialize();
     }
 
     ///oijqwdoijqwodijqwd
@@ -64,11 +50,7 @@ public class SynthesisManager : UXML_UIDocumentObject, IUnityEditorListener
 
         //UniversalInputManager.OnMoveInputStarted += SelectMove;
         UniversalInputManager.OnPrimaryInteract += Select;
-        //InkyStoryManager.GlobalStoryObject.BindExternalFunction("playerAddItem", AddItem);
-
-        InkyStoryManager.GlobalStoryObject.StoryValue.BindExternalFunction("AddSynthesisClue",
-            (string clue) => AddClue(clue));
-
+        //InkyStoryManager.Instance.GlobalStoryObject.BindExternalFunction("playerAddItem", AddItem);
         InkyStoryManager.GlobalStoryObject.BindExternalFunction("playerRemoveItem", RemoveItem);
         InkyStoryManager.GlobalStoryObject.BindExternalFunction("playerHasItem", HasItem);
     }
@@ -81,22 +63,11 @@ public class SynthesisManager : UXML_UIDocumentObject, IUnityEditorListener
             {
                 itemsSelection.CurrentSelection.RemoveFromClassList("highlight");
             }
-            var selected = itemsSelection.GetElementInDirection(move);
+            var selected = itemsSelection.getFromDir(move);
             if (selected != null) {
                 selected.AddToClassList("highlight");
             }
         }
-    }
-
-    [Button]
-    public void AddClue(string clue)
-    {
-        Debug.Log("Synthesis Adding clue: " + clue);
-        SynthesisClueElement newClue = new SynthesisClueElement();
-        newClue.text = clue;
-
-        mystery1Container = ElementQuery<GroupBox>("mystery1");
-        mystery1Container.Add(newClue);
     }
 
     HashSet<VisualElement> toSynthesize = new HashSet<VisualElement>();
@@ -164,18 +135,33 @@ public class SynthesisManager : UXML_UIDocumentObject, IUnityEditorListener
     }
     */
 
-    public object AddItem(string itemName)
-    {
-        if (synthesisItems.ContainsKey(itemName))
-        {
-            return false;
+    /*
+    public object AddItem(object[] args) {
+        if (args.Length < 2) {
+            Debug.LogError("Invalid number of args for AddItem: " + args.Length + " minimum of 2 needed.");
+            return null;
         }
-        var synthesisObj = new SynthesisClueElement();
-        synthesisItems.Add(itemName, synthesisObj);
-        mystery1Container.Add(synthesisObj);
-        itemsSelection.Add(synthesisObj);
-        return true;
+        string type = (string)args[0];
+        VisualTreeAsset asset = (VisualTreeAsset)Resources.Load("Synthesis/" + type);
+        var newObj = asset.Instantiate();
+        
+        newObj.name = (string)args[1];
+        newObj.AddToClassList("synthesis-object");
+
+        foreach (var child in newObj.Children()) {
+            if (child.dataSource != null && child.dataSource is SynthesisBinding b) {
+                var source = (SynthesisBinding)b.Clone();
+                if (args.Length == 3) {
+                    source.setValue((string)args[2]);
+                }
+                child.dataSource = source;
+            }
+        }
+        objects.Add(newObj);
+        itemsSelection.Add(newObj);
+        return synthesisItems.TryAdd(newObj.name, newObj);
     }
+    */
 
     public object RemoveItem(object[] args) {
         Debug.Log(args[0]);
@@ -197,8 +183,7 @@ public class SynthesisManager : UXML_UIDocumentObject, IUnityEditorListener
     }
 
     [Obsolete("Dragging should not be used for synthesis items.")]
-    public SynthesisClueElement OverlappingObject(VisualElement synthesisObj)
-    {
+    public SynthesisObject OverlappingObject(VisualElement synthesisObj) {
         var rect = synthesisObj.worldBound;
         foreach (var obj in synthesisItems) {
             if (obj.Value != synthesisObj && obj.Value.worldBound.Overlaps(rect, true)) {
@@ -208,17 +193,9 @@ public class SynthesisManager : UXML_UIDocumentObject, IUnityEditorListener
         return null;
     }
 
-    public void ToggleVisibility()
-    {
-        synthesisActive = !synthesisActive;
-        Show(!synthesisActive);
-    }
-
     public void Show(bool visible)
     {
-        Debug.Log("SynthesisManager: Show(" + visible + ")");
-        VisualElement container = ElementQuery<VisualElement>("synthesis-container");
-        container.visible = visible;
+        document.rootVisualElement.visible = visible;
     }
 }
 
@@ -232,6 +209,7 @@ public class SynthesisManagerCustomEditor : Editor
     {
         _serializedObject = new SerializedObject(target);
         _script = (SynthesisManager)target;
+        _script.Awake();
     }
 
     public override void OnInspectorGUI()
@@ -239,11 +217,6 @@ public class SynthesisManagerCustomEditor : Editor
         _serializedObject.Update();
 
         EditorGUI.BeginChangeCheck();
-
-        if (GUILayout.Button("Toggle Visibility"))
-        {
-            _script.ToggleVisibility();
-        }
 
         base.OnInspectorGUI();
 

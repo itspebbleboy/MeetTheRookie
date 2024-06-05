@@ -1,7 +1,49 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/[SPRITES]/_characters/misra_v2.png.meta
 guid: 0a99c2bcbcc487f4ebf2102232c5d3dc
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4546534427752583984
+    second: misra 1_0
+  - first:
+      213: 806816813061424638
+    second: misra 1_1
+  - first:
+      213: -7708862951594810992
+    second: misra 1_2
+  - first:
+      213: -4012189588818635628
+    second: misra 1_3
+  - first:
+      213: -2581744914329851766
+    second: misra 1_4
+  - first:
+      213: 8175339613860887628
+    second: misra 1_5
+========
+guid: 16f20ceec20f13d4d95603c7c4420779
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7150030442416436414
+    second: misra_0
+  - first:
+      213: 1509074956413505105
+    second: misra_1
+  - first:
+      213: -5536184757414602607
+    second: misra_2
+  - first:
+      213: 1469686735008831542
+    second: misra_3
+  - first:
+      213: -5198074914284712921
+    second: misra_4
+  - first:
+      213: -9077404530817885860
+    second: misra_5
+>>>>>>>> demo-build:Assets/[SPRITES]/_characters/misra.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -39,7 +81,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -63,16 +105,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 2
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,59 +127,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -147,18 +137,253 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+<<<<<<<< HEAD:Assets/[SPRITES]/_characters/misra_v2.png.meta
+      name: misra 1_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 59
+        height: 119
+========
+      name: misra_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 57
+        height: 118
+>>>>>>>> demo-build:Assets/[SPRITES]/_characters/misra.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< HEAD:Assets/[SPRITES]/_characters/misra_v2.png.meta
+      spriteID: 0dc29bac60777e0c0800000000000000
+      internalID: -4546534427752583984
+========
+      spriteID: ed406d70bdddd904ea6b8f466f6b6c7c
+      internalID: 18124189
+>>>>>>>> demo-build:Assets/[SPRITES]/_characters/misra.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< HEAD:Assets/[SPRITES]/_characters/misra_v2.png.meta
+      name: misra 1_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 59
+        height: 121
+========
+      name: misra_1
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 0
+        width: 57
+        height: 120
+>>>>>>>> demo-build:Assets/[SPRITES]/_characters/misra.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< HEAD:Assets/[SPRITES]/_characters/misra_v2.png.meta
+      spriteID: ef5c655ed93623b00800000000000000
+      internalID: 806816813061424638
+========
+      spriteID: 6b7a70acaf852574cb4d1b806a57813d
+      internalID: 1675509262
+>>>>>>>> demo-build:Assets/[SPRITES]/_characters/misra.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< HEAD:Assets/[SPRITES]/_characters/misra_v2.png.meta
+      name: misra 1_2
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 0
+        width: 57
+        height: 121
+========
+      name: misra_2
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 0
+        width: 55
+        height: 120
+>>>>>>>> demo-build:Assets/[SPRITES]/_characters/misra.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< HEAD:Assets/[SPRITES]/_characters/misra_v2.png.meta
+      spriteID: 091a5042dfd940590800000000000000
+      internalID: -7708862951594810992
+========
+      spriteID: 60878eb3e78bde2479ca50e37369b4de
+      internalID: -41731316
+>>>>>>>> demo-build:Assets/[SPRITES]/_characters/misra.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< HEAD:Assets/[SPRITES]/_characters/misra_v2.png.meta
+      name: misra 1_3
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 0
+        width: 59
+        height: 119
+========
+      name: misra_3
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 0
+        width: 57
+        height: 118
+>>>>>>>> demo-build:Assets/[SPRITES]/_characters/misra.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< HEAD:Assets/[SPRITES]/_characters/misra_v2.png.meta
+      spriteID: 494d1f293d6d158c0800000000000000
+      internalID: -4012189588818635628
+========
+      spriteID: d822764d6aac644458dc1799bf629c8d
+      internalID: 436807157
+>>>>>>>> demo-build:Assets/[SPRITES]/_characters/misra.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< HEAD:Assets/[SPRITES]/_characters/misra_v2.png.meta
+      name: misra 1_4
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 0
+        width: 61
+        height: 121
+========
+      name: misra_4
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 0
+        width: 59
+        height: 120
+>>>>>>>> demo-build:Assets/[SPRITES]/_characters/misra.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< HEAD:Assets/[SPRITES]/_characters/misra_v2.png.meta
+      spriteID: a88a2b8ddaccb2cd0800000000000000
+      internalID: -2581744914329851766
+========
+      spriteID: e26d671d3bb96fe429a0f94f4e70618d
+      internalID: 362986355
+>>>>>>>> demo-build:Assets/[SPRITES]/_characters/misra.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< HEAD:Assets/[SPRITES]/_characters/misra_v2.png.meta
+      name: misra 1_5
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 0
+        width: 64
+        height: 119
+========
+      name: misra_5
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 0
+        width: 62
+        height: 118
+>>>>>>>> demo-build:Assets/[SPRITES]/_characters/misra.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< HEAD:Assets/[SPRITES]/_characters/misra_v2.png.meta
+      spriteID: c4c7b526014a47170800000000000000
+      internalID: 8175339613860887628
+========
+      spriteID: 23c606aea52cdf64e895270da6890bbb
+      internalID: 242880236
+>>>>>>>> demo-build:Assets/[SPRITES]/_characters/misra.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
+<<<<<<<< HEAD:Assets/[SPRITES]/_characters/misra_v2.png.meta
     spriteID: 
+========
+    spriteID: 90ca0a5c429c6fd47a630a5ebd6cb8ca
+>>>>>>>> demo-build:Assets/[SPRITES]/_characters/misra.png.meta
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+<<<<<<<< HEAD:Assets/[SPRITES]/_characters/misra_v2.png.meta
+      misra 1_0: -4546534427752583984
+      misra 1_1: 806816813061424638
+      misra 1_2: -7708862951594810992
+      misra 1_3: -4012189588818635628
+      misra 1_4: -2581744914329851766
+      misra 1_5: 8175339613860887628
+========
+      misra_0: 18124189
+      misra_1: 1675509262
+      misra_2: -41731316
+      misra_3: 436807157
+      misra_4: 362986355
+      misra_5: 242880236
+>>>>>>>> demo-build:Assets/[SPRITES]/_characters/misra.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

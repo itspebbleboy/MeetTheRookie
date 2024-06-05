@@ -1,0 +1,777 @@
+fileFormatVersion: 2
+guid: 415680c51886049f297a02f1e5670f53
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5007263326998986374
+    second: policeCaseFolder-Sheet_0
+  - first:
+      213: 1098356881971398506
+    second: policeCaseFolder-Sheet_1
+  - first:
+      213: 315268040130999956
+    second: policeCaseFolder-Sheet_2
+  - first:
+      213: 6514190573574003766
+    second: policeCaseFolder-Sheet_3
+  - first:
+      213: 8853695710645330958
+    second: policeCaseFolder-Sheet_4
+  - first:
+      213: 1540877171030580636
+    second: policeCaseFolder-Sheet_5
+  - first:
+      213: 2409715538360274212
+    second: policeCaseFolder-Sheet_6
+  - first:
+      213: 2903351209844232331
+    second: policeCaseFolder-Sheet_7
+  - first:
+      213: -566031806361484601
+    second: policeCaseFolder-Sheet_8
+  - first:
+      213: 5360524452588730068
+    second: policeCaseFolder-Sheet_9
+  - first:
+      213: -2924576577681698809
+    second: policeCaseFolder-Sheet_10
+  - first:
+      213: 2810792741168202974
+    second: policeCaseFolder-Sheet_11
+  - first:
+      213: -2618553301469540157
+    second: policeCaseFolder-Sheet_12
+  - first:
+      213: -6596141440287079739
+    second: policeCaseFolder-Sheet_13
+  - first:
+      213: -8742238114186676324
+    second: policeCaseFolder-Sheet_14
+  - first:
+      213: -1490516822543022806
+    second: policeCaseFolder-Sheet_15
+  - first:
+      213: -7543193528160756296
+    second: policeCaseFolder-Sheet_16
+  - first:
+      213: -5607902774901474477
+    second: policeCaseFolder-Sheet_17
+  - first:
+      213: -5563877576930605591
+    second: policeCaseFolder-Sheet_18
+  - first:
+      213: -6398383224774402673
+    second: policeCaseFolder-Sheet_19
+  - first:
+      213: -2132164404494649234
+    second: policeCaseFolder-Sheet_20
+  - first:
+      213: -7610648785042182999
+    second: policeCaseFolder-Sheet_21
+  - first:
+      213: 3016106837780193195
+    second: policeCaseFolder-Sheet_22
+  - first:
+      213: -9163806544942065459
+    second: policeCaseFolder-Sheet_23
+  - first:
+      213: -9068817414762955385
+    second: policeCaseFolder-Sheet_24
+  - first:
+      213: 1058287240070620678
+    second: policeCaseFolder-Sheet_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 1831
+        y: 9
+        width: 178
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a718261a880a28ab0800000000000000
+      internalID: -5007263326998986374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 9
+        width: 178
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a67c28ac3c52e3f00800000000000000
+      internalID: 1098356881971398506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 9
+        width: 178
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 496ba05bc9e006400800000000000000
+      internalID: 315268040130999956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 9
+        width: 178
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63c931120dd076a50800000000000000
+      internalID: 6514190573574003766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2855
+        y: 9
+        width: 178
+        height: 456
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e042a660755aeda70800000000000000
+      internalID: 8853695710645330958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 3123
+        y: 287
+        width: 155
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d59c58f9b426510800000000000000
+      internalID: 1540877171030580636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3379
+        y: 292
+        width: 155
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d04b1d387017120800000000000000
+      internalID: 2409715538360274212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3623
+        y: 9
+        width: 178
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8057f0fa86ca4820800000000000000
+      internalID: 2903351209844232331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 3879
+        y: 9
+        width: 178
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c24042321d0528f0800000000000000
+      internalID: -566031806361484601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 4135
+        y: 9
+        width: 178
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d6b85e9698646a40800000000000000
+      internalID: 5360524452588730068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 4391
+        y: 9
+        width: 178
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 700dad00911d967d0800000000000000
+      internalID: -2924576577681698809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 4647
+        y: 9
+        width: 178
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed4c39a1b11f10720800000000000000
+      internalID: 2810792741168202974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 4903
+        y: 9
+        width: 178
+        height: 299
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c05b7065a709abd0800000000000000
+      internalID: -2618553301469540157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 9
+        width: 178
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c28473de4cc574a0800000000000000
+      internalID: -6596141440287079739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 9
+        width: 178
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c97b506e0c45da680800000000000000
+      internalID: -8742238114186676324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 9
+        width: 178
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a254494d8de905be0800000000000000
+      internalID: -1490516822543022806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 9
+        width: 178
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bdd3f1a371315790800000000000000
+      internalID: -7543193528160756296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 9
+        width: 178
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bf11f532abc22b0800000000000000
+      internalID: -5607902774901474477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 9
+        width: 178
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e54a4d82d229c2b0800000000000000
+      internalID: -5563877576930605591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 9
+        width: 178
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8dd08e6b506437a0800000000000000
+      internalID: -6398383224774402673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 3111
+        y: 9
+        width: 178
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e683d5355c70962e0800000000000000
+      internalID: -2132164404494649234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 3367
+        y: 9
+        width: 178
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ac6d41c04b816690800000000000000
+      internalID: -7610648785042182999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 5159
+        y: 9
+        width: 178
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bafd38e503d5bd920800000000000000
+      internalID: 3016106837780193195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 5415
+        y: 9
+        width: 178
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc81452df7e93d080800000000000000
+      internalID: -9163806544942065459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 5671
+        y: 9
+        width: 178
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d7d242c96152280800000000000000
+      internalID: -9068817414762955385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: policeCaseFolder-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 5927
+        y: 9
+        width: 178
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 606ecb643aacfae00800000000000000
+      internalID: 1058287240070620678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      policeCaseFolder-Sheet_0: -5007263326998986374
+      policeCaseFolder-Sheet_1: 1098356881971398506
+      policeCaseFolder-Sheet_10: -2924576577681698809
+      policeCaseFolder-Sheet_11: 2810792741168202974
+      policeCaseFolder-Sheet_12: -2618553301469540157
+      policeCaseFolder-Sheet_13: -6596141440287079739
+      policeCaseFolder-Sheet_14: -8742238114186676324
+      policeCaseFolder-Sheet_15: -1490516822543022806
+      policeCaseFolder-Sheet_16: -7543193528160756296
+      policeCaseFolder-Sheet_17: -5607902774901474477
+      policeCaseFolder-Sheet_18: -5563877576930605591
+      policeCaseFolder-Sheet_19: -6398383224774402673
+      policeCaseFolder-Sheet_2: 315268040130999956
+      policeCaseFolder-Sheet_20: -2132164404494649234
+      policeCaseFolder-Sheet_21: -7610648785042182999
+      policeCaseFolder-Sheet_22: 3016106837780193195
+      policeCaseFolder-Sheet_23: -9163806544942065459
+      policeCaseFolder-Sheet_24: -9068817414762955385
+      policeCaseFolder-Sheet_25: 1058287240070620678
+      policeCaseFolder-Sheet_3: 6514190573574003766
+      policeCaseFolder-Sheet_4: 8853695710645330958
+      policeCaseFolder-Sheet_5: 1540877171030580636
+      policeCaseFolder-Sheet_6: 2409715538360274212
+      policeCaseFolder-Sheet_7: 2903351209844232331
+      policeCaseFolder-Sheet_8: -566031806361484601
+      policeCaseFolder-Sheet_9: 5360524452588730068
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

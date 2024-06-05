@@ -1,0 +1,20 @@
+VisualElement.Pamphlet {
+    flex-grow: 0;
+    background-image: url("project://database/Assets/[USER%20INTERFACE]/EnlargedAssets/TownPamphlet/readable_page4.png?fileID=-9221409168140752355&guid=939720acfad71dd45868f177cb1607fe&type=3#readable_page4_0");
+    width: 384px;
+    height: 768px;
+    top: 165px;
+    left: 785px;
+    position: absolute;
+}
+
+VisualElement.Pamphlet.Unselected {
+    flex-grow: 0;
+    background-image: url("project://database/Assets/[USER%20INTERFACE]/EnlargedAssets/TownPamphlet/readable_page4.png?fileID=-9221409168140752355&guid=939720acfad71dd45868f177cb1607fe&type=3#readable_page4_0");
+    width: 384px;
+    height: 768px;
+    top: 165px;
+    left: 785px;
+    position: absolute;
+    visibility: hidden;
+}

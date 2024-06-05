@@ -19,33 +19,16 @@ LIST QuestChain_1 = (FIRST_INTERACT), (PAY_FOR_GAS)
 // == ( SCENE 1 ) ================================= >>
 === scene1_0 ===
 
-= intro
-    hi i'm your main character Lupe! (progress with Z)
-    same person just on the phone w/ my boss :(
-    Here's how you play MTR
-    walk with arrow keys & interact with Z!
-    okay i'm going back to my world
-    where everything is not as it seems
-    byyeeeeeeeee
-    ->DONE
 * [thelton] -> thelton
 
 = thelton
     ~ SetSpeaker(Speaker.Chief_Thelton)
-    You've reached Chief Detective Inspector Thelton, Boise Precinct. 
-    I'm not available right now. You know what to do!
+    You've reached Chief Detective Inspector Thelton, Boise Precinct. I'm not available right now. You know what to do!
     // We hear a generic voicemail beep.
     
     ~ SetSpeaker(Speaker.Lupe)
-    Hey, it's Lupe. Had to change my route; 
-    tank was running low. 
-    I pit stopped outside of Kettle Rock, Idaho. 
-    Should be back on the road soon
-    don't jump on me for being late. 
-    I'll debrief the Watchowski Case with you when I get back.
-    Alright. Bye.
-        ~ChangeGameScene("scene1_1")
-        -> DONE
+    Hey, it's Lupe. Had to change my route; tank was running low. I pit stopped outside of Kettle Rock, Idaho. Should be back on the road soon--don't jump on me for being late. I'll debrief the Watchowski Case with you when I get back. Alright. Bye.
+        -> scene1_1
 
 // ------------- SCENE1.1 Outside MelOMarket
 === scene1_1 ===
@@ -87,14 +70,10 @@ LIST QuestChain_1 = (FIRST_INTERACT), (PAY_FOR_GAS)
     }
 
 = car
-    {
-    - IsQuestComplete(look_at_tree):
+    {IsQuestComplete(pay_for_gas): 
         ~ SetSpeaker(Speaker.Lupe)
         "Sorry I was so late to the debrief boss, I had to go report a suspicious fallen tree." Ugh. Guess I'll be more than a little late...Thelton's gonna kill me.
-        ~ ChangeGameScene("scene2_DS")
-        -> DONE
-    - IsQuestComplete(pay_for_gas):
-        / TEMP DIA:/ I should look into what caused that noise.
+        -> DONE //{goto("precinct")} 
     - else: 
         ~ SetSpeaker(Speaker.Lupe)
         Still gotta pay.
@@ -103,7 +82,7 @@ LIST QuestChain_1 = (FIRST_INTERACT), (PAY_FOR_GAS)
 
 
 = marlowe
-    {IsQuestComplete(pay_for_gas):
+    {IsQuestComplete(PAY_FOR_GAS):
         ~ SetSpeaker(Speaker.Marlowe)
         Timber. Heh heh. Hope you didn't need to be anywhere anytime soon.
         ~ SetSpeaker(Speaker.Lupe)
@@ -112,15 +91,11 @@ LIST QuestChain_1 = (FIRST_INTERACT), (PAY_FOR_GAS)
         Got a chainsaw on ya? 
         Heheheheh. 
         Ah, don't look so grumpy. 
-        If you put in a complaint with the local Police 
-        I'm sure you'll be out of here in no time.
-        ~ CompleteQuest(look_at_tree)
+        If you put in a complaint with the local Police I'm sure you'll be out of here in no time.
         -> DONE
     - else :
         ~ SetSpeaker(Speaker.Marlowe)
-        You're stuck at the pump too, eh? 
-        Good luck getting that lazybones to help you. 
-        Heh. Youth these days, am I right?
+        You're stuck at the pump too, eh? Good luck getting that lazybones to help you. Heh. Youth these days, am I right?
         -> DONE
     }
 
@@ -156,9 +131,6 @@ LIST QuestChain_1 = (FIRST_INTERACT), (PAY_FOR_GAS)
         ~ SetSpeaker(Speaker.Lupe)
         Finally
         ~ CompleteQuest(pay_for_gas)
-        // TODO CRASHING TREE NOISE 
-        // Lupe pays. Suddenly, a loud crashing noise is heard from outside.
-        What was that? 
         -> DONE
     - else:
         ~ SetSpeaker(Speaker.Beth)
@@ -182,7 +154,7 @@ LIST QuestChain_1 = (FIRST_INTERACT), (PAY_FOR_GAS)
     Whose paygrade is it <i>not</i> above?
     ~ SetSpeaker(Speaker.Beth) 
     My manager's in the back.
-    ~DiscoverClue(broken_cash_reg)
+    ~ DiscoverClue(broken_cash_reg)
     -> DONE
 }
 
@@ -198,7 +170,6 @@ LIST QuestChain_1 = (FIRST_INTERACT), (PAY_FOR_GAS)
 
 = door_to_outside
 {IsQuestComplete(pay_for_gas):
-    ~ChangeGameScene("scene1_4")
     -> DONE
     -else:
         ~ SetSpeaker(Speaker.Lupe)
@@ -253,7 +224,6 @@ What was that?
     
 = fallen_tree 
     // Lupe sees a tree has fallen and blocked the way out of town.
-    -> scene1_1.marlowe
     -> DONE
     //* What the hell... -> npc
   

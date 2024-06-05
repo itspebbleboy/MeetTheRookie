@@ -1,5 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/[USER%20INTERFACE]/_stylesheets/VisualNovel.uss?fileID=7433441132597879392&amp;guid=f355bbbc73f8b6f4e81577431e243ca6&amp;type=3#VisualNovel" />
+    <Style src="project://database/Assets/[USER%20INTERFACE]/_stylesheets/Global.uss?fileID=7433441132597879392&amp;guid=37b11a59d10b548be8719ac25628bde6&amp;type=3#Global" />
     <ui:VisualElement name="VisualElement" class="background">
         <ui:VisualElement name="VisualElement" style="flex-grow: 0; width: 100%; height: 100%; flex-direction: row; flex-basis: 100%; flex-shrink: 0; position: absolute; background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/UXML_WorldSpaceTexture.renderTexture?fileID=8400000&amp;guid=e7ee34e8fb65d8548a8b02bafb328c7f&amp;type=2#UXML_WorldSpaceTexture&quot;);">
             <ui:VisualElement name="MisraSide" class="CharacterSide">
@@ -18,19 +19,19 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="ChoiceParent" style="top: 5%; align-items: center; justify-content: space-evenly; align-self: center; flex-direction: column; width: 70%; height: 48%; opacity: 1; display: flex;">
-            <Darklight.UnityExt.UXML.SelectableButton name="Choice1" class="Choice" />
-            <Darklight.UnityExt.UXML.SelectableButton name="Choice2" class="Choice" />
-            <Darklight.UnityExt.UXML.SelectableButton name="Choice3" class="Choice" />
-            <Darklight.UnityExt.UXML.SelectableButton name="Choice4" class="Choice" />
+            <Darklight.UnityExt.UXML.SelectableButton name="Choice" />
+            <Darklight.UnityExt.UXML.SelectableButton name="Choice" />
+            <Darklight.UnityExt.UXML.SelectableButton name="Choice" />
+            <Darklight.UnityExt.UXML.SelectableButton name="Choice" />
         </ui:VisualElement>
         <ui:VisualElement name="Dashboard" style="flex-grow: 1; position: absolute; width: 100%; height: 100%; background-image: url(&quot;project://database/Assets/[SPRITES]/_datingSim/Backgrounds/datingsim_stakeout_fg.png?fileID=2800000&amp;guid=3ab68fe5e91a142e68a112fc9f4c91b3&amp;type=3#datingsim_stakeout_fg&quot;); display: none;" />
         <ui:VisualElement name="DialogueBoxParent" class="DialogueBoxParent" style="bottom: 0;">
-            <ui:VisualElement name="DialogueBox" class="DialogueBox" style="background-image: url(&quot;project://database/Assets/[SPRITES]/_datingSim/Textbox.png?fileID=2800000&amp;guid=8c3a61bc5b4f709409e891ceb9d6f78d&amp;type=3#Textbox&quot;); justify-content: space-between;">
+            <ui:VisualElement name="DialogueBox" class="DialogueBox" style="background-image: url(&quot;project://database/Assets/[SPRITES]/_datingSim/Textbox.png?fileID=2800000&amp;guid=8c3a61bc5b4f709409e891ceb9d6f78d&amp;type=3#Textbox&quot;);">
+                <Darklight.UnityExt.UXML.ControlledLabel rolling-text-percentage="1" font-size-range="48,84" name="DialogueText" font-size="48" style="align-self: stretch;" />
                 <ui:VisualElement name="DialogueTriangle" class="TriangleDown TriangleDefault" style="transition-duration: 1s;" />
-                <Darklight.UnityExt.UXML.ControlledLabel name="DialogueText" rolling-text-percentage="1" font-size-min="24" font-size-max="96" class="DialogueText" style="align-self: flex-start;" />
             </ui:VisualElement>
             <ui:VisualElement name="NameTag" class="NameTagLupe" style="bottom: auto; top: 5%; width: 30%; align-self: flex-start; justify-content: flex-end; height: 30%; overflow: visible; -unity-background-scale-mode: scale-to-fit; scale: 1.25 1.25;">
-                <ui:Label text="Name" name="NameText" style="width: 100%; height: 100%; -unity-font-definition: url(&apos;project://database/Assets/[USER%20INTERFACE]/_fonts/zeldadxt.ttf?fileID=12800000&amp;guid=b615391fee7f2f449b46c6ff8b8cfc14&amp;type=3#zeldadxt&apos;); -unity-font-style: bold; font-size: 64px; -unity-text-align: upper-center; display: none;" />
+                <ui:Label text="Name" name="NameText" style="width: 100%; height: 100%; -unity-font-definition: url(&quot;project://database/Assets/[USER%20INTERFACE]/_fonts/zeldadxt.ttf?fileID=12800000&amp;guid=b615391fee7f2f449b46c6ff8b8cfc14&amp;type=3#zeldadxt&quot;); -unity-font-style: bold; font-size: 64px; -unity-text-align: upper-center; display: none;" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

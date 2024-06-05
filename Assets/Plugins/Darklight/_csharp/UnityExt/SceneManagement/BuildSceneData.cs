@@ -19,10 +19,9 @@ namespace Darklight.UnityExt.SceneManagement
     [System.Serializable]
     public class BuildSceneData
     {
-
         [SerializeField, ShowOnly] private string _name = "default";
         [SerializeField, ShowOnly] private string _path;
-        private bool _sceneFound;
+        [SerializeField] private bool _sceneFound;
         private Scene _scene;
 
         public string Name => _name;
@@ -32,7 +31,7 @@ namespace Darklight.UnityExt.SceneManagement
         public BuildSceneData(){}
         public BuildSceneData(string path) => InitializeData(path);
 
-        public virtual void InitializeData(string path)
+        public void InitializeData(string path)
         {
             this._path = path.Replace("\\", "/"); // Replace all backslashes with forward slashes
             this._name = _path.Replace(BuildSceneManager.BUILD_SCENE_DIRECTORY + "/", "").Replace(".unity", "");

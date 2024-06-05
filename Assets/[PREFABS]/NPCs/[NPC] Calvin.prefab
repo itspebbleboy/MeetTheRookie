@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6521527979389369535, guid: 1b4984283f284664abae2c35fb0b3905, type: 3}
+  m_Sprite: {fileID: -7569444317647869509, guid: 1b4984283f284664abae2c35fb0b3905, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
     - {fileID: 8609721151305637149, guid: 1b4984283f284664abae2c35fb0b3905, type: 3}
     - {fileID: 5484843246563276747, guid: 1b4984283f284664abae2c35fb0b3905, type: 3}
     - {fileID: 8615295126695275498, guid: 1b4984283f284664abae2c35fb0b3905, type: 3}
-  currentFrame: 3
+  currentFrame: 2
 --- !u!61 &4165984020649371347
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -282,16 +282,16 @@ MonoBehaviour:
   _preset: {fileID: 11400000, guid: 0af6dde00b8423242a55ec1e859f58a0, type: 2}
   layerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   editMode: 0
   _sprite: {fileID: -8903238982833652902, guid: 1b4984283f284664abae2c35fb0b3905, type: 3}
   onStart: 0
   _sceneKnot: scene4_3
-  _interactionStitch: scene4_3.calvin
+  _interactionStitch: scene4_3.arcade_machines
   _isTarget: 0
   _isActive: 0
   _isComplete: 0
   _defaultTint: {r: 1, g: 1, b: 1, a: 1}
   _interactionTint: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   _outlineMaterial: {fileID: 0}
-  speakerTag: Speaker.Calvin
+  speakerTag: Speaker.Unkown

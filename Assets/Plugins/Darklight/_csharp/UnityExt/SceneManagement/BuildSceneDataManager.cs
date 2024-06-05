@@ -33,7 +33,6 @@ namespace Darklight.UnityExt.SceneManagement
 #endif
         }
 
-#if UNITY_EDITOR
         public virtual void CreateBuildSceneDataObject()
         {
             buildSceneDataObject = ScriptableObjectUtility.CreateOrLoadScriptableObject<BuildSceneDataObject<TSceneData>>(
@@ -41,7 +40,6 @@ namespace Darklight.UnityExt.SceneManagement
                 DATA_FILENAME
             );
         }
-#endif
 
         /// <summary>
         /// Subscribes to SceneManager events.

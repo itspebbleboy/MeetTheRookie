@@ -1,21 +1,10 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/[USER%20INTERFACE]/_stylesheets/Global.uss?fileID=7433441132597879392&amp;guid=37b11a59d10b548be8719ac25628bde6&amp;type=3#Global" />
-    <engine:VisualElement name="header">
+    <engine:VisualElement name="header" style="background-color: rgba(2, 0, 0, 0.45);">
         <engine:VisualElement name="container" />
     </engine:VisualElement>
-    <engine:VisualElement name="body" style="align-self: stretch; align-items: center;">
-        <engine:VisualElement name="MenuPanel" class="panel" style="flex-grow: 1; flex-basis: 50%;">
-            <engine:Label text="Menu" name="h3" />
-        </engine:VisualElement>
-        <engine:VisualElement name="CenterGap" style="flex-grow: 1; flex-basis: 100%;" />
-        <engine:VisualElement name="ChoicePanel" class="panel" style="flex-grow: 1; flex-basis: 50%;">
-            <engine:Label text="Choices" name="h3" />
-            <engine:GroupBox name="ChoiceBox" class="ChoiceGroup" style="flex-direction: column; align-items: auto; padding-top: 5%; padding-right: 5%; padding-bottom: 5%; padding-left: 5%;">
-                <Darklight.UnityExt.UXML.SelectableButton />
-                <Darklight.UnityExt.UXML.SelectableButton />
-                <Darklight.UnityExt.UXML.SelectableButton />
-            </engine:GroupBox>
-        </engine:VisualElement>
+    <engine:VisualElement name="body" style="flex-grow: 1; align-self: stretch;">
+        <engine:GroupBox name="ChoiceBox" style="flex-direction: column; align-items: auto; padding-top: 5%; padding-right: 5%; padding-bottom: 5%; padding-left: 5%;" />
     </engine:VisualElement>
     <engine:VisualElement name="footer" style="flex-grow: 1;" />
 </engine:UXML>

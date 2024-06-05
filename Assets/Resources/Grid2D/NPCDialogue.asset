@@ -15,7 +15,7 @@ MonoBehaviour:
   uniqueID: 6c86621f-fb29-4f07-8fe1-d8dc89977950
   gridSizeX: 3
   gridSizeY: 1
-  cellSize: 0.5
+  cellSize: 0.75
   originKeyX: -1
   originKeyY: 1
   keys:

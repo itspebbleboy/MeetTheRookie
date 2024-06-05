@@ -395,6 +395,261 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &671820579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: mtr_global
+  m_EditorClassIdentifier: 
+  _inkyTextAsset: {fileID: 4900000, guid: d3591a36bfee79947b7fe0046e67d8e2, type: 3}
+  _knots:
+  - name: SetSpeaker
+    stitches: []
+  - name: SetActiveQuestChain
+    stitches: []
+  - name: StartQuest
+    stitches: []
+  - name: CompleteQuest
+    stitches: []
+  - name: IsQuestComplete
+    stitches: []
+  - name: IsQuestActive
+    stitches: []
+  - name: DiscoverClue
+    stitches: []
+  - name: IsClueFound
+    stitches: []
+  - name: Misra_Dialogue
+    stitches: []
+  - name: Roy_Dialogue
+    stitches:
+    - Roy_Dialogue.interogate
+    - Roy_Dialogue.personal_info
+    - Roy_Dialogue.town_history
+    - Roy_Dialogue.winery_closing
+    - Roy_Dialogue.window
+    - Roy_Dialogue.merch_shirt
+    - Roy_Dialogue.merch_sticker
+    - Roy_Dialogue.pamphlet
+    - Roy_Dialogue.potential_suspects
+    - Roy_Dialogue.teenagers
+  - name: Jenny_Dialogue
+    stitches:
+    - Jenny_Dialogue.interogate
+    - Jenny_Dialogue.hosi
+    - Jenny_Dialogue.4_3_jenny_questions
+  - name: Calvin_Dialogue
+    stitches:
+    - Calvin_Dialogue.4_3
+    - Calvin_Dialogue.4_3_calvin_questions
+    - Calvin_Dialogue.cal_hosi
+    - Calvin_Dialogue.HOSI_questions
+    - Calvin_Dialogue.HOSI_questions2
+    - Calvin_Dialogue.personal_info_calvin
+    - Calvin_Dialogue.winery_calvin
+    - Calvin_Dialogue.KR_calvin
+  - name: Josh_Dialogue
+    stitches:
+    - Josh_Dialogue.4_3
+    - Josh_Dialogue.4_3_josh_questions
+    - Josh_Dialogue.4_3_josh_personal_info
+    - Josh_Dialogue.4_3_KR_josh
+    - Josh_Dialogue.4_3_winery_josh
+  - name: Jenkins_Dialogue
+    stitches:
+    - Jenkins_Dialogue.jenkins_questions
+    - Jenkins_Dialogue.jenkins_winery_
+    - Jenkins_Dialogue.jenkins_last_night
+    - Jenkins_Dialogue.jenkins_kettle_rock
+    - Jenkins_Dialogue.jenkins_council
+    - Jenkins_Dialogue.jenkins_sarah
+    - Jenkins_Dialogue.jenkins_sacrifice
+  - name: Irene_Dialogue
+    stitches:
+    - Irene_Dialogue.irene_questions
+    - Irene_Dialogue.irene_goats
+    - Irene_Dialogue.irene_plaque
+    - Irene_Dialogue.irene_sacrifice
+    - Irene_Dialogue.irene_kettle_rock
+    - Irene_Dialogue.irene_winery
+    - Irene_Dialogue.irene_still_standing
+  - name: scene2
+    stitches:
+    - scene2.intro
+    - scene2.ding
+    - scene2.hello
+    - scene2.soul
+    - scene2.chastise
+    - scene2.scared
+    - scene2.introductions
+    - scene2.silence
+    - scene2.niceToMeet
+    - scene2.precinct
+    - scene2.Company
+    - scene2.treeFell
+    - scene2.snoop
+    - scene2.peek
+    - scene2.wait
+    - scene2.solo
+    - scene2.transition_to_case
+    - scene2.time
+    - scene2.police_report
+    - scene2.theRest
+    - scene2.nothingHere
+    - scene2.Evidence
+    - scene2.Witnesses
+    - scene2.Help
+    - scene2.We
+    - scene2.phone_call
+    - scene2.voicemail
+    - scene2.JokeBack
+    - scene2.door
+  - name: scene4_1
+    stitches:
+    - scene4_1.talk_to_misra
+    - scene4_1.idahome_and_goods
+    - scene4_1.powerup_arcade
+    - scene4_1.strange_symbol_on_fountain
+    - scene4_1.goop_on_fountain
+    - scene4_1.the_rockin_kettle
+    - scene4_1.laundromat_closed_sign
+    - scene4_1.einab_closed_sign
+    - scene4_1.apartments_for_lease_sign
+    - scene4_1.diner_closed_sign
+    - scene4_1.clothing_store_closed_sign
+    - scene4_1.heart_of_kettle
+  - name: scene4_2
+    stitches:
+    - scene4_2.store_window
+    - scene4_2.merch_shirt
+    - scene4_2.merch_sticker
+    - scene4_2.front_door
+  - name: scene4_3
+    stitches:
+    - scene4_3.arcade_machines
+    - scene4_3.teens
+    - scene4_3.teens_roulette
+    - scene4_3.teens_suspect
+    - scene4_3.exit_scene
+  - name: scene4_4
+    stitches:
+    - scene4_4.irene_text
+    - scene4_4.man
+    - scene4_4.goop
+    - scene4_4.memorial_plaque
+  - name: global decl
+    stitches: []
+  _variables:
+  - _key: reported_incident
+    _valueAsString: False
+  - _key: case_file_received
+    _valueAsString: False
+  - _key: love_points
+    _valueAsString: 0
+  - _key: tease_level
+    _valueAsString: 0
+  - _key: sincerity_level
+    _valueAsString: 0
+  - _key: spooked
+    _valueAsString: False
+  - _key: snooped
+    _valueAsString: False
+  - _key: closed_signs
+    _valueAsString: 0
+  - _key: Speaker
+    _valueAsString: Unkown, Misra, Lupe, Chief_Thelton, Marlowe, Beth, Mel, Roy_Rodgerson,
+      Jenny, Calvin, Josh, Irene, Jenkins
+  - _key: CURRENT_SPEAKER
+    _valueAsString: Lupe
+  - _key: MAIN_QUEST
+    _valueAsString: 
+  - _key: ACTIVE_QUEST_CHAIN
+    _valueAsString: 
+  - _key: COMPLETED_QUESTS
+    _valueAsString: 
+  - _key: GLOBAL_KNOWLEDGE
+    _valueAsString: 
+  - _key: Level1_Clues
+    _valueAsString: GAS_PUMP_BROKEN, CASHREG_BROKEN, CASHREG_FIX
+  - _key: Level1_Quests
+    _valueAsString: FIRST_INTERACT, PAY_FOR_GAS
+  - _key: Level3_Clues
+    _valueAsString: 
+  - _key: Level3_Quests
+    _valueAsString: 
+  - _key: Level4_Quests
+    _valueAsString: 
+  - _key: Level4_Clues
+    _valueAsString: 
+  _globalTags: []
+--- !u!114 &1099151066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: mtr_level2_precinct
+  m_EditorClassIdentifier: 
+  _inkyTextAsset: {fileID: 4900000, guid: 56d5c002448d20e4597414021daff05c, type: 3}
+  _knots:
+  - name: scene2
+    stitches:
+    - scene2.ding
+    - scene2.hello
+    - scene2.soul
+    - scene2.chastise
+    - scene2.scared
+    - scene2.introductions
+    - scene2.silence
+    - scene2.niceToMeet
+    - scene2.precinct
+    - scene2.Company
+    - scene2.treeFell
+    - scene2.snoop
+    - scene2.peek
+    - scene2.wait
+    - scene2.solo
+    - scene2.transition_to_case
+    - scene2.time
+    - scene2.police_report
+    - scene2.theRest
+    - scene2.nothingHere
+    - scene2.Evidence
+    - scene2.Witnesses
+    - scene2.Help
+    - scene2.We
+    - scene2.phone_call
+    - scene2.voicemail
+    - scene2.JokeBack
+    - scene2.door
+  - name: global decl
+    stitches: []
+  _variables:
+  - _key: reported_incident
+    _valueAsString: False
+  - _key: case_file_received
+    _valueAsString: False
+  - _key: love_points
+    _valueAsString: 0
+  - _key: tease_level
+    _valueAsString: 0
+  - _key: sincerity_level
+    _valueAsString: 0
+  - _key: spooked
+    _valueAsString: False
+  - _key: snooped
+    _valueAsString: False
+  _globalTags: []
 --- !u!1 &1316734653
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,11 +712,73 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preset: {fileID: 11400000, guid: d27c31d010fec7542bdc073f39bed53f, type: 2}
-  inCar: 0
   textSize: {x: 20, y: 48}
   nextScene:
     m_SceneName: MAIN_MENU
   emotes: {fileID: 11400000, guid: a64166c2fdcc660428683bdb0e087b06, type: 2}
+--- !u!114 &1814767746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: mtr_scene2_precinctDEMO
+  m_EditorClassIdentifier: 
+  _inkyTextAsset: {fileID: 4900000, guid: 128483559616cef4b9002c3e7c1d7d52, type: 3}
+  _knots:
+  - name: intro
+    stitches:
+    - intro.ding
+    - intro.hello
+    - intro.soul
+    - intro.chastise
+    - intro.scared
+    - intro.introductions
+    - intro.silence
+    - intro.niceToMeet
+    - intro.precinct
+    - intro.Company
+    - intro.treeFell
+    - intro.snoop
+    - intro.peek
+    - intro.wait
+    - intro.solo
+    - intro.transition_to_case
+    - intro.time
+    - intro.police_report
+    - intro.theRest
+    - intro.nothingHere
+    - intro.Evidence
+    - intro.Witnesses
+    - intro.Help
+    - intro.We
+    - intro.phone_call
+    - intro.voicemail
+    - intro.JokeBack
+    - intro.door
+  - name: global decl
+    stitches: []
+  _variables:
+  - _key: reported_incident
+    _valueAsString: False
+  - _key: case_file_received
+    _valueAsString: False
+  - _key: love_points
+    _valueAsString: 0
+  - _key: tease_level
+    _valueAsString: 0
+  - _key: sincerity_level
+    _valueAsString: 0
+  - _key: spooked
+    _valueAsString: False
+  - _key: snooped
+    _valueAsString: False
+  _globalTags:
+  - 'hide : Lupe'
 --- !u!1001 &1847173572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -525,18 +842,6 @@ PrefabInstance:
     - target: {fileID: 5054830795790530424, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5155693147541508910, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: buildSceneDataObject
-      value: 
-      objectReference: {fileID: 11400000, guid: 985fee78f5f34b34ab4d7ddb85f37d9e, type: 2}
-    - target: {fileID: 5155693147541508910, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: buildScenePaths.Array.size
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5155693147541508910, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
-      propertyPath: 'buildScenePaths.Array.data[19]'
-      value: Assets/Scenes/Build/SYNTHESIS_DEMO.unity
       objectReference: {fileID: 0}
     - target: {fileID: 7427744868763189831, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
       propertyPath: sceneData.Array.size
@@ -608,6 +913,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b98fe6343db00478ab792e4a56ca3734, type: 3}
+--- !u!114 &2101494412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a35ab352d7ead40ba9a1c9e028b43b, type: 3}
+  m_Name: synthesisTest
+  m_EditorClassIdentifier: 
+  _inkyTextAsset: {fileID: 4900000, guid: 66ae6d2237460114eb1cd5c052de6568, type: 3}
+  _knots:
+  - name: nada
+    stitches: []
+  - name: synthesize
+    stitches: []
+  _variables: []
+  _globalTags: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ using Darklight.UnityExt.Input;
 using Darklight.UnityExt.UXML;
 using Darklight.UnityExt.Utility;
 using Darklight.UnityExt.Audio;
+using FMODUnity;
 
 using Ink.Runtime;
 
@@ -30,7 +31,6 @@ public class MTR_DatingSimManager : UXML_UIDocumentObject
     // Choice Variables
     bool choicesActive;
     SelectableVectorField<SelectableButton> choiceMap = new SelectableVectorField<SelectableButton>();
-    bool isRolling = false;
 
     // UXML Variables
     VisualElement misraImage;
@@ -75,15 +75,14 @@ public class MTR_DatingSimManager : UXML_UIDocumentObject
         nameTag = root.Q<VisualElement>("NameTag");
         dialogueText = ElementQuery<ControlledLabel>("DialogueText");
         choiceParent = root.Q<VisualElement>("ChoiceParent");
-
-        if (inCar) { root.Q<VisualElement>("Dashboard").style.display = DisplayStyle.Flex; }
-        else { root.Q<VisualElement>("Dashboard").style.display = DisplayStyle.None; }
-
-        choiceParent.style.display = DisplayStyle.None;
+        
+        if(inCar){ root.Q<VisualElement>("Dashboard").style.display = DisplayStyle.Flex; }
+        else{ root.Q<VisualElement>("Dashboard").style.display = DisplayStyle.None; }
 
         // Get the story object
         storyObject = InkyStoryManager.GlobalStoryObject;
         storyIterator = InkyStoryManager.Iterator;
+        storyIterator.GoToKnotOrStitch("scene2");
 
         if (!boundEmote)
         {
@@ -139,22 +138,21 @@ public class MTR_DatingSimManager : UXML_UIDocumentObject
         {
             choiceButtons[index].style.display = DisplayStyle.Flex;
             choiceButtons[index].text = choice.text;
-            choiceButtons[index].style.fontSize = SetFontSize(false, choice.text);
-            choiceButtons[index].Deselect();
+            choiceButtons[index].style.fontSize = textSize.y;
+            choiceButtons[index].RemoveFromClassList("Highlight");
             index++;
         }
 
         for (int i = index; i < choiceButtons.Count; i++)
         {
             choiceButtons[i].style.display = DisplayStyle.None;
-            choiceButtons[i].Deselect();
+            choiceButtons[i].RemoveFromClassList("Highlight");
         }
 
         choicesActive = true;
 
-        //choiceMap.SelectElement(choiceButtons[0]);
-        choiceMap.CurrentSelection.SetSelected();
-        choiceMap.CurrentSelection.style.fontSize = SetFontSize(true, choiceMap.CurrentSelection.text);
+        choiceMap.Select(choiceButtons[0]);
+        choiceMap.CurrentSelection.AddToClassList("Highlight");
     }
 
     /// <summary>
@@ -185,13 +183,7 @@ public class MTR_DatingSimManager : UXML_UIDocumentObject
     /// </summary>
     void Select()
     {
-        if (isRolling)
-        {
-            StopAllCoroutines();
-            dialogueText.InstantCompleteText();
-            isRolling = false;
-        }
-        else if (choicesActive)
+        if (choicesActive)
         {
             SelectChoice();
         }
@@ -210,14 +202,12 @@ public class MTR_DatingSimManager : UXML_UIDocumentObject
         move.y = -move.y;
         if (choiceMap.CurrentSelection != null)
         {
-            choiceMap.CurrentSelection.Deselect();
-            choiceMap.CurrentSelection.style.fontSize = SetFontSize(false, choiceMap.CurrentSelection.text);
+            choiceMap.CurrentSelection.RemoveFromClassList("Highlight");
         }
-        var selected = choiceMap.GetElementInDirection(move);
+        var selected = choiceMap.getFromDir(move);
         if (selected != null)
         {
-            selected.SetSelected();
-            selected.style.fontSize = SetFontSize(true, selected.text);
+            selected.AddToClassList("Highlight");
         }
     }
 
@@ -276,24 +266,39 @@ public class MTR_DatingSimManager : UXML_UIDocumentObject
         }
 
         StartCoroutine(RollingTextRoutine(dialogue, 0.025f));
+
+        //UpdateBoxNTextSize();
     }
 
     IEnumerator RollingTextRoutine(string fullText, float interval)
     {
-        isRolling = true;
-        dialogueText.SetFullText(fullText); // << Set rolling text
-        float buffer = 1f;
+        dialogueText.Initialize(fullText); // << Initialized for rolling text
 
-        for (int i = 0; i < dialogueText.fullText.Length; i++)
+        while (true)
         {
-            dialogueText.RollingTextStep();
-            buffer -= interval;
-            yield return new WaitForSeconds(interval);
+            for (int i = 0; i < dialogueText.fullText.Length; i++)
+            {
+                dialogueText.RollingTextStep();
+                yield return new WaitForSeconds(interval);
+            }
+            yield return null;
         }
-
-        yield return new WaitForSeconds(Mathf.Max(0, buffer) + 0.25f);
-        isRolling = false;
     }
+
+    /// <summary>
+    /// Updates the text box size and text size
+    /// </summary>
+    /*
+    void UpdateBoxNTextSize()
+    {
+        dialogueText.style.fontSize = textSize.y;
+        float width = (!float.IsNaN(dialogueText.resolvedStyle.width)) ? dialogueText.resolvedStyle.width : 1000;
+        Vector2 newBoxSize = dialogueText.MeasureTextSize(dialogueText.text, width, VisualElement.MeasureMode.Exactly, 0, VisualElement.MeasureMode.Undefined);
+        dialogueBox.style.height = newBoxSize.y * 1.2f;
+        float trueBoxHeight = (dialogueBox.style.height.value.value > 223f) ? 190f : 170f;
+        dialogueText.style.fontSize = Mathf.Max(textSize.y * Mathf.Clamp(trueBoxHeight / newBoxSize.y, 0, 1), textSize.x);
+    }
+    */
 
     /// <summary>
     /// Moves the cool dialogue triangle up and down
@@ -327,22 +332,5 @@ public class MTR_DatingSimManager : UXML_UIDocumentObject
         }
 
         return success;
-    }
-
-    /// <summary>
-    /// HARDCODED: Sets the font size of the choice boxes. Expects max string size of 57.
-    /// </summary>
-    /// <param name="selected"> If the box is selected or not </param>
-    /// <param name="text"> The text to measure to set the font size </param>
-    float SetFontSize(bool selected, string text)
-    {
-        if (selected)
-        {
-            return Mathf.Pow(5f, Mathf.Clamp((57f - text.Length) / 32f, 0f, 1f) + 1.29f) + 20f;
-        }
-        else
-        {
-            return Mathf.Pow(5f, Mathf.Clamp((57f - text.Length) / 32f, 0f, 1f) + 1.115f) + 20f;
-        }
     }
 }

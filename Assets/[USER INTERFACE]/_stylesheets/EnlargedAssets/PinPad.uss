@@ -1,0 +1,53 @@
+VisualElement.NumButton {
+    align-self: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-right: 5px;
+    margin-bottom: 0;
+    margin-left: 5px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    width: 75px;
+    height: 75px;
+    max-width: 75px;
+    max-height: 75px;
+    transition-duration: 0.1s;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+GroupBox.Row {
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: center;
+    height: 87px;
+}
+
+.Hovered {
+    background-color: rgba(197, 163, 0, 0);
+    -unity-background-image-tint-color: rgba(255, 150, 0, 0.81);
+}
+
+.Selected {
+    background-color: rgba(255, 150, 0, 0.81);
+    -unity-background-image-tint-color: rgba(197, 163, 0, 0.26);
+}
+
+.UnHovered {
+    background-color: rgba(102, 147, 84, 0.82);
+}
+
+.Row {
+    flex-direction: row;
+    justify-content: center;
+    top: -41px;
+}
+
+.Row {
+    justify-content: center;
+}
+
+.Flash {
+}

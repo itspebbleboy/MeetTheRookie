@@ -136,7 +136,6 @@ MonoBehaviour:
       loop: 1
       frames:
       - {fileID: -8603573873493872659, guid: 6b6830db7439af447b0949d40c896a3f, type: 3}
-      - {fileID: -8603573873493872659, guid: 6b6830db7439af447b0949d40c896a3f, type: 3}
   - state: 2
     spriteSheet:
       loop: 1
@@ -197,7 +196,6 @@ MonoBehaviour:
   spriteSheet:
     loop: 1
     frames:
-    - {fileID: -8603573873493872659, guid: 6b6830db7439af447b0949d40c896a3f, type: 3}
     - {fileID: -8603573873493872659, guid: 6b6830db7439af447b0949d40c896a3f, type: 3}
   currentFrame: 0
 --- !u!61 &6562033029251709814
@@ -264,7 +262,6 @@ MonoBehaviour:
     m_Bits: 0
   editMode: 0
   _sprite: {fileID: -8603573873493872659, guid: 6b6830db7439af447b0949d40c896a3f, type: 3}
-  onStart: 0
   _sceneKnot: SetSpeaker
   _interactionStitch: 
   _isTarget: 0

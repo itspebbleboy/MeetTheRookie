@@ -1,7 +1,7 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Resources/Synthesis/testuss.uss?fileID=7433441132597879392&amp;guid=d7e7fa8bd647c314d84fe72e595d54e1&amp;type=3#testuss" />
-    <engine:VisualElement name="VisualElement" class="Paper" style="flex-grow: 0; background-image: none; width: 260px; height: 128px; rotate: -2deg; flex-shrink: 0;">
-        <engine:VisualElement name="PaperBackground" style="flex-grow: 0; width: 256px; height: 100%; flex-shrink: 0; rotate: -4deg; background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/Synthesis/SynthAlternative/MediumPaper1.png?fileID=2800000&amp;guid=e8634acd4ac144143a11bcf42aef770e&amp;type=3#MediumPaper1&quot;);">
+    <engine:VisualElement name="VisualElement" class="Paper" style="flex-grow: 0; position: relative; background-image: none; width: 260px; height: 128px; rotate: -2deg; flex-shrink: 0; top: 250px; left: 750px;">
+        <engine:VisualElement name="PaperBackground" style="flex-grow: 0; width: 256px; height: 100%; flex-shrink: 0; top: 0; rotate: -4deg; background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/Synthesis/SynthAlternative/MediumPaper1.png?fileID=2800000&amp;guid=e8634acd4ac144143a11bcf42aef770e&amp;type=3#MediumPaper1&quot;); left: 4px;">
             <engine:Label text="Broken Windows" style="position: absolute; left: 4px; top: 16px; font-size: 35px; width: 100px; white-wrap: normal; flex-shrink: 1; flex-wrap: wrap; -unity-font-definition: url(&quot;project://database/Assets/[USER%20INTERFACE]/_fonts/pixelplay.ttf?fileID=12800000&amp;guid=e2cb29917e71d184a9ea0469322749c1&amp;type=3#pixelplay&quot;); rotate: 5deg;" />
         </engine:VisualElement>
     </engine:VisualElement>

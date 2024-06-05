@@ -1,0 +1,11 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Resources/Synthesis/TestUss.uss?fileID=7433441132597879392&amp;guid=d7e7fa8bd647c314d84fe72e595d54e1&amp;type=3#TestUss" />
+    <engine:VisualElement class="whatever Paper" style="flex-grow: 1; position: relative; background-image: none; width: 256px; height: 256px; top: auto;">
+        <engine:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/Synthesis/SynthUITest/BigPaper/Big%20paper.png?fileID=2800000&amp;guid=c6d908db33e4e4c1db5bf291f5fd01bf&amp;type=3#Big paper&quot;);" />
+    </engine:VisualElement>
+    <engine:Label text="Label" data-source="project://database/Assets/Resources/Synthesis/New%20Synthesis%20Binding.asset?fileID=11400000&amp;guid=e3966740f44bdb24a84194189719aa9e&amp;type=2#New Synthesis Binding" style="position: absolute; top: 40px; left: 40px; width: 62%; font-size: 26px; white-space: normal; color: rgb(0, 0, 0);">
+        <Bindings>
+            <engine:DataBinding property="text" binding-mode="ToTarget" data-source-path="value" />
+        </Bindings>
+    </engine:Label>
+</engine:UXML>

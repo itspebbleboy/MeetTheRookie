@@ -21,7 +21,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Build/SCENE_1_3 - The Gas Station Int Bathroom.unity
     guid: 4fea4162377ee481e8fdf735512692dd
   - enabled: 1
-    path: Assets/Scenes/Build/SCENE_1_4 - The Gas Station Ext..unity
+    path: Assets/Scenes/Build/SCENE_1_4 - The Gas Station Int..unity
+    guid: fdf27c545200445d4a252459e84fe396
+  - enabled: 1
+    path: Assets/Scenes/Build/SCENE_1_5 - The Gas Station Ext..unity
     guid: e20b042c02ea14ecaa264b0735a6365c
   - enabled: 1
     path: Assets/Scenes/Build/SCENE_2_0 - The Precinct - Dating Sim.unity
@@ -33,14 +36,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Build/SCENE_3_2 - The Winery Int..unity
     guid: dd1987156ba4d41ef9d4c364b35f0e52
   - enabled: 1
-    path: Assets/Scenes/Build/SCENE_4_1 - Main Street [AFTERNOON].unity
+    path: Assets/Scenes/Build/SCENE_3_3 - The Winery Ext..unity
+    guid: 19a90049d680c48abbff5ae62e7324e3
+  - enabled: 1
+    path: Assets/Scenes/Build/SCENE_4_1 - Main Street.unity
     guid: 938279deb4ab77d4596376237e2dadaa
-  - enabled: 1
-    path: Assets/Scenes/Build/SCENE_4_1 - Main Street [DUSK].unity
-    guid: 52f4cc5afa034fe4ab61410472c0509f
-  - enabled: 1
-    path: Assets/Scenes/Build/SCENE_4_1 - Main Street [GOLDEN HOUR].unity
-    guid: 3c83badf709aae640b4252a02fbb44f9
   - enabled: 1
     path: Assets/Scenes/Build/SCENE_4_2 - The General Store.unity
     guid: f2f40d719c0e59c4ab90748c1adb5f30
@@ -57,10 +57,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Build/SCENE_5_1 - Stakeout - Dating Sim.unity
     guid: 6cd90d71e90854fbf82f9b1e60750f07
   - enabled: 1
-    path: Assets/Scenes/Build/SCENE_5_2 - The Winery Ext. [EVENING].unity
+    path: Assets/Scenes/Build/SCENE_5_2 - The Winery Ext..unity
     guid: 428d256e79ba94f1ea0513aaa69b180b
   - enabled: 1
-    path: Assets/Scenes/Build/SCENE_5_3 - The Winery Int. [EVENING].unity
+    path: Assets/Scenes/Build/SCENE_5_3 - The Winery Int..unity
     guid: b642ba77b870a45c6aade55ccd32f756
   - enabled: 1
     path: Assets/Scenes/Build/SYNTHESIS_DEMO.unity

@@ -16,9 +16,6 @@ namespace Darklight.UnityExt.Inky
     /// </summary>
     public class InkyStoryManager : MonoBehaviourSingleton<InkyStoryManager>, IUnityEditorListener
     {
-        public delegate void StoryInitialized(Story story);
-        public event StoryInitialized OnStoryInitialized;
-
         [SerializeField]
         InkyStoryObject _globalStoryObject;
 
@@ -26,13 +23,9 @@ namespace Darklight.UnityExt.Inky
         List<string> _speakerList;
 
         [SerializeField, ShowOnly]
-        List<string> _globalKnotList;
-
-        [SerializeField, ShowOnly]
-        string _currentSpeaker;
+        List<string> _globalKnots;
 
         // ------------------------ [[ GLOBAL STORY OBJECT ]] ------------------------ >>
-        public static InkyStoryIterator Iterator { get; private set; }
 
         public static InkyStoryObject GlobalStoryObject
         {
@@ -50,20 +43,37 @@ namespace Darklight.UnityExt.Inky
         /// <summary>
         /// List of all of the knot names in the Inky Story.
         /// </summary>
-        public static List<string> GlobalKnotList
+        public static List<string> GlobalKnots
         {
-            get { return Instance._globalKnotList; }
-        }
-
-        public static string CurrentSpeaker
-        {
-            get { return Instance._currentSpeaker; }
+            get { return Instance._globalKnots; }
         }
 
         // ----------- [[ STORY ITERATOR ]] ------------ >>
+        public static InkyStoryIterator Iterator { get; private set; }
+
+        public delegate void StoryInitialized(Story story);
+        public event StoryInitialized OnStoryInitialized;
+
         #region ----- [[ SPEAKER HANDLING ]] ------------------------ >>
+        [Tooltip("The current speaker in the story.")]
+        [ShowOnly, SerializeField]
+        string _currentSpeaker;
+        public string CurrentSpeaker => _currentSpeaker;
+
         public delegate void SpeakerSet(string speaker);
         public event SpeakerSet OnSpeakerSet;
+
+        /// <summary>
+        /// This is the external function that is called from the Ink story to set the current speaker.
+        /// </summary>
+        public object SetSpeaker(object[] args)
+        {
+            string speaker = (string)args[0];
+            _currentSpeaker = speaker;
+            OnSpeakerSet?.Invoke(speaker);
+            Debug.Log($"{Prefix} >> Set Speaker: {speaker}");
+            return false;
+        }
 
         /// <summary>
         /// This is the forceful way to set the speaker value.
@@ -77,15 +87,6 @@ namespace Darklight.UnityExt.Inky
 
         #endregion
 
-        #region ----- [[ QUEST HANDLING ]] ------------------------ >>
-        [SerializeField, ShowOnly] private string _mainQuestName;
-        [SerializeField, ShowOnly] private List<string> _activeQuestChain = new List<string>();
-        [SerializeField, ShowOnly] private List<string> _completedQuestChain = new List<string>();
-        #endregion
-
-        #region ----- [[ CLUE HANDLING ]] ------------------------ >>
-        [SerializeField, ShowOnly] private List<string> _globalKnowledgeList = new List<string>();
-        #endregion
 
         // ------------------------ [[ METHODS ]] ------------------------ >>
         public void OnEditorReloaded()
@@ -103,7 +104,7 @@ namespace Darklight.UnityExt.Inky
             _speakerList = _globalStoryObject.GetVariableByName("Speaker").ToStringList();
             //Debug.Log($"{Prefix} >> Speaker List Count : {SpeakerList.Count}");
 
-            _globalKnotList = _globalStoryObject.KnotNameList;
+            _globalKnots = _globalStoryObject.KnotNames;
             //Debug.Log($"{Prefix} >> Global Knots Count : {GlobalKnots.Count}");
 
             // << OBSERVE VARIABLES >>
@@ -111,45 +112,11 @@ namespace Darklight.UnityExt.Inky
                 "CURRENT_SPEAKER",
                 (string varName, object newValue) =>
                 {
+                    if (_currentSpeaker == newValue.ToString())
+                        return;
                     _currentSpeaker = newValue.ToString();
                     OnSpeakerSet?.Invoke(_currentSpeaker);
                     Debug.Log($"{Prefix} >> Current Speaker: {_currentSpeaker}");
-                }
-            );
-
-            _globalStoryObject.StoryValue.ObserveVariable(
-                "MAIN_QUEST",
-                (string varName, object newValue) =>
-                {
-                    _mainQuestName = newValue.ToString();
-                    Debug.Log($"{Prefix} >> Main Quest: {_mainQuestName}");
-                }
-            );
-
-            _globalStoryObject.StoryValue.ObserveVariable(
-                "ACTIVE_QUEST_CHAIN",
-                (string varName, object newValue) =>
-                {
-                    _activeQuestChain = _globalStoryObject.GetVariableByName("ACTIVE_QUEST_CHAIN").ToStringList();
-                    Debug.Log($"{Prefix} >> Active Quest Chain: {_activeQuestChain.Count}");
-                }
-            );
-
-            _globalStoryObject.StoryValue.ObserveVariable(
-                "COMPLETED_QUESTS",
-                (string varName, object newValue) =>
-                {
-                    _completedQuestChain = _globalStoryObject.GetVariableByName("COMPLETED_QUESTS").ToStringList();
-                    Debug.Log($"{Prefix} >> Completed Quest Chain: {_completedQuestChain.Count}");
-                }
-            );
-
-            _globalStoryObject.StoryValue.ObserveVariable(
-                "GLOBAL_KNOWLEDGE",
-                (string varName, object newValue) =>
-                {
-                    _globalKnowledgeList = _globalStoryObject.GetVariableByName("GLOBAL_KNOWLEDGE").ToStringList();
-                    Debug.Log($"{Prefix} >> Global Knowledge: {_globalKnowledgeList.Count}");
                 }
             );
 
