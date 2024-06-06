@@ -317,7 +317,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 0d27376535b0c1f4fbcf885e85bbb734, type: 3}
+  m_Texture: {fileID: 2800000, guid: f9f204d5cf61c46e5a6915d8f82ed43d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -457,6 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preset: {fileID: 11400000, guid: d27c31d010fec7542bdc073f39bed53f, type: 2}
+  inCar: 0
   textSize: {x: 20, y: 48}
   nextScene:
     m_SceneName: MAIN_MENU

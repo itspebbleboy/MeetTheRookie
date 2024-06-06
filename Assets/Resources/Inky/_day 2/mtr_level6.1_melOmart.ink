@@ -1,7 +1,4 @@
 
-=== hi ===
-helloooo
--> DONErt
 
 === thelton_intro_DAY2===
 
@@ -317,6 +314,7 @@ I think I'd rather lick ground than eat something out of here.
         Mel said to hit it. In the side.
         // the employee whacks the side of the register.The Drawer pops open.
         TODO SFX CASH REGISTER FIX NOISE
+        TODO ANIMATION REGISTER DRAWER
         ~ SetSpeaker(Speaker.Beth) 
         Cool. $76.45.
         ~ SetSpeaker(Speaker.Lupe)

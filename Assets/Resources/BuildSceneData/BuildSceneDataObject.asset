@@ -71,6 +71,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: SetSpeaker
     backgroundMusicEvent:
@@ -138,6 +144,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene1_0
     backgroundMusicEvent:
@@ -205,6 +217,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene1_1
     backgroundMusicEvent:
@@ -272,6 +290,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene1_2
     backgroundMusicEvent:
@@ -339,6 +363,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene1_3
     backgroundMusicEvent:
@@ -406,6 +436,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene1_4
     backgroundMusicEvent:
@@ -473,6 +509,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene2_DS
     backgroundMusicEvent:
@@ -540,6 +582,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene3_1
     backgroundMusicEvent:
@@ -607,6 +655,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene3_2
     backgroundMusicEvent:
@@ -674,6 +728,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene4_1
     backgroundMusicEvent:
@@ -741,6 +801,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene4_1_DUSK
     backgroundMusicEvent:
@@ -808,6 +874,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene4_1_GOLDENHOUR
     backgroundMusicEvent:
@@ -875,6 +947,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene4_2
     backgroundMusicEvent:
@@ -942,6 +1020,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene4_3
     backgroundMusicEvent:
@@ -1009,6 +1093,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene4_4
     backgroundMusicEvent:
@@ -1076,6 +1166,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene4_5_DS
     backgroundMusicEvent:
@@ -1143,6 +1239,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene5_1_DS
     backgroundMusicEvent:
@@ -1210,6 +1312,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene5_2
     backgroundMusicEvent:
@@ -1277,6 +1385,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene5_3
     backgroundMusicEvent:
@@ -1344,6 +1458,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: scene5_4
     backgroundMusicEvent:
@@ -1411,6 +1531,12 @@ MonoBehaviour:
     - scene5_4
     - scene7_1_DS
     - BreakCycle
+    - thelton_intro_DAY2
+    - scene6_1
+    - scene6_2
+    - scene6_3
+    - scene6_4
+    - scene6_5
     - global decl
     knot: 
     backgroundMusicEvent:

@@ -164,6 +164,7 @@ TODO SFX Door close
         Mel said to hit it. In the side.
         // the employee whacks the side of the register.The Drawer pops open.
         TODO ^^ SFX, cash register hit noise
+        TODO ^^ ANIMATION: EMPLOYEE HIT THE REGISTER
         ~ SetSpeaker(Speaker.Beth) 
         Cool. $76.45.
         ~ SetSpeaker(Speaker.Lupe)
