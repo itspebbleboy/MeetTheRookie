@@ -46,6 +46,9 @@
 {
     - IsQuestComplete(look_at_tree):
         ~ SetSpeaker(Speaker.Lupe)
+        "Pump out of order, pay inside".
+        Huh.
+        Okay.
         Something tells me I'll be here longer than I think. I should probably try Thelton again at some point.
         TODO SFX CAR DOOR OPEN CLOSE AND STARTING
         ~ ChangeGameScene("scene7_1_DS")

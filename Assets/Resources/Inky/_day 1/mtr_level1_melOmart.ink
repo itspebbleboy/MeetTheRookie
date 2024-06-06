@@ -57,6 +57,7 @@ LIST QuestChain_1 = (FIRST_INTERACT), (PAY_FOR_GAS)
 ~ StartQuest(pay_for_gas)
 TODO SFX door closing
 
+
 * [npc] -> marlowe
 * [lupe's car] -> car
 * [gas pump] -> gas_pump
