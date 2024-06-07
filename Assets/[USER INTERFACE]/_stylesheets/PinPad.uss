@@ -15,20 +15,34 @@ VisualElement.NumButton {
     max-width: 75px;
     max-height: 75px;
     transition-duration: 0.1s;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 GroupBox.Row {
     flex-grow: 1;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    width: 272px;
+    top: 37px;
+    left: 114px;
 }
 
 .Hovered {
     background-color: rgba(197, 163, 0, 0.73);
+    -unity-background-image-tint-color: rgba(255, 150, 0, 0.81);
 }
 
 .Selected {
     background-color: rgba(255, 150, 0, 0.81);
+    -unity-background-image-tint-color: rgba(197, 163, 0, 0.26);
 }
 
 .UnHovered {

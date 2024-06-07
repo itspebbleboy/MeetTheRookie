@@ -1,0 +1,389 @@
+fileFormatVersion: 2
+guid: 7bddfd18a9d94e54c9b0d992e4e71234
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3840143976807969508
+    second: bar_memorial_plaque_sharpie_enlarged_0
+  - first:
+      213: -7374090234801395977
+    second: bar_memorial_plaque_sharpie_enlarged_1
+  - first:
+      213: -6666632148148374777
+    second: bar_memorial_plaque_sharpie_enlarged_2
+  - first:
+      213: -7481031572167982390
+    second: bar_memorial_plaque_sharpie_enlarged_3
+  - first:
+      213: 2536323127741935900
+    second: bar_memorial_plaque_sharpie_enlarged_4
+  - first:
+      213: 921532686661454589
+    second: bar_memorial_plaque_sharpie_enlarged_5
+  - first:
+      213: 152403510206986471
+    second: bar_memorial_plaque_sharpie_enlarged_6
+  - first:
+      213: -7930332659987683104
+    second: bar_memorial_plaque_sharpie_enlarged_7
+  - first:
+      213: -417965349682472975
+    second: bar_memorial_plaque_sharpie_enlarged_8
+  - first:
+      213: 6188712191333484825
+    second: bar_memorial_plaque_sharpie_enlarged_9
+  - first:
+      213: 8945985647075983045
+    second: bar_memorial_plaque_sharpie_enlarged_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bar_memorial_plaque_sharpie_enlarged_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 80
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d4108266115bac0800000000000000
+      internalID: -3840143976807969508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar_memorial_plaque_sharpie_enlarged_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 82
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f66cf44008f9a990800000000000000
+      internalID: -7374090234801395977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar_memorial_plaque_sharpie_enlarged_2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 83
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 703ba61f16d5b73a0800000000000000
+      internalID: -6666632148148374777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar_memorial_plaque_sharpie_enlarged_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 71
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac2027bdb690e2890800000000000000
+      internalID: -7481031572167982390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar_memorial_plaque_sharpie_enlarged_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 85
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c117aa85274d23320800000000000000
+      internalID: 2536323127741935900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar_memorial_plaque_sharpie_enlarged_5
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 73
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfa0e559811f9cc00800000000000000
+      internalID: 921532686661454589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar_memorial_plaque_sharpie_enlarged_6
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 87
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e8f8606f227d1200800000000000000
+      internalID: 152403510206986471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar_memorial_plaque_sharpie_enlarged_7
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 83
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e861c2667cc1f190800000000000000
+      internalID: -7930332659987683104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar_memorial_plaque_sharpie_enlarged_8
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 74
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f711cb9ab6133af0800000000000000
+      internalID: -417965349682472975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar_memorial_plaque_sharpie_enlarged_9
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 59
+        width: 38
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 919cf85e2f8b2e550800000000000000
+      internalID: 6188712191333484825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar_memorial_plaque_sharpie_enlarged_10
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 69
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cef4b35c86862c70800000000000000
+      internalID: 8945985647075983045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bar_memorial_plaque_sharpie_enlarged_0: -3840143976807969508
+      bar_memorial_plaque_sharpie_enlarged_1: -7374090234801395977
+      bar_memorial_plaque_sharpie_enlarged_10: 8945985647075983045
+      bar_memorial_plaque_sharpie_enlarged_2: -6666632148148374777
+      bar_memorial_plaque_sharpie_enlarged_3: -7481031572167982390
+      bar_memorial_plaque_sharpie_enlarged_4: 2536323127741935900
+      bar_memorial_plaque_sharpie_enlarged_5: 921532686661454589
+      bar_memorial_plaque_sharpie_enlarged_6: 152403510206986471
+      bar_memorial_plaque_sharpie_enlarged_7: -7930332659987683104
+      bar_memorial_plaque_sharpie_enlarged_8: -417965349682472975
+      bar_memorial_plaque_sharpie_enlarged_9: 6188712191333484825
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

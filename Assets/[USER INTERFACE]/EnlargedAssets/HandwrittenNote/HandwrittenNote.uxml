@@ -1,0 +1,4 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement style="flex-grow: 1; background-color: rgb(130, 130, 130); background-image: url(&quot;project://database/Assets/[TEXTURES]/wall%20and%20floor%20textures/grey_metal_2.png?fileID=2800000&amp;guid=aa2ef41fbf6e7c34da171934feaf12b3&amp;type=3#grey_metal_2&quot;);" />
+    <engine:VisualElement name="HandwrittenNote" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/EnlargedAssets/HandwrittenNote/winery_note_enlarged.png?fileID=2800000&amp;guid=e27a650b6be415245988aeaa8a198ea9&amp;type=3#winery_note_enlarged&quot;); width: 1080px; height: 1080px; align-self: center; position: absolute; top: 0; left: 22%;" />
+</engine:UXML>

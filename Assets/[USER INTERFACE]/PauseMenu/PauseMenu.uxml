@@ -1,0 +1,32 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/[USER%20INTERFACE]/_stylesheets/PauseMenu.uss?fileID=7433441132597879392&amp;guid=6627ac181f9b66f46ad8d2ace8d36769&amp;type=3#PauseMenu" />
+    <engine:VisualElement name="Base" style="flex-grow: 1; align-items: center; justify-content: center; background-color: rgba(168, 168, 168, 0.32); top: 75px; scale: 1.5 1.5;">
+        <engine:VisualElement name="LeftTab" class="Menus" style="background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/PauseMenu/pause%20menu%20back%20tab%201.png?fileID=2800000&amp;guid=bc853dba31f2b1947b636063ff36d5f3&amp;type=3#pause menu back tab 1&quot;);">
+            <engine:Label text="General Settings" name="TabTitle" class="TabTitle" style="top: 25px; position: absolute; left: 172px; color: rgba(43, 47, 55, 0.55);" />
+        </engine:VisualElement>
+        <engine:VisualElement name="MiddleTab" class="Menus" style="background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/PauseMenu/pause%20menu%20back%20tab%202.png?fileID=2800000&amp;guid=d347fc8881d81d4448a9a18174ec9e6a&amp;type=3#pause menu back tab 2&quot;);">
+            <engine:Label text="Controls" name="TabTitle" class="TabTitle" style="left: 492px; top: 26px; width: 109px; color: rgba(43, 47, 55, 0.55);" />
+        </engine:VisualElement>
+        <engine:VisualElement name="Sounds" class="Menus" style="background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/PauseMenu/pause%20menu%203.png?fileID=2800000&amp;guid=95d3d11c002e9644bb010a644bc592fb&amp;type=3#pause menu 3&quot;);">
+            <engine:GroupBox class="MenuBox" style="justify-content: space-evenly;">
+                <engine:SliderInt label="Music" value="42" high-value="100" show-input-field="true" name="Music" class="SoundSlider SliderInt" />
+                <engine:SliderInt label="Sounds" value="42" high-value="100" show-input-field="true" name="Game" class="SoundSlider" />
+                <engine:SliderInt label="Dialogue" value="42" high-value="100" show-input-field="true" name="Dialogue" class="SoundSlider" />
+            </engine:GroupBox>
+            <engine:Label text="Sound" name="TabTitle" class="TabTitle" style="position: absolute; left: 754px; top: 26px;" />
+        </engine:VisualElement>
+        <engine:VisualElement name="Controls" class="Menus" style="background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/PauseMenu/pause%20menu%202.png?fileID=2800000&amp;guid=78792f5d5e373e145ba9d36a2705a760&amp;type=3#pause menu 2&quot;); visibility: visible; display: flex;">
+            <engine:Label text="Controls" name="TabTitle" class="TabTitle" style="left: 492px; top: 26px; width: 109px;" />
+            <engine:Label text="W - Up&#10;A - Left&#10;S - Down&#10;D - Right&#10;Z - Select/Interact&#10;X - Deselect/Back OR Open Synthesis&#10;C - Combine/Flip Character Stack&#10;? - Open Synthesis&#10;" style="position: absolute; top: 101px; left: 161px; width: 584px; height: 311px; -unity-font-definition: resource(&apos;Fonts/cour&apos;); -unity-font-style: bold; font-size: 36px;" />
+        </engine:VisualElement>
+        <engine:VisualElement name="GeneralSettings" class="Menus" style="background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/PauseMenu/pause%20menu%201.png?fileID=2800000&amp;guid=5eaf87856b4d3eb468c0a8dc6ba25aae&amp;type=3#pause menu 1&quot;); display: flex;">
+            <engine:GroupBox class="MenuBox" style="-unity-text-align: middle-left;">
+                <engine:Button text="Resume" name="Resume" class="GenSettingsButton" />
+                <engine:Button text="Main Menu" name="MainMenu" class="GenSettingsButton" />
+                <engine:Button text="Quit Game" name="QuitGame" class="GenSettingsButton" />
+            </engine:GroupBox>
+            <engine:Label text="General Settings" name="TabTitle" class="TabTitle Selected" style="top: 25px; position: absolute; left: 172px;" />
+            <engine:Button name="Fullscreen" class="Fullscreen" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

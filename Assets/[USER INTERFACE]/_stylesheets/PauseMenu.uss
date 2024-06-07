@@ -1,17 +1,198 @@
-.button {
-    justify-content: space-evenly;
-    align-self: auto;
-    margin-right: 0;
-    padding-right: 0;
+VisualElement.Menus {
+    width: 60%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    background-image: none;
+}
+
+GroupBox.MenuBox {
+    left: 154px;
+    top: 108px;
+    width: 861px;
+    height: 393px;
+    justify-content: center;
+}
+
+Button.GenSettingsButton {
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-font-definition: resource('Fonts/cour');
+    -unity-font-style: bold;
+    font-size: 40px;
+    color: rgb(35, 40, 46);
+}
+
+Button.GenSettingsButton.Selected {
+    color: rgb(212, 101, 7);
+    -unity-font-definition: resource('Fonts/cour');
+}
+
+Label.TabTitle {
+    -unity-font-definition: resource('Fonts/cour');
+    -unity-font-style: bold;
+    font-size: 20px;
+    color: rgb(43, 47, 55);
+}
+
+Label.TabTitle.Selected {
+    -unity-font-definition: resource('Fonts/cour');
+    -unity-font-style: bold;
+    font-size: 20px;
+    color: rgba(255, 150, 0, 0.81);
+}
+
+SliderInt.SoundSlider {
+    color: rgb(35, 40, 46);
+    width: 466px;
+}
+
+SliderInt Label {
+    background-color: rgba(221, 39, 39, 0);
+    color: rgb(35, 40, 46);
+    -unity-font-definition: resource('Fonts/cour');
+    -unity-font-style: bold;
+    font-size: 20px;
+    background-image: none;
+}
+
+SliderInt Label.Selected {
+    background-color: rgba(221, 39, 39, 0);
+    color: rgba(255, 150, 0, 0.81);
+    -unity-font-definition: resource('Fonts/cour');
+    -unity-font-style: bold;
+    font-size: 20px;
+    background-image: none;
+}
+
+SliderInt #unity-dragger {
+    background-image: url("project://database/Assets/[USER%20INTERFACE]/PauseMenu/Ui_Pin.png?fileID=4690419380084828854&guid=d5d4be384c1732247bb9fe36b6bcbacf&type=3#Ui_Pin_0");
+    flex-grow: 1;
+    width: 26px;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    height: 36px;
+    top: 10px;
+}
+
+SliderInt #unity-drag-container {
+    background-image: url("project://database/Assets/[USER%20INTERFACE]/PauseMenu/Ui_Slider_.png?fileID=1361678115227503379&guid=84c6f665b7f7e794380ea8be75a9c460&type=3#Ui_Slider__0");
+    flex-grow: 1;
+    height: 20px;
+}
+
+SliderInt #unity-tracker {
+    background-image: url("project://database/Assets/[USER%20INTERFACE]/PauseMenu/Ui_Slider_Shaded_Bar.png?fileID=-2262083059964613331&guid=c6fbc80d884dff34fbe52089d0da8d39&type=3#Ui_Slider_Shaded_Bar_0");
+    height: 12px;
+    top: 7px;
+}
+
+SliderInt #unity-text-field {
+    -unity-font-definition: resource('Fonts/cour');
+    -unity-font-style: bold;
+    width: 33px;
+    height: 26px;
+    -unity-text-align: middle-center;
+    top: -3px;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+SliderInt #unity-text-input {
     margin-top: 0;
+    margin-right: 0;
     margin-bottom: 0;
     margin-left: 0;
     padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    color: rgb(35, 40, 46);
+    background-color: rgba(255, 255, 255, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-font-definition: resource('Fonts/cour');
+}
+
+SliderInt TextElement {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
     -unity-text-align: middle-center;
-    white-space: normal;
-    -unity-background-image-tint-color: rgb(255, 255, 255);
-    height: 10%;
-    width: 66%;
+    color: rgb(35, 40, 46);
+    letter-spacing: 4px;
+    -unity-font-definition: resource('Fonts/cour');
+}
+
+#Fullscreen Image {
+    color: rgba(27, 27, 27, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#Fullscreen TextElement {
+    -unity-font-definition: resource('Fonts/cour');
+}
+
+Button.Fullscreen {
+    width: 50px;
+    height: 50px;
+    left: 959px;
+    top: 49px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    border-left-color: rgba(149, 149, 149, 0);
+    border-right-color: rgba(149, 149, 149, 0);
+    border-top-color: rgba(149, 149, 149, 0);
+    border-bottom-color: rgba(149, 149, 149, 0);
+    -unity-background-image-tint-color: rgb(0, 0, 0);
+    background-image: url("project://database/Assets/[USER%20INTERFACE]/PauseMenu/fullscreen1.png?fileID=-3308469008158286800&guid=276b5eb848904b4478a891fa2aec9439&type=3#fullscreen1_0");
+    background-color: rgba(188, 188, 188, 0);
+}
+
+Button.Fullscreen.Selected {
+    width: 50px;
+    height: 50px;
+    left: 959px;
+    top: 49px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    border-left-color: rgba(149, 149, 149, 0);
+    border-right-color: rgba(149, 149, 149, 0);
+    border-top-color: rgba(149, 149, 149, 0);
+    border-bottom-color: rgba(149, 149, 149, 0);
+    -unity-background-image-tint-color: rgb(0, 0, 0);
+    background-image: url("project://database/Assets/[USER%20INTERFACE]/PauseMenu/fullscreen1.png?fileID=-3308469008158286800&guid=276b5eb848904b4478a891fa2aec9439&type=3#fullscreen1_0");
+    background-color: rgba(255, 150, 0, 0.81);
 }

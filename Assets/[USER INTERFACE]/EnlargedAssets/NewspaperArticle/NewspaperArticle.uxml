@@ -1,0 +1,4 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement style="flex-grow: 1; position: absolute; background-color: rgb(87, 87, 87); width: 100%; height: 100%; background-image: url(&quot;project://database/Assets/[TEXTURES]/wall%20and%20floor%20textures/grey_metal_2.png?fileID=2800000&amp;guid=aa2ef41fbf6e7c34da171934feaf12b3&amp;type=3#grey_metal_2&quot;);" />
+    <engine:VisualElement style="background-image: url(&quot;project://database/Assets/[USER%20INTERFACE]/EnlargedAssets/NewspaperArticle/winery_office_newspaper%20w_%20text.png?fileID=2800000&amp;guid=f162fdd5c444ce544910d90be0d7f9ce&amp;type=3#winery_office_newspaper w_ text&quot;); width: 1024px; height: 1024px; left: 25%; top: 2%;" />
+</engine:UXML>

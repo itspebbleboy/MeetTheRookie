@@ -31,6 +31,7 @@ namespace Darklight.UnityExt.Input
         [SerializeField, ShowOnly] private Vector2 _moveInput;
         [SerializeField, ShowOnly] private bool _primaryInteract;
         [SerializeField, ShowOnly] private bool _secondaryInteract;
+        [SerializeField, ShowOnly] private bool _pauseInteract;
 
         // -------------- [[ INPUT ACTION MAPS ]] -------------- >>
         InputActionMap _activeActionMap;
@@ -43,6 +44,7 @@ namespace Darklight.UnityExt.Input
         InputAction _primaryButtonAction => _activeActionMap.FindAction("PrimaryInteract");
         InputAction _secondaryButtonAction => _activeActionMap.FindAction("SecondaryInteract");
         InputAction _menuButtonAction => _activeActionMap.FindAction("MenuButton");
+        InputAction _pause => _activeActionMap.FindAction("PauseInteract");
 
         // -------------- [[ INPUT EVENTS ]] -------------- >>
         public delegate void OnInput_Trigger();
@@ -63,6 +65,10 @@ namespace Darklight.UnityExt.Input
 
         /// <summary> Event for the menu button input from the active device. </summary>
         public static event OnInput_Trigger OnMenuButton;
+
+        /// <summary> Event for the Pause interaction input from the active device. </summary>
+        public static event OnInput_Trigger OnPauseInteract;
+        public static event OnInput_Trigger OnPauseInteractCanceled;
 
         public override void Initialize()
         {
@@ -139,6 +145,7 @@ namespace Darklight.UnityExt.Input
             _moveInputAction.Enable();
             _primaryButtonAction.Enable();
             _secondaryButtonAction.Enable();
+            _pause.Enable();
 
             // << -- Set the input events -- >>
             _moveInputAction.started += HandleMoveStarted;
@@ -152,6 +159,9 @@ namespace Darklight.UnityExt.Input
             _secondaryButtonAction.canceled += HandleSecondaryCanceled;
 
             _menuButtonAction.started += HandleMenuStarted;
+
+            _pause.performed += HandlePausePerformed;
+            _pause.canceled += HandlePauseCanceled;
             return true;
         }
 
@@ -177,6 +187,12 @@ namespace Darklight.UnityExt.Input
             {
                 _secondaryButtonAction.performed -= HandleSecondaryPerformed;
                 _secondaryButtonAction.canceled -= HandleSecondaryCanceled;
+            }
+
+            if (_pause != null)
+            {
+                _pause.performed -= HandlePausePerformed;
+                _pause.canceled -= HandlePauseCanceled;
             }
 
             DisableAllActionMaps();
@@ -233,6 +249,18 @@ namespace Darklight.UnityExt.Input
         private void HandleMenuStarted(InputAction.CallbackContext ctx)
         {
             OnMenuButton?.Invoke();
+        }
+
+        private void HandlePausePerformed(InputAction.CallbackContext ctx)
+        {
+            _pauseInteract = true;
+            OnPauseInteract?.Invoke();
+        }
+
+        private void HandlePauseCanceled(InputAction.CallbackContext ctx)
+        {
+            _pauseInteract = false;
+            OnPauseInteractCanceled?.Invoke();
         }
 
     }
