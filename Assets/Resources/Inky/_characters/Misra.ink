@@ -29,7 +29,9 @@ Idk to each their own , just take it away now. -> DONE
     ~ SetSpeaker(Speaker.Misra)
     Thoughts?
     ~ SetSpeaker(Speaker.Lupe)
-    It's obscure. Someone was definitely here, but I can't speak to motive. Who would want to break into an abandoned Winery?
+    It's obscure. 
+    Someone was definitely here, but I can't speak to motive. 
+    Who would want to break into an abandoned Winery?
     ~ SetSpeaker(Speaker.Misra)
     That sounds like it's time for some profiling! We need a suspect list.
     ~ SetSpeaker(Speaker.Lupe)

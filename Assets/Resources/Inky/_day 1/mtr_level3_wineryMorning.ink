@@ -150,7 +150,10 @@ TODO SFX door close
 
 = floor_splatters
     ~ SetSpeaker(Speaker.Misra)
-    I know what you're thinking! Don't worry, it's not blood. I'm sure you've already deduced this, but it's dried up wine from when this place was used.
+    I know what you're thinking! 
+    Don't worry, it's not blood. 
+    I'm sure you've already deduced this, 
+    but it's dried up wine from when this place was used.
     ~ CompleteQuest(visit_floor)
     -> DONE
 
